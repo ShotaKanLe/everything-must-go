@@ -1,0 +1,115 @@
+[gd_scene format=3 uid="uid://ecyq7pi6npn7"]
+
+[ext_resource type="PackedScene" uid="uid://bs72ogkvdd7d6" path="res://scenes/mainCharacter/mainCharacter.tscn" id="1_ki6c0"]
+[ext_resource type="PackedScene" uid="uid://byxe1mjyv624h" path="res://scenes/objects/tesObject.tscn" id="2_8ifl6"]
+[ext_resource type="PackedScene" uid="uid://cehkmmcj4g5ar" path="res://scenes/objects/shopping_cart.tscn" id="3_hhxvm"]
+[ext_resource type="Texture2D" uid="uid://cvv2u38l7yx4p" path="res://icon.svg" id="3_twn0q"]
+[ext_resource type="Script" uid="uid://c1b18kbpxqd8x" path="res://scripts/inventory_ui.gd" id="5_al2iq"]
+[ext_resource type="PackedScene" uid="uid://bvu3ol7qnrefo" path="res://scenes/indestructibleArea.tscn" id="5_w16ng"]
+[ext_resource type="PackedScene" uid="uid://dde5vp3dc8bew" path="res://scenes/buyingPoint.tscn" id="6_1jq6i"]
+
+[sub_resource type="ProceduralSkyMaterial" id="ProceduralSkyMaterial_ki6c0"]
+
+[sub_resource type="Sky" id="Sky_ki6c0"]
+sky_material = SubResource("ProceduralSkyMaterial_ki6c0")
+
+[sub_resource type="Environment" id="Environment_8ifl6"]
+background_mode = 2
+sky = SubResource("Sky_ki6c0")
+
+[sub_resource type="ConcavePolygonShape3D" id="ConcavePolygonShape3D_8ifl6"]
+data = PackedVector3Array(-50, -0.5, -50, -50, 0.5, -50, -50, -0.5, 50, -50, -0.5, -50, -50, -0.5, 50, 12.927776, -0.5, -32.56901, -50, -0.5, -50, 50, -0.5, -50, -50, 0.5, -50, -50, -0.5, -50, 12.927776, -0.5, -32.56901, 12.623352, -0.5, -40.586998, -50, 0.5, -50, 12.665292, 0.5, -39.80562, 13.057508, 0.5, -29.475351, -50, -0.5, -50, 12.623352, -0.5, -40.586998, 32.18213, -0.5, -41.40719, -50, 0.5, -50, 32.25521, 0.5, -39.805614, 12.665292, 0.5, -39.80562, -50, -0.5, 50, 32.517693, -0.5, -32.569008, 12.927776, -0.5, -32.56901, -50, -0.5, 50, -50, 0.5, -50, -50, 0.5, 50, -50, 0.5, -50, 50, 0.5, 50, -50, 0.5, 50, -50, -0.5, 50, -50, 0.5, 50, 50, 0.5, 50, -50, -0.5, -50, 32.18213, -0.5, -41.40719, 50, -0.5, -50, -50, 0.5, -50, 50, 0.5, -50, 32.25521, 0.5, -39.805614, -50, 0.5, -50, 50, -0.5, -50, 50, 0.5, -50, -50, -0.5, 50, 50, -0.5, -50, 32.517693, -0.5, -32.569008, -50, 0.5, -50, 13.057508, 0.5, -29.475351, 50, 0.5, 50, 50, -0.5, -50, 32.18213, -0.5, -41.40719, 32.517693, -0.5, -32.569008, 50, 0.5, -50, 32.647427, 0.5, -29.475348, 32.25521, 0.5, -39.805614, 50, 0.5, 50, 13.057508, 0.5, -29.475351, 32.647427, 0.5, -29.475348, 50, -0.5, -50, 50, 0.5, 50, 50, 0.5, -50, 50, 0.5, -50, 50, 0.5, 50, 32.647427, 0.5, -29.475348, -50, -0.5, 50, 50, -0.5, 50, 50, -0.5, -50, -50, -0.5, 50, 50, 0.5, 50, 50, -0.5, 50, 50, -0.5, -50, 50, -0.5, 50, 50, 0.5, 50, 12.623352, -2.8465672, -39.82849, 12.623352, -0.5, -40.586998, 12.927776, -0.5, -32.56901, 12.623352, -2.8465672, -39.82849, 32.18213, -3.086607, -40.57109, 12.623352, -0.5, -40.586998, 12.623352, -2.8465672, -39.82849, 12.927776, -0.5, -32.56901, 32.517693, -0.5, -32.569008, 16.610374, 30.909513, 54.271072, 13.057508, 0.5, -29.475351, 12.665292, 0.5, -39.80562, 16.610374, 30.909513, 54.271072, 12.665292, 0.5, -39.80562, 32.25521, 0.5, -39.805614, 12.623352, -2.8465672, -39.82849, 32.517693, -0.5, -32.569008, 32.18213, -3.086607, -40.57109, 32.18213, -3.086607, -40.57109, 32.18213, -0.5, -41.40719, 12.623352, -0.5, -40.586998, 32.18213, -3.086607, -40.57109, 32.517693, -0.5, -32.569008, 32.18213, -0.5, -41.40719, 36.16915, 27.646187, 54.505722, 32.647427, 0.5, -29.475348, 13.057508, 0.5, -29.475351, 36.16915, 27.646187, 54.505722, 32.25521, 0.5, -39.805614, 32.647427, 0.5, -29.475348, 16.610374, 27.886227, 55.24832, 13.057508, 0.5, -29.475351, 16.610374, 30.909513, 54.271072, 16.610374, 27.886227, 55.24832, 36.16915, 27.646187, 54.505722, 13.057508, 0.5, -29.475351, 16.610374, 27.886227, 55.24832, 16.610374, 30.909513, 54.271072, 36.16915, 27.646187, 54.505722, 16.610374, 30.909513, 54.271072, 32.25521, 0.5, -39.805614, 36.16915, 30.669474, 53.528473, 36.16915, 27.646187, 54.505722, 36.16915, 30.669474, 53.528473, 32.25521, 0.5, -39.805614, 16.610374, 30.909513, 54.271072, 36.16915, 30.669474, 53.528473, 36.16915, 27.646187, 54.505722)
+
+[node name="MainScene" type="Node3D" unique_id=279125458]
+
+[node name="MainCharacter" parent="." unique_id=869498214 node_paths=PackedStringArray("stamina_progress_bar") instance=ExtResource("1_ki6c0")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1.4804047, 0)
+stamina_progress_bar = NodePath("../CanvasLayer/HBoxContainer/staminaProgressBar")
+
+[node name="WorldEnvironment" type="WorldEnvironment" parent="." unique_id=1393783174]
+environment = SubResource("Environment_8ifl6")
+
+[node name="DirectionalLight3D" type="DirectionalLight3D" parent="." unique_id=967652953]
+transform = Transform3D(1, 0, 0, 0, 0.5073428, 0.86174434, 0, -0.86174434, 0.5073428, 0, 6.313469, 0)
+
+[node name="WorldEnvShape" type="Node3D" parent="." unique_id=47891524]
+
+[node name="CSGCombiner3D" type="CSGCombiner3D" parent="WorldEnvShape" unique_id=1615205586]
+
+[node name="CSGBox3D" type="CSGBox3D" parent="WorldEnvShape/CSGCombiner3D" unique_id=1795035176]
+size = Vector3(100, 1, 100)
+
+[node name="CSGBox3D2" type="CSGBox3D" parent="WorldEnvShape/CSGCombiner3D" unique_id=2029359673]
+transform = Transform3D(-0.039870225, 0, 0.9992049, -0.30732796, 0.9515247, -0.012262985, -0.9507681, -0.3075725, -0.037937503, 24.396252, 13.911453, 6.849991)
+size = Vector3(100, 3.1773071, 19.57434)
+
+[node name="StaticBody3D" type="StaticBody3D" parent="WorldEnvShape" unique_id=490822054]
+
+[node name="CSGBakedCollisionShape3D" type="CollisionShape3D" parent="WorldEnvShape/StaticBody3D" unique_id=1698597843]
+shape = SubResource("ConcavePolygonShape3D_8ifl6")
+
+[node name="ShoppingItemManager" type="Node3D" parent="." unique_id=486347944]
+
+[node name="Node3D" parent="ShoppingItemManager" unique_id=2092713960 instance=ExtResource("2_8ifl6")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -6.6939397, 1, -9.134291)
+
+[node name="Node3D2" parent="ShoppingItemManager" unique_id=560986958 instance=ExtResource("2_8ifl6")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -6.6939397, 1, -18.578218)
+
+[node name="ShoppingCart" parent="ShoppingItemManager" unique_id=250277162 instance=ExtResource("3_hhxvm")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 2, 4)
+
+[node name="CanvasLayer" type="CanvasLayer" parent="." unique_id=1093344464]
+
+[node name="HBoxContainer" type="HBoxContainer" parent="CanvasLayer" unique_id=696075841]
+anchors_preset = 2
+anchor_top = 1.0
+anchor_bottom = 1.0
+offset_top = -128.0
+offset_right = 280.0
+grow_vertical = 0
+size_flags_horizontal = 0
+size_flags_vertical = 8
+
+[node name="Label" type="Label" parent="CanvasLayer/HBoxContainer" unique_id=1177548275]
+layout_mode = 2
+text = "Stamina Karakter : "
+
+[node name="staminaProgressBar" type="TextureProgressBar" parent="CanvasLayer/HBoxContainer" unique_id=2052904457]
+layout_mode = 2
+texture_progress = ExtResource("3_twn0q")
+
+[node name="InventoryUI" type="Control" parent="CanvasLayer" unique_id=840493724]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("5_al2iq")
+current_slots_count = 5
+
+[node name="SlotContainer" type="HBoxContainer" parent="CanvasLayer/InventoryUI" unique_id=228648166]
+layout_mode = 1
+anchors_preset = 7
+anchor_left = 0.5
+anchor_top = 1.0
+anchor_right = 0.5
+anchor_bottom = 1.0
+offset_left = -20.0
+offset_top = -40.0
+offset_right = 20.0
+grow_horizontal = 2
+grow_vertical = 0
+pivot_offset = Vector2(0, -20)
+
+[node name="Area3D" parent="." unique_id=560902227 instance=ExtResource("5_w16ng")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 2.369091, 0)
+
+[node name="CollisionShape3D" parent="Area3D" index="0" unique_id=566950700]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 3.2720947, 2.134369, -3.7526855)
+
+[node name="buyingPoint" parent="." unique_id=1449974486 instance=ExtResource("6_1jq6i")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.74003124, 27.268158)
+
+[editable path="Area3D"]

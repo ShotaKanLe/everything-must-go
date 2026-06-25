@@ -1,0 +1,23 @@
+[gd_scene format=3 uid="uid://dde5vp3dc8bew"]
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_8i4xi"]
+size = Vector3(17, 12.529388, 15)
+
+[node name="buyingPoint" type="Node3D" unique_id=1449974486]
+
+[node name="CSGCombiner3D" type="CSGCombiner3D" parent="." unique_id=1437003552]
+
+[node name="CSGBox3D" type="CSGBox3D" parent="CSGCombiner3D" unique_id=1727724873]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.008639097, -0.08874512, -0.07384908)
+size = Vector3(3.4990234, 0.15942383, 3.4206543)
+
+[node name="CSGBox3D2" type="CSGBox3D" parent="CSGCombiner3D" unique_id=1532690045]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.0018920898, 0.23217773, 1.5625374)
+size = Vector3(3.484497, 0.53564453, 0.17687988)
+
+[node name="Area3D" type="Area3D" parent="." unique_id=1394786956]
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Area3D" unique_id=1539820173]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.5157471, 5.764694, -0.0057373047)
+shape = SubResource("BoxShape3D_8i4xi")
+debug_color = Color(0, 0.6339036, 0.4387836, 0.41960785)

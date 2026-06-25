@@ -1,0 +1,9 @@
+[gd_scene format=3 uid="uid://6rfb6vx4kjkd"]
+
+[ext_resource type="Script" uid="uid://b1smw737aqvos" path="res://scripts/fracture_particles.gd" id="1_l5hug"]
+
+[sub_resource type="ParticleProcessMaterial" id="ParticleProcessMaterial_q8w5a"]
+
+[node name="FractureParticles" type="GPUParticles3D" unique_id=350319211]
+process_material = SubResource("ParticleProcessMaterial_q8w5a")
+script = ExtResource("1_l5hug")
