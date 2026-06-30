@@ -1,0 +1,23 @@
+[gd_scene format=3 uid="uid://nhicgqbyttax"]
+
+[ext_resource type="Script" uid="uid://dec1flmonurh4" path="res://scripts/interactableObject.gd" id="1_jomrp"]
+[ext_resource type="PackedScene" uid="uid://2v7lwx1msbmp" path="res://assets/objects/Animal Food/Chicken Breast.glb" id="2_euq50"]
+[ext_resource type="Resource" uid="uid://bi628gw0egvm8" path="res://resources/objects/chicken_breast.tres" id="2_ptxti"]
+
+[node name="ChickenBreast" type="RigidBody3D" unique_id=1275525457]
+script = ExtResource("1_jomrp")
+item_data = ExtResource("2_ptxti")
+
+[node name="Chicken Breast" parent="." unique_id=1539942553 instance=ExtResource("2_euq50")]
+
+[node name="ObjectName" type="Label3D" parent="." unique_id=335997831]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.96267486, 0)
+billboard = 1
+text = "TEST"
+
+[node name="ObjectPrice" type="Label3D" parent="." unique_id=906287399]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.76227176, 0)
+billboard = 1
+outline_modulate = Color(0, 0.45882353, 0, 1)
+text = "TEST"
+font_size = 20

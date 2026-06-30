@@ -27,6 +27,10 @@ extends CharacterBody3D
 @export var stamina_regen : float = 5.0
 @export var stamina_progress_bar : Range
 
+@export_group("HP System")
+@export var max_hp : float = 100.0
+@export var hp_progress_bar : Range
+
 @export_group("Interaction Settings")
 @export var max_interaction_distance : float = 4.0
 @export var min_grab_distance : float = 1.5
@@ -46,6 +50,7 @@ var look_rotation : Vector2
 var move_speed : float = 0.0
 var freeflying : bool = false
 var current_stamina : float = 100.0
+var current_hp : float = 100.0
 var player_strength_level : int = 0
 
 var hovered_object : InteractableObject = null
@@ -64,17 +69,30 @@ const LASER_COLOR_ROTATE := Color(0.6, 0.0, 1.0, 0.6)
 @onready var head: Node3D = $Head
 @onready var camera_3d: Camera3D = $Head/Camera3D
 @onready var collider: CollisionShape3D = $Collider
+var current_item_instance: Node3D = null
+@onready var ray = $Head/Camera3D/RayCast3D
 
 func _ready() -> void:
 	current_stamina = max_stamina
+	current_hp = max_hp
 	check_input_mappings()
 	look_rotation.y = rotation.y
 	look_rotation.x = head.rotation.x
 	setup_laser_visual()
+	Inventory.item_drop.connect(drop_from_player)
+	
+	if hp_progress_bar:
+		hp_progress_bar.max_value = max_hp
+		hp_progress_bar.value = current_hp
+	
 	if stamina_progress_bar:
 		stamina_progress_bar.max_value = max_stamina
 		stamina_progress_bar.value = current_stamina
 
+	for node in get_tree().get_nodes_in_group("category_areas"):
+		if node is CategoryArea:
+			node.spawn_contents()
+		
 func setup_laser_visual() -> void:
 	laser_mesh = MeshInstance3D.new()
 	var cylinder_mesh := CylinderMesh.new()
@@ -97,6 +115,9 @@ func _input(event: InputEvent) -> void:
 		capture_mouse()
 	if Input.is_key_pressed(KEY_ESCAPE):
 		release_mouse()
+
+	if Input.is_key_pressed(KEY_H):
+		take_damage(25.0)
 
 	if mouse_captured and event is InputEventMouseMotion:
 		if is_rotating and grabbed_object:
@@ -130,6 +151,17 @@ func _input(event: InputEvent) -> void:
 			enable_freefly()
 		else:
 			disable_freefly()
+
+	if event.is_action_pressed("interact"):
+		process_interaction()
+
+func process_interaction():
+	if ray.is_colliding():
+		var collider = ray.get_collider()
+		if collider and collider.has_method("interact"):
+			collider.interact()
+		elif ray == null:
+			push_warning("RayCast3D tidak ditemukan di path: $Head/Camera3D/RayCast3D")
 
 func _enter_rotation_mode() -> void:
 	if not grabbed_object:
@@ -227,6 +259,12 @@ func _physics_process(delta: float) -> void:
 
 	move_and_slide()
 
+func take_damage(amount: float) -> void:
+	current_hp -= amount
+	current_hp = max(current_hp, 0.0)
+	if hp_progress_bar:
+		hp_progress_bar.value = current_hp
+
 func is_consuming_stamina() -> bool:
 	var is_moving := Input.get_vector(input_left, input_right, input_forward, input_back) != Vector2.ZERO
 	var is_currently_sprinting := can_sprint and Input.is_action_pressed(input_sprint) and is_moving and current_stamina > 0.0
@@ -253,6 +291,11 @@ func process_raycast_detection() -> void:
 		if hovered_object:
 			hovered_object.set_label_visibility(false)
 			hovered_object = null
+
+func drop_from_player(item):
+	var forward = -transform.basis.z.normalized()
+	var drop_pos = global_position + forward * 2.0
+	item.global_position = drop_pos
 
 func try_grab_object(object: InteractableObject) -> void:
 	if object.interact(player_strength_level):

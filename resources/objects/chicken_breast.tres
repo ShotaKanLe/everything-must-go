@@ -1,0 +1,8 @@
+[gd_resource type="Resource" script_class="ShoppingItem" format=3 uid="uid://bi628gw0egvm8"]
+
+[ext_resource type="Script" uid="uid://dgee7q3f12wgw" path="res://resources/shoppingItemResources.gd" id="1_3gmwk"]
+
+[resource]
+script = ExtResource("1_3gmwk")
+objectName = "Chicken Breast"
+metadata/_custom_type_script = "uid://dgee7q3f12wgw"

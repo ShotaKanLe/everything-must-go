@@ -3,13 +3,13 @@
 importer="scene"
 importer_version=1
 type="PackedScene"
-uid="uid://dwn6whljblum3"
-path="res://.godot/imported/Cart.glb-8e051b90b91badcd84a0647aafe431ba.scn"
+uid="uid://bto36765wetth"
+path="res://.godot/imported/Broccolli.glb-9eb8ff2a023edc7977d6c0fe8d51227f.scn"
 
 [deps]
 
-source_file="res://assets/objects/Cart.glb"
-dest_files=["res://.godot/imported/Cart.glb-8e051b90b91badcd84a0647aafe431ba.scn"]
+source_file="res://assets/objects/Vegetables/Broccolli.glb"
+dest_files=["res://.godot/imported/Broccolli.glb-9eb8ff2a023edc7977d6c0fe8d51227f.scn"]
 
 [params]
 
