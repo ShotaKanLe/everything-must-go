@@ -4,6 +4,9 @@
 [ext_resource type="PackedScene" uid="uid://2v7lwx1msbmp" path="res://assets/objects/Animal Food/Chicken Breast.glb" id="2_euq50"]
 [ext_resource type="Resource" uid="uid://bi628gw0egvm8" path="res://resources/objects/chicken_breast.tres" id="2_ptxti"]
 
+[sub_resource type="BoxShape3D" id="BoxShape3D_ptxti"]
+size = Vector3(2.109375, 1, 2.7072754)
+
 [node name="ChickenBreast" type="RigidBody3D" unique_id=1275525457]
 script = ExtResource("1_jomrp")
 item_data = ExtResource("2_ptxti")
@@ -21,3 +24,7 @@ billboard = 1
 outline_modulate = Color(0, 0.45882353, 0, 1)
 text = "TEST"
 font_size = 20
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="." unique_id=1026329328]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.026367188, 0, -0.011108398)
+shape = SubResource("BoxShape3D_ptxti")

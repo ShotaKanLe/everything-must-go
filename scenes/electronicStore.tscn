@@ -1,0 +1,7 @@
+[gd_scene format=3 uid="uid://cnsuwyt6wssp4"]
+
+[ext_resource type="PackedScene" uid="uid://d3xv0sgnlo6bi" path="res://assets/area/Electronic Store.glb" id="1_l3vss"]
+
+[node name="Node3D" type="Node3D" unique_id=900024237]
+
+[node name="Electronic Store" parent="." unique_id=19779940 instance=ExtResource("1_l3vss")]
