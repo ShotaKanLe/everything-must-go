@@ -1,0 +1,39 @@
+[gd_scene format=3 uid="uid://bqh7m8sa3prw1"]
+
+[ext_resource type="PackedScene" uid="uid://cp8ioc5fcqyu0" path="res://assets/objects/Electronics/Electric Kettle/Electric Kettle.glb" id="1_7ulqp"]
+[ext_resource type="Script" uid="uid://dec1flmonurh4" path="res://scripts/interactableObject.gd" id="1_ervkd"]
+[ext_resource type="Script" uid="uid://dgee7q3f12wgw" path="res://scripts/Resources/shoppingItemResources.gd" id="2_y3nm7"]
+
+[sub_resource type="Resource" id="Resource_tr7wo"]
+script = ExtResource("2_y3nm7")
+objectName = "Electric Kettle"
+objectCategory = "Electrics"
+metadata/_custom_type_script = "uid://dgee7q3f12wgw"
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_ucneh"]
+size = Vector3(2.2143097, 3.1766238, 2.4941268)
+
+[node name="ElectricKettle" type="RigidBody3D" unique_id=261258412]
+collision_mask = 2
+script = ExtResource("1_ervkd")
+item_data = SubResource("Resource_tr7wo")
+
+[node name="ObjectName" type="Label3D" parent="." unique_id=246497837]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 5.554461, 0)
+billboard = 1
+text = "TEST"
+font_size = 96
+
+[node name="ObjectPrice" type="Label3D" parent="." unique_id=329317810]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 5.9924607, 0)
+billboard = 1
+outline_modulate = Color(0, 0.45882353, 0, 1)
+text = "TEST"
+font_size = 84
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="." unique_id=295873779]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.0065345764, 3.4222548, 0.044978112)
+shape = SubResource("BoxShape3D_ucneh")
+
+[node name="Electric Kettle" parent="." unique_id=1264464343 instance=ExtResource("1_7ulqp")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 2.9953222, 0)

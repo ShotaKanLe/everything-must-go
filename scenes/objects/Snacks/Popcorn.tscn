@@ -1,0 +1,38 @@
+[gd_scene format=3 uid="uid://b6e7rfv2a8k4b"]
+
+[ext_resource type="Script" uid="uid://dec1flmonurh4" path="res://scripts/interactableObject.gd" id="1_6rcwh"]
+[ext_resource type="Script" uid="uid://dgee7q3f12wgw" path="res://scripts/Resources/shoppingItemResources.gd" id="2_lhbmk"]
+[ext_resource type="PackedScene" uid="uid://cxqrcg4r3ctjw" path="res://assets/objects/Snacks/Popcorn/Popcorn.glb" id="3_lhbmk"]
+
+[sub_resource type="Resource" id="Resource_r2knc"]
+script = ExtResource("2_lhbmk")
+objectName = "Popcorn"
+objectCategory = "Snacks"
+metadata/_custom_type_script = "uid://dgee7q3f12wgw"
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_r2knc"]
+size = Vector3(1.9628283, 2.4177728, 2.0072346)
+
+[node name="Popcorn" type="RigidBody3D" unique_id=2109557233]
+collision_mask = 2
+script = ExtResource("1_6rcwh")
+item_data = SubResource("Resource_r2knc")
+
+[node name="Popcorn" parent="." unique_id=2120984555 instance=ExtResource("3_lhbmk")]
+
+[node name="ObjectName" type="Label3D" parent="." unique_id=185789135]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1.9196277, 0)
+billboard = 1
+text = "TEST"
+font_size = 96
+
+[node name="ObjectPrice" type="Label3D" parent="." unique_id=468547924]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 2.3576274, 0)
+billboard = 1
+outline_modulate = Color(0, 0.45882353, 0, 1)
+text = "TEST"
+font_size = 84
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="." unique_id=1167671140]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.015204936, 0.18202257, 0.0039429665)
+shape = SubResource("BoxShape3D_r2knc")

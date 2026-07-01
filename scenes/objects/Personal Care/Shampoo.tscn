@@ -1,0 +1,38 @@
+[gd_scene format=3 uid="uid://s1lby5mfv14c"]
+
+[ext_resource type="Script" uid="uid://dec1flmonurh4" path="res://scripts/interactableObject.gd" id="1_rn01w"]
+[ext_resource type="Script" uid="uid://dgee7q3f12wgw" path="res://scripts/Resources/shoppingItemResources.gd" id="2_vy63s"]
+[ext_resource type="PackedScene" uid="uid://17sk6pmvrjsa" path="res://assets/objects/Personal Care/Shampoo/Shampoo.glb" id="3_vy63s"]
+
+[sub_resource type="Resource" id="Resource_x10i0"]
+script = ExtResource("2_vy63s")
+objectName = "Shampoo"
+objectCategory = "Personal Care"
+metadata/_custom_type_script = "uid://dgee7q3f12wgw"
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_rn01w"]
+size = Vector3(1.8602269, 4.9727964, 2.0072346)
+
+[node name="Shampoo" type="RigidBody3D" unique_id=298845508]
+collision_mask = 2
+script = ExtResource("1_rn01w")
+item_data = SubResource("Resource_x10i0")
+
+[node name="ObjectName" type="Label3D" parent="." unique_id=40846406]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 4.5554786, 0)
+billboard = 1
+text = "TEST"
+font_size = 96
+
+[node name="ObjectPrice" type="Label3D" parent="." unique_id=1631421520]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 4.9934783, 0)
+billboard = 1
+outline_modulate = Color(0, 0.45882353, 0, 1)
+text = "TEST"
+font_size = 84
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="." unique_id=1191691666]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.033269495, 1.4595344, 0.004899502)
+shape = SubResource("BoxShape3D_rn01w")
+
+[node name="Shampoo" parent="." unique_id=889529072 instance=ExtResource("3_vy63s")]

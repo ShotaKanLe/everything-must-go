@@ -1,0 +1,27 @@
+[gd_scene format=3 uid="uid://dmr3yo4ojemlw"]
+
+[ext_resource type="PackedScene" uid="uid://c1hu6lvxriwow" path="res://assets/objects/Tools/Cardbox/Cardbox.glb" id="1_3s3kx"]
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_db3jk"]
+size = Vector3(1.9902003, 1.2366399, 1.979517)
+
+[node name="Cardbox" type="RigidBody3D" unique_id=1871032020]
+
+[node name="ObjectName" type="Label3D" parent="." unique_id=2114047618]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1.438446, 0)
+billboard = 1
+text = "TEST"
+font_size = 96
+
+[node name="ObjectPrice" type="Label3D" parent="." unique_id=1185375438]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1.8764458, 0)
+billboard = 1
+outline_modulate = Color(0, 0.45882353, 0, 1)
+text = "TEST"
+font_size = 84
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="." unique_id=718824096]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.006823778, 0.24519128, 0.0032146275)
+shape = SubResource("BoxShape3D_db3jk")
+
+[node name="Cardbox" parent="." unique_id=1806295149 instance=ExtResource("1_3s3kx")]

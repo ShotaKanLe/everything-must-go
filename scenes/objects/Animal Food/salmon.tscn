@@ -1,0 +1,37 @@
+[gd_scene format=3 uid="uid://cggyvppjotasb"]
+
+[ext_resource type="PackedScene" uid="uid://b4u0f4wuc81g7" path="res://assets/objects/Animal Food/Salmon/Salmon.glb" id="1_1up7c"]
+[ext_resource type="Script" uid="uid://dec1flmonurh4" path="res://scripts/interactableObject.gd" id="1_asgnq"]
+[ext_resource type="Script" uid="uid://dgee7q3f12wgw" path="res://scripts/Resources/shoppingItemResources.gd" id="2_asgnq"]
+
+[sub_resource type="Resource" id="Resource_gmyf3"]
+script = ExtResource("2_asgnq")
+objectName = "Salmon"
+metadata/_custom_type_script = "uid://dgee7q3f12wgw"
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_kt72f"]
+size = Vector3(1.9754028, 0.29467773, 2.585205)
+
+[node name="Salmon" type="RigidBody3D" unique_id=458724593]
+collision_mask = 2
+script = ExtResource("1_asgnq")
+item_data = SubResource("Resource_gmyf3")
+
+[node name="Salmon" parent="." unique_id=1104304383 instance=ExtResource("1_1up7c")]
+
+[node name="ObjectName" type="Label3D" parent="." unique_id=942725759]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.762, 0)
+billboard = 1
+text = "TEST"
+font_size = 96
+
+[node name="ObjectPrice" type="Label3D" parent="." unique_id=774866445]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1.2, 0)
+billboard = 1
+outline_modulate = Color(0, 0.45882353, 0, 1)
+text = "TEST"
+font_size = 84
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="." unique_id=481317653]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.0920105, 0.006225586, 0.030151367)
+shape = SubResource("BoxShape3D_kt72f")

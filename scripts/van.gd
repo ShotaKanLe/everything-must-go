@@ -1,7 +1,7 @@
 extends Node3D
 class_name Van
 
-@export var task_list : TaskList # Hanya di sini kita assign TaskList
+@export var task_list : TaskList
 @export var total_grid_capacity : int = 100
 
 var current_grid_used : int = 0

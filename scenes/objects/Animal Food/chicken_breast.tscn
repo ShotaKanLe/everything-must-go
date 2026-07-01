@@ -1,0 +1,39 @@
+[gd_scene format=3 uid="uid://nhicgqbyttax"]
+
+[ext_resource type="Script" uid="uid://dec1flmonurh4" path="res://scripts/interactableObject.gd" id="1_jomrp"]
+[ext_resource type="PackedScene" uid="uid://2v7lwx1msbmp" path="res://assets/objects/Animal Food/Chicken Breast/Chicken Breast.glb" id="2_euq50"]
+[ext_resource type="Script" uid="uid://dgee7q3f12wgw" path="res://scripts/Resources/shoppingItemResources.gd" id="2_lvmxf"]
+
+[sub_resource type="Resource" id="Resource_182gg"]
+script = ExtResource("2_lvmxf")
+objectName = "Chicken Breast"
+metadata/_custom_type_script = "uid://dgee7q3f12wgw"
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_ptxti"]
+size = Vector3(1.9754028, 0.29467773, 2.585205)
+
+[node name="ChickenBreast" type="RigidBody3D" unique_id=1275525457]
+collision_mask = 2
+script = ExtResource("1_jomrp")
+item_data = SubResource("Resource_182gg")
+
+[node name="Chicken Breast" parent="." unique_id=1539942553 instance=ExtResource("2_euq50")]
+
+[node name="ObjectName" type="Label3D" parent="." unique_id=335997831]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.762, 0)
+billboard = 1
+text = "TEST
+"
+font_size = 96
+
+[node name="ObjectPrice" type="Label3D" parent="." unique_id=906287399]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1.2, 0)
+billboard = 1
+outline_modulate = Color(0, 0.45882353, 0, 1)
+text = "TEST
+"
+font_size = 84
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="." unique_id=603273157]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.0920105, 0.006225586, 0.030151367)
+shape = SubResource("BoxShape3D_ptxti")

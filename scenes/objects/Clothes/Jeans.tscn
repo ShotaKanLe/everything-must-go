@@ -1,0 +1,37 @@
+[gd_scene format=3 uid="uid://ce26uy81y5535"]
+
+[ext_resource type="Script" uid="uid://dec1flmonurh4" path="res://scripts/interactableObject.gd" id="1_argui"]
+[ext_resource type="Script" uid="uid://dgee7q3f12wgw" path="res://scripts/Resources/shoppingItemResources.gd" id="2_qxhth"]
+[ext_resource type="PackedScene" uid="uid://dc8kyvurnowoj" path="res://assets/objects/Clothes/Jeans/Jeans.glb" id="3_qxhth"]
+
+[sub_resource type="Resource" id="Resource_we6jn"]
+script = ExtResource("2_qxhth")
+objectName = "Jeans"
+objectCategory = "Clothes"
+metadata/_custom_type_script = "uid://dgee7q3f12wgw"
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_qxhth"]
+size = Vector3(2.5286984, 3.8577685, 0.79854786)
+
+[node name="Jeans" type="RigidBody3D" unique_id=2076985788]
+script = ExtResource("1_argui")
+item_data = SubResource("Resource_we6jn")
+
+[node name="Jeans" parent="." unique_id=2146654024 instance=ExtResource("3_qxhth")]
+
+[node name="ObjectName" type="Label3D" parent="." unique_id=1571602047]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 2.9953222, 0)
+billboard = 1
+text = "TEST"
+font_size = 96
+
+[node name="ObjectPrice" type="Label3D" parent="." unique_id=1841188986]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 3.433322, 0)
+billboard = 1
+outline_modulate = Color(0, 0.45882353, 0, 1)
+text = "TEST"
+font_size = 84
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="." unique_id=947306967]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.011696577, 0.51490134, -0.27554232)
+shape = SubResource("BoxShape3D_qxhth")

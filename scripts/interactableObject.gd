@@ -7,15 +7,20 @@ class_name InteractableObject
 
 var current_price : float = 0.0
 var is_label_active : bool = false
-
-@onready var label_3d: Label3D = $Label3D
-@onready var mesh_instance_3d: MeshInstance3D = $MeshInstance3D
-
 const FRACTURE_PARTICLES = preload("res://scenes/fracture_particles.tscn")
 
+@onready var label_3d: Label3D = $Label
+@onready var mesh_instance_3d: MeshInstance3D = $MeshInstance3D
+@onready var object_name_label: Label3D = $ObjectName
+@onready var object_price_label: Label3D = $ObjectPrice
+
 func _ready() -> void:
+	
 	if item_data:
 		current_price = item_data.get_random_price()
+		object_name_label.text = item_data.objectName
+		object_price_label.text = "$%.2f" % current_price
+
 	if label_3d:
 		label_3d.text = ""
 		label_3d.top_level = true

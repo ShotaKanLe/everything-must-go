@@ -1,0 +1,38 @@
+[gd_scene format=3 uid="uid://qqydcd1p6xcs"]
+
+[ext_resource type="PackedScene" uid="uid://dtjmub24g1ub7" path="res://assets/objects/Electronics/Rice Cooker/Rice Cooker.glb" id="1_kwo3c"]
+[ext_resource type="Script" uid="uid://dec1flmonurh4" path="res://scripts/interactableObject.gd" id="1_us64x"]
+[ext_resource type="Script" uid="uid://dgee7q3f12wgw" path="res://scripts/Resources/shoppingItemResources.gd" id="2_k1j6s"]
+
+[sub_resource type="Resource" id="Resource_1lou2"]
+script = ExtResource("2_k1j6s")
+objectName = "Rice Cooker"
+objectCategory = "Electrics"
+metadata/_custom_type_script = "uid://dgee7q3f12wgw"
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_us64x"]
+size = Vector3(2.0780406, 2.2520227, 2.478766)
+
+[node name="RiceCoocker" type="RigidBody3D" unique_id=1187103217]
+collision_mask = 2
+script = ExtResource("1_us64x")
+item_data = SubResource("Resource_1lou2")
+
+[node name="ObjectName" type="Label3D" parent="." unique_id=94517197]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1.7986016, 0)
+billboard = 1
+text = "TEST"
+font_size = 96
+
+[node name="ObjectPrice" type="Label3D" parent="." unique_id=1192480744]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 2.2366014, 0)
+billboard = 1
+outline_modulate = Color(0, 0.45882353, 0, 1)
+text = "TEST"
+font_size = 84
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="." unique_id=638897498]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.00025340915, 0.21902624, -0.014970809)
+shape = SubResource("BoxShape3D_us64x")
+
+[node name="Rice Cooker" parent="." unique_id=1607752160 instance=ExtResource("1_kwo3c")]

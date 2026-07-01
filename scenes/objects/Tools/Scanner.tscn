@@ -1,0 +1,7 @@
+[gd_scene format=3 uid="uid://v1n5vhbvu22w"]
+
+[ext_resource type="PackedScene" uid="uid://dwt50bvkylwr8" path="res://assets/objects/Tools/Scanner/Scanner.glb" id="1_iuglt"]
+
+[node name="Scanner" type="RigidBody3D" unique_id=1107152870]
+
+[node name="Scanner" parent="." unique_id=41049998 instance=ExtResource("1_iuglt")]
