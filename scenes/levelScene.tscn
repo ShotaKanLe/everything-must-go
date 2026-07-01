@@ -1,34 +1,10 @@
-[gd_scene format=3 uid="uid://ecyq7pi6npn7"]
+[gd_scene format=3 uid="uid://blpt0mb702v20"]
 
-[ext_resource type="Script" uid="uid://bdskhdxug3jtc" path="res://scripts/main_scene.gd" id="1_aslay"]
-[ext_resource type="PackedScene" uid="uid://bs72ogkvdd7d6" path="res://scenes/mainCharacter/mainCharacter.tscn" id="1_ki6c0"]
-[ext_resource type="Texture2D" uid="uid://cvv2u38l7yx4p" path="res://icon.svg" id="3_twn0q"]
-[ext_resource type="PackedScene" uid="uid://dr88wtxxnm75r" path="res://scenes/tools_area.tscn" id="5_1jq6i"]
-[ext_resource type="PackedScene" uid="uid://lt2otpo0fuxa" path="res://scenes/User Interface/label.tscn" id="5_aslay"]
-[ext_resource type="PackedScene" uid="uid://c6k2siw7j7gi3" path="res://scenes/category_area.tscn" id="7_1xypn"]
-[ext_resource type="PackedScene" uid="uid://sb07nhiwpfri" path="res://scenes/inventory.tscn" id="7_al2iq"]
-[ext_resource type="PackedScene" uid="uid://qvevcekfpc3" path="res://assets/objects/Beverages/Milk.glb" id="8_fp4eh"]
-[ext_resource type="PackedScene" uid="uid://bxfqvurbx0ett" path="res://assets/objects/Beverages/Mineral Water.glb" id="9_ha8th"]
-[ext_resource type="PackedScene" uid="uid://b4osbvuhgpa5i" path="res://assets/objects/Beverages/Orange Juice.glb" id="10_3tio3"]
-[ext_resource type="PackedScene" uid="uid://os8myr8vsya2" path="res://assets/objects/Beverages/Soda Can.glb" id="11_jmmcx"]
-[ext_resource type="PackedScene" uid="uid://dnd4ifwv8mnm5" path="res://scenes/objects/van.tscn" id="12_ha8th"]
-[ext_resource type="PackedScene" uid="uid://nhicgqbyttax" path="res://scenes/objects/chicken_breast.tscn" id="12_tokr4"]
-[ext_resource type="PackedScene" uid="uid://b2l8hrdytd2bq" path="res://assets/objects/Animal Food/Lobster.glb" id="13_hnm5q"]
-[ext_resource type="PackedScene" uid="uid://cae204k6son3f" path="res://assets/objects/Animal Food/Pork.glb" id="14_0eirs"]
-[ext_resource type="PackedScene" uid="uid://b4u0f4wuc81g7" path="res://assets/objects/Animal Food/Salmon.glb" id="15_gg62s"]
-[ext_resource type="PackedScene" uid="uid://otvomyvk6wnk" path="res://assets/objects/Electronics/Blender.glb" id="16_f44mt"]
-[ext_resource type="PackedScene" uid="uid://cp8ioc5fcqyu0" path="res://assets/objects/Electronics/Electric Kettle.glb" id="17_1s0h2"]
-[ext_resource type="PackedScene" uid="uid://bsqfn4u4vjpr1" path="res://assets/objects/Electronics/Microwave.glb" id="18_w72fx"]
-[ext_resource type="PackedScene" uid="uid://dtjmub24g1ub7" path="res://assets/objects/Electronics/Rice Cooker.glb" id="19_ybfn7"]
-[ext_resource type="PackedScene" uid="uid://d38aw5e6aqv4v" path="res://assets/objects/Fruits/Apple.glb" id="20_tokr4"]
-[ext_resource type="PackedScene" uid="uid://dmveg18vpci7t" path="res://assets/objects/Fruits/Avocado.glb" id="21_nt7sb"]
-[ext_resource type="PackedScene" uid="uid://b0dxx4ctlkwkg" path="res://assets/objects/Fruits/Banana.glb" id="22_aslay"]
-[ext_resource type="PackedScene" uid="uid://b21thyggvjjqb" path="res://assets/objects/Fruits/Melon.glb" id="23_so3qn"]
-[ext_resource type="PackedScene" uid="uid://bto36765wetth" path="res://assets/objects/Vegetables/Broccolli.glb" id="24_jx383"]
-[ext_resource type="PackedScene" uid="uid://bxpk2l6tqcows" path="res://assets/objects/Vegetables/Cabbage.glb" id="25_3tgni"]
-[ext_resource type="PackedScene" uid="uid://c0hy5ano20bu3" path="res://assets/objects/Vegetables/Carrot.glb" id="26_u82ob"]
-[ext_resource type="PackedScene" uid="uid://cd4me1j5dqn7a" path="res://assets/objects/Vegetables/Potato.glb" id="27_cebwr"]
-[ext_resource type="PackedScene" uid="uid://bh0nulj80v86t" path="res://assets/tes toon shader/Testing Toon Shader 3.glb" id="28_nt7sb"]
+[ext_resource type="Script" uid="uid://bdskhdxug3jtc" path="res://scripts/main_scene.gd" id="1_bdbnr"]
+[ext_resource type="PackedScene" uid="uid://bs72ogkvdd7d6" path="res://scenes/mainCharacter/mainCharacter.tscn" id="2_2hkt0"]
+[ext_resource type="PackedScene" uid="uid://sb07nhiwpfri" path="res://scenes/inventory.tscn" id="3_4tqdv"]
+[ext_resource type="Texture2D" uid="uid://cvv2u38l7yx4p" path="res://icon.svg" id="4_26ytl"]
+[ext_resource type="PackedScene" uid="uid://lt2otpo0fuxa" path="res://scenes/User Interface/label.tscn" id="5_hjddb"]
 
 [sub_resource type="ProceduralSkyMaterial" id="ProceduralSkyMaterial_ki6c0"]
 
@@ -57,10 +33,13 @@ data = PackedVector3Array(-11.931875, 4, 89.365974, -11.931875, 13.756462, 90.84
 [sub_resource type="ConcavePolygonShape3D" id="ConcavePolygonShape3D_2n1xb"]
 data = PackedVector3Array(-11.931875, 4, 89.365974, -11.931875, 13.756462, 90.845535, -11.931875, 4, 90.845535, -11.931875, 4, 106.42064, -10.806936, 4, 104.72557, -11.931875, 4, 104.72557, -11.931875, 4, 106.42064, -10.806936, 4, 106.42064, -10.806936, 4, 104.72557, -11.931875, 13.756462, 106.42064, -11.931875, 4, 106.42064, -11.931875, 4, 104.72557, -11.931875, 4, 104.72557, -11.931875, 13.756462, 104.72557, -11.931875, 13.756462, 106.42064, -11.931875, 4, 89.365974, -11.931875, 4, 90.845535, 14.113901, 4, 89.365974, -2.9534512, 4, 106.42064, -1.1383667, 4, 104.72557, -2.9534512, 4, 104.72557, -2.9534512, 4, 106.42064, -1.1383667, 4, 106.42064, -1.1383667, 4, 104.72557, -11.931875, 4, 89.365974, 14.113901, 4, 89.365974, -11.931875, 20.657455, 89.365974, -11.931875, 4, 124.23231, -11.931875, 4, 122.46808, -11.931875, 13.756462, 122.46808, -11.931875, 4, 124.23231, 14.113901, 4, 122.46808, -11.931875, 4, 122.46808, -11.931875, 4, 89.365974, -11.931875, 20.657455, 89.365974, -11.931875, 13.756462, 90.845535, -11.931875, 20.657455, 89.365974, -11.931875, 13.756462, 104.72557, -11.931875, 13.756462, 90.845535, -11.931875, 20.657455, 89.365974, -11.931875, 20.657455, 124.23231, -11.931875, 13.756462, 104.72557, -11.931875, 20.657455, 124.23231, -11.931875, 13.756462, 106.42064, -11.931875, 13.756462, 104.72557, -11.931875, 4, 124.23231, -11.931875, 13.756462, 122.46808, -11.931875, 20.657455, 124.23231, -11.931875, 20.657455, 124.23231, -11.931875, 13.756462, 122.46808, -11.931875, 13.756462, 106.42064, -11.931875, 4, 124.23231, -11.931875, 20.657455, 124.23231, 14.113901, 20.657455, 124.23231, -11.931875, 20.657455, 89.365974, 14.113901, 20.657455, 124.23231, -11.931875, 20.657455, 124.23231, 14.113901, 4, 89.365974, -11.931875, 4, 90.845535, 14.113901, 4, 90.845535, 14.113901, 4, 89.365974, 14.113901, 4, 90.845535, 14.113901, 13.756462, 90.845535, -11.931875, 4, 124.23231, 14.113901, 4, 124.23231, 14.113901, 4, 122.46808, -11.931875, 4, 124.23231, 14.113901, 20.657455, 124.23231, 14.113901, 4, 124.23231, 14.113901, 4, 124.23231, 14.113901, 13.756462, 122.46808, 14.113901, 4, 122.46808, -11.931875, 20.657455, 89.365974, 14.113901, 4, 89.365974, 14.113901, 20.657455, 89.365974, -11.931875, 20.657455, 89.365974, 14.113901, 20.657455, 89.365974, 14.113901, 20.657455, 124.23231, 14.113901, 4, 89.365974, 14.113901, 13.756462, 90.845535, 14.113901, 20.657455, 89.365974, 14.113901, 20.657455, 89.365974, 14.113901, 13.756462, 90.845535, 14.113901, 13.756462, 104.72557, 14.113901, 20.657455, 89.365974, 14.113901, 13.756462, 104.72557, 14.113901, 20.657455, 124.23231, 14.113901, 20.657455, 124.23231, 14.113901, 13.756462, 104.72557, 14.113901, 13.756462, 106.42064, 14.113901, 4, 124.23231, 14.113901, 20.657455, 124.23231, 14.113901, 13.756462, 122.46808, 14.113901, 20.657455, 124.23231, 14.113901, 13.756462, 106.42064, 14.113901, 13.756462, 122.46808, -10.806936, 13.756462, 104.72557, -11.931875, 4, 104.72557, -10.806936, 4, 104.72557, -10.806936, 13.756462, 104.72557, -11.931875, 13.756462, 104.72557, -11.931875, 4, 104.72557, -11.931875, 4, 90.845535, -11.931875, 13.756462, 90.845535, 14.113901, 4, 90.845535, -1.1383667, 13.756462, 104.72557, -2.9534512, 4, 104.72557, -1.1383667, 4, 104.72557, -2.9534512, 13.756462, 104.72557, -2.9534512, 4, 104.72557, -1.1383667, 13.756462, 104.72557, -10.806936, 13.756462, 104.72557, -11.931875, 13.756462, 90.845535, -11.931875, 13.756462, 104.72557, -10.806936, 13.756462, 104.72557, -2.9534512, 13.756462, 104.72557, -11.931875, 13.756462, 90.845535, -2.9534512, 13.756462, 104.72557, -1.1383667, 13.756462, 104.72557, -11.931875, 13.756462, 90.845535, -1.1383667, 13.756462, 104.72557, 14.113901, 13.756462, 104.72557, -11.931875, 13.756462, 90.845535, 14.113901, 4, 90.845535, -11.931875, 13.756462, 90.845535, 14.113901, 13.756462, 90.845535, 14.113901, 13.756462, 90.845535, -11.931875, 13.756462, 90.845535, 14.113901, 13.756462, 104.72557, -11.931875, 13.756462, 106.42064, -10.806936, 4, 106.42064, -11.931875, 4, 106.42064, -10.806936, 13.756462, 106.42064, -10.806936, 4, 106.42064, -11.931875, 13.756462, 106.42064, -2.9534512, 13.756462, 106.42064, -1.1383667, 4, 106.42064, -2.9534512, 4, 106.42064, -2.9534512, 13.756462, 106.42064, -1.1383667, 13.756462, 106.42064, -1.1383667, 4, 106.42064, -11.931875, 4, 122.46808, 14.113901, 13.756462, 122.46808, -11.931875, 13.756462, 122.46808, -10.806936, 13.756462, 106.42064, -11.931875, 13.756462, 106.42064, 14.113901, 13.756462, 122.46808, -10.806936, 13.756462, 106.42064, 14.113901, 13.756462, 122.46808, -2.9534512, 13.756462, 106.42064, -11.931875, 13.756462, 106.42064, -11.931875, 13.756462, 122.46808, 14.113901, 13.756462, 122.46808, 14.113901, 4, 122.46808, 14.113901, 13.756462, 122.46808, -11.931875, 4, 122.46808, -2.9534512, 13.756462, 106.42064, 14.113901, 13.756462, 122.46808, -1.1383667, 13.756462, 106.42064, -1.1383667, 13.756462, 106.42064, 14.113901, 13.756462, 122.46808, 14.113901, 13.756462, 106.42064, -10.806936, 13.756462, 104.72557, -10.806936, 4, 104.72557, -10.806936, 4, 106.42064, -10.806936, 13.756462, 104.72557, -10.806936, 4, 106.42064, -10.806936, 13.756462, 106.42064, -2.9534512, 13.756462, 106.42064, -2.9534512, 4, 106.42064, -2.9534512, 4, 104.72557, -2.9534512, 13.756462, 104.72557, -2.9534512, 13.756462, 106.42064, -2.9534512, 4, 104.72557, -10.806936, 13.756462, 104.72557, -10.806936, 13.756462, 106.42064, -2.9534512, 13.756462, 104.72557, -10.806936, 13.756462, 106.42064, -2.9534512, 13.756462, 106.42064, -2.9534512, 13.756462, 104.72557, -1.1383667, 13.756462, 104.72557, -1.1383667, 4, 104.72557, -1.1383667, 4, 106.42064, -1.1383667, 13.756462, 104.72557, -1.1383667, 4, 106.42064, -1.1383667, 13.756462, 106.42064, -1.1383667, 13.756462, 104.72557, -1.1383667, 13.756462, 106.42064, 14.113901, 13.756462, 104.72557, -1.1383667, 13.756462, 106.42064, 14.113901, 13.756462, 106.42064, 14.113901, 13.756462, 104.72557)
 
-[node name="MainScene" type="Node3D" unique_id=279125458]
-script = ExtResource("1_aslay")
+[node name="MainScene" type="Node3D" unique_id=279125458 node_paths=PackedStringArray("invoice_list_container", "debug_list_menu")]
+script = ExtResource("1_bdbnr")
+invoice_list_container = NodePath("CanvasLayer/NotaList")
+item_label_scene = ExtResource("5_hjddb")
+debug_list_menu = NodePath("CanvasLayer/debugArea/debugListMenu")
 
-[node name="MainCharacter" parent="." unique_id=869498214 node_paths=PackedStringArray("stamina_progress_bar", "hp_progress_bar") instance=ExtResource("1_ki6c0")]
+[node name="MainCharacter" parent="." unique_id=869498214 node_paths=PackedStringArray("stamina_progress_bar", "hp_progress_bar") instance=ExtResource("2_2hkt0")]
 transform = Transform3D(-0.9999933, 0, -0.0036477088, 0, 1, 0, 0.0036477088, 0, -0.9999933, 7.825996, 1.4804047, 3.8491077)
 stamina_progress_bar = NodePath("../CanvasLayer/HBoxContainer/staminaProgressBar")
 hp_progress_bar = NodePath("../CanvasLayer/HBoxContainerHP/HPProgressBar")
@@ -253,9 +232,23 @@ size = Vector3(15.660263, 9.756462, 16.047443)
 transform = Transform3D(0.99999994, 0, 0, 0, 1, 0, 0, 0, 0.99999994, 0, 0, 0)
 shape = SubResource("ConcavePolygonShape3D_2n1xb")
 
-[node name="Inventory" parent="." unique_id=1022800452 instance=ExtResource("7_al2iq")]
+[node name="Inventory" parent="." unique_id=1022800452 instance=ExtResource("3_4tqdv")]
 
 [node name="CanvasLayer" type="CanvasLayer" parent="." unique_id=1093344464]
+
+[node name="LabelList" type="Control" parent="CanvasLayer" unique_id=456823621]
+layout_mode = 3
+anchors_preset = 0
+offset_right = 40.0
+offset_bottom = 40.0
+
+[node name="NotaListLabel" parent="CanvasLayer/LabelList" unique_id=1350703745 instance=ExtResource("5_hjddb")]
+layout_mode = 0
+offset_left = 20.0
+offset_top = 20.0
+offset_right = 90.0
+offset_bottom = 43.0
+text = "Nota List : "
 
 [node name="HBoxContainerHP" type="HBoxContainer" parent="CanvasLayer" unique_id=315883477]
 anchors_preset = 2
@@ -274,7 +267,7 @@ text = "HP Karakter : "
 
 [node name="HPProgressBar" type="TextureProgressBar" parent="CanvasLayer/HBoxContainerHP" unique_id=106398373]
 layout_mode = 2
-texture_progress = ExtResource("3_twn0q")
+texture_progress = ExtResource("4_26ytl")
 
 [node name="HBoxContainer" type="HBoxContainer" parent="CanvasLayer" unique_id=696075841]
 anchors_preset = 2
@@ -292,44 +285,61 @@ text = "Stamina Karakter : "
 
 [node name="staminaProgressBar" type="TextureProgressBar" parent="CanvasLayer/HBoxContainer" unique_id=2052904457]
 layout_mode = 2
-texture_progress = ExtResource("3_twn0q")
+texture_progress = ExtResource("4_26ytl")
 
 [node name="NotaList" type="VBoxContainer" parent="CanvasLayer" unique_id=999919880]
-offset_left = 20.0
-offset_top = 20.0
-offset_right = 86.0
-offset_bottom = 60.0
+offset_left = 25.0
+offset_top = 50.0
+offset_right = 91.0
+offset_bottom = 90.0
 
-[node name="Nota List Text" parent="CanvasLayer/NotaList" unique_id=1350703745 instance=ExtResource("5_aslay")]
-layout_mode = 2
-text = "Nota List"
+[node name="debugArea" type="Control" parent="CanvasLayer" unique_id=103782584]
+layout_mode = 3
+anchors_preset = 0
+offset_right = 40.0
+offset_bottom = 40.0
 
-[node name="ToolsArea" parent="." unique_id=1954120802 instance=ExtResource("5_1jq6i")]
-transform = Transform3D(-8.7422784e-08, 0, 2.0000002, 0, 2, 0, -2.0000002, 0, -8.7422784e-08, -7.605715, 1, 20.345444)
+[node name="openDebugMenu" type="Button" parent="CanvasLayer/debugArea" unique_id=1784189978]
+layout_mode = 0
+offset_left = 1085.0
+offset_top = 31.0
+offset_right = 1238.0
+offset_bottom = 62.0
+text = "Open Debug Menu"
 
-[node name="Van" parent="." unique_id=601252719 node_paths=PackedStringArray("task_list") instance=ExtResource("12_ha8th")]
-transform = Transform3D(-2, 0, -1.7484555e-07, 0, 2, 0, 1.7484555e-07, 0, -2, -1.8226423, 2, 5.979034)
-task_list = NodePath("")
+[node name="debugListMenu" type="Control" parent="CanvasLayer/debugArea" unique_id=1185149770]
+visible = false
+anchors_preset = 0
+offset_right = 40.0
+offset_bottom = 40.0
 
-[node name="BeverageArea" parent="." unique_id=597242689 groups=["category_areas"] instance=ExtResource("7_1xypn")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 5.1, 83.068085)
-possible_item_scenes = Array[PackedScene]([ExtResource("8_fp4eh"), ExtResource("9_ha8th"), ExtResource("10_3tio3"), ExtResource("11_jmmcx")])
+[node name="debugNextDay" type="Button" parent="CanvasLayer/debugArea/debugListMenu" unique_id=1259134426]
+layout_mode = 0
+offset_left = 1121.0
+offset_top = 78.0
+offset_right = 1200.0
+offset_bottom = 109.0
+text = "Next Day"
 
-[node name="FoodAnimalArea" parent="." unique_id=180689954 groups=["category_areas"] instance=ExtResource("7_1xypn")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 5, 5.1, 83.068)
-possible_item_scenes = Array[PackedScene]([ExtResource("12_tokr4"), ExtResource("13_hnm5q"), ExtResource("14_0eirs"), ExtResource("15_gg62s")])
+[node name="debugClosedDay" type="Button" parent="CanvasLayer/debugArea/debugListMenu" unique_id=886601393]
+layout_mode = 0
+offset_left = 1115.0
+offset_top = 123.0
+offset_right = 1209.0
+offset_bottom = 154.0
+text = "Closed Day"
 
-[node name="ElectronicArea" parent="." unique_id=1655227136 groups=["category_areas"] instance=ExtResource("7_1xypn")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -5, 5.1, 83.068)
-possible_item_scenes = Array[PackedScene]([ExtResource("16_f44mt"), ExtResource("17_1s0h2"), ExtResource("18_w72fx"), ExtResource("19_ybfn7")])
+[node name="debugResetDay" type="Button" parent="CanvasLayer/debugArea/debugListMenu" unique_id=1807355342]
+layout_mode = 0
+offset_left = 1114.0
+offset_top = 163.0
+offset_right = 1208.0
+offset_bottom = 194.0
+text = "Reset Day"
 
-[node name="FruitArea" parent="." unique_id=1021951454 groups=["category_areas"] instance=ExtResource("7_1xypn")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -10, 5.1, 83.068)
-possible_item_scenes = Array[PackedScene]([ExtResource("20_tokr4"), ExtResource("21_nt7sb"), ExtResource("22_aslay"), ExtResource("23_so3qn")])
+[node name="Pathfind" type="Node3D" parent="." unique_id=1488544774]
 
-[node name="VegetableArea" parent="." unique_id=1648306922 groups=["category_areas"] instance=ExtResource("7_1xypn")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 10, 5.1, 83.068)
-possible_item_scenes = Array[PackedScene]([ExtResource("24_jx383"), ExtResource("25_3tgni"), ExtResource("26_u82ob"), ExtResource("27_cebwr")])
-
-[node name="Testing Toon Shader 3" parent="." unique_id=1702367721 instance=ExtResource("28_nt7sb")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 3.0844135, 1.499999, 15.730167)
+[connection signal="pressed" from="CanvasLayer/debugArea/openDebugMenu" to="." method="_on_open_debug_menu_pressed"]
+[connection signal="pressed" from="CanvasLayer/debugArea/debugListMenu/debugNextDay" to="." method="_on_debug_next_day_pressed"]
+[connection signal="pressed" from="CanvasLayer/debugArea/debugListMenu/debugClosedDay" to="." method="_on_debug_closed_day_pressed"]
+[connection signal="pressed" from="CanvasLayer/debugArea/debugListMenu/debugResetDay" to="." method="_on_debug_reset_day_pressed"]

@@ -5,20 +5,21 @@
 [ext_resource type="PackedScene" uid="uid://dw0gara5jru6" path="res://assets/char/Char.glb" id="2_m723l"]
 
 [sub_resource type="CapsuleShape3D" id="CapsuleShape3D_iof21"]
-radius = 0.4
-height = 2.2996094
+radius = 1.0
+height = 4.5374513
 
 [node name="MainCharacter" type="CharacterBody3D" unique_id=869498214]
 script = ExtResource("1_jy3c8")
 
 [node name="Collider" type="CollisionShape3D" parent="." unique_id=250236034]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1.1498047, 0.4096973)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 2.2687256, 0.4096973)
 shape = SubResource("CapsuleShape3D_iof21")
 
 [node name="Head" type="Node3D" parent="." unique_id=1681913612]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1.9092124, 0)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 3.699072, -1.2895879)
 
 [node name="Camera3D" type="Camera3D" parent="Head" unique_id=24228059]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1, 0)
 
 [node name="RayCast3D" type="RayCast3D" parent="Head/Camera3D" unique_id=1746747984]
 transform = Transform3D(-54.65625, 0, 0, 0, 1.0398054, -8.742278e-08, 0, 9.090268e-08, 1, -0.031, 0, -1.767874)
@@ -29,4 +30,4 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.40534604, 0.09676218, -0.83
 script = ExtResource("2_6up22")
 
 [node name="Char" parent="." unique_id=961960044 instance=ExtResource("2_m723l")]
-transform = Transform3D(-2.1855694e-08, 0, 0.5, 0, 0.5, 0, -0.5, 0, -2.1855694e-08, 0, 0, 0.3784753)
+transform = Transform3D(-4.371139e-08, 0, 1, 0, 1, 0, -1, 0, -4.371139e-08, 0, 0, 0.3784753)

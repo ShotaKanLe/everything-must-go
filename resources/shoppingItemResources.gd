@@ -10,11 +10,7 @@ class_name ShoppingItem
 @export var strengthLevelToLift : int = 0
 @export var isFragile : bool = false
 @export var availableFromDay : int = 1
-
-@export_group("Absurd & Stealth Mechanic")
 @export var isIllegalToSteal : bool = true
-@export var alarmTriggerRadius : float = 0.0
-@export var gridCapsuleSize : Vector3 = Vector3(1, 1, 1)
 
 func get_random_price() -> float:
 	return snapped(randf_range(minimumPrice, maximumPrice), 0.01)

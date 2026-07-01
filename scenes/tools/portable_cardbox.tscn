@@ -1,0 +1,36 @@
+[gd_scene format=3 uid="uid://dsccwrgttiagf"]
+
+[ext_resource type="Script" uid="uid://dec1flmonurh4" path="res://scripts/interactableObject.gd" id="1_2xgry"]
+[ext_resource type="Script" uid="uid://dgee7q3f12wgw" path="res://resources/shoppingItemResources.gd" id="2_o5tjb"]
+[ext_resource type="PackedScene" uid="uid://tsjsg55252cx" path="res://tempAssets/tools/portable cardbox/Portable Cardbox.glb" id="4_6h021"]
+
+[sub_resource type="Resource" id="Resource_v0vrs"]
+script = ExtResource("2_o5tjb")
+isShoppingItem = false
+metadata/_custom_type_script = "uid://dgee7q3f12wgw"
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_voivw"]
+size = Vector3(1.0094328, 0.62887573, 0.9890671)
+
+[node name="Portable Cardbox" type="RigidBody3D" unique_id=1113825715]
+script = ExtResource("1_2xgry")
+item_data = SubResource("Resource_v0vrs")
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="." unique_id=479512490]
+transform = Transform3D(0.99973017, 0, 0.023228243, 0, 1, 0, -0.023228243, 0, 0.99973017, -0.009082013, 0.12025046, 0.0002523126)
+shape = SubResource("BoxShape3D_voivw")
+
+[node name="ObjectName" type="Label3D" parent="." unique_id=585172689]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.79416037, 0)
+billboard = 1
+text = "TEST"
+
+[node name="ObjectPrice" type="Label3D" parent="." unique_id=2126618168]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.5937574, 0)
+billboard = 1
+outline_modulate = Color(0, 0.45882353, 0, 1)
+text = "TEST"
+font_size = 20
+
+[node name="Portable Cardbox" parent="." unique_id=935759202 instance=ExtResource("4_6h021")]
+transform = Transform3D(0.5, 0, 0, 0, 0.5, 0, 0, 0, 0.5, 0, 0, 0)

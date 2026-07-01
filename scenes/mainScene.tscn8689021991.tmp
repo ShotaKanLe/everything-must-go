@@ -307,9 +307,8 @@ text = "Nota List"
 [node name="ToolsArea" parent="." unique_id=1954120802 instance=ExtResource("5_1jq6i")]
 transform = Transform3D(-8.7422784e-08, 0, 2.0000002, 0, 2, 0, -2.0000002, 0, -8.7422784e-08, -7.605715, 1, 20.345444)
 
-[node name="Van" parent="." unique_id=601252719 node_paths=PackedStringArray("task_list") instance=ExtResource("12_ha8th")]
+[node name="Van" parent="." unique_id=601252719 instance=ExtResource("12_ha8th")]
 transform = Transform3D(-2, 0, -1.7484555e-07, 0, 2, 0, 1.7484555e-07, 0, -2, -1.8226423, 2, 5.979034)
-task_list = NodePath("")
 
 [node name="BeverageArea" parent="." unique_id=597242689 groups=["category_areas"] instance=ExtResource("7_1xypn")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 5.1, 83.068085)

@@ -73,8 +73,15 @@ var current_item_instance: Node3D = null
 @onready var ray = $Head/Camera3D/RayCast3D
 
 func _ready() -> void:
+	max_stamina = LevelData.get_max_stamina()
+	max_hp = LevelData.get_max_hp()
 	current_stamina = max_stamina
 	current_hp = max_hp
+	base_speed = LevelData.get_base_speed()
+	stamina_regen = LevelData.get_stamina_regen()
+	max_grab_distance = LevelData.get_max_grab_distance()
+	player_strength_level = LevelData.strength_level
+
 	check_input_mappings()
 	look_rotation.y = rotation.y
 	look_rotation.x = head.rotation.x
@@ -300,9 +307,13 @@ func drop_from_player(item):
 func try_grab_object(object: InteractableObject) -> void:
 	if object.interact(player_strength_level):
 		grabbed_object = object
-		if hovered_object:
-			hovered_object.set_label_visibility(false)
+		
+		# Jangan matikan visibilitas label saat di-grab, melainkan pertahankan posisinya tetap aktif
+		if hovered_object == object:
 			hovered_object = null
+		
+		grabbed_object.set_label_visibility(true) # Memastikan label tetap menyala saat di-grab
+		
 		current_grab_distance = camera_3d.global_position.distance_to(grabbed_object.global_position)
 		current_grab_distance = clamp(current_grab_distance, min_grab_distance, max_grab_distance)
 		grabbed_object.gravity_scale = 0.0
@@ -315,6 +326,9 @@ func drop_object() -> void:
 	if grabbed_object:
 		if is_rotating:
 			_exit_rotation_mode()
+		
+		grabbed_object.set_label_visibility(false) # Sembunyikan label saat dilepas/dijatuhkan
+		
 		grabbed_object.gravity_scale = 1.0
 		grabbed_object.linear_velocity *= throw_momentum_factor
 		grabbed_object.angular_velocity *= throw_momentum_factor

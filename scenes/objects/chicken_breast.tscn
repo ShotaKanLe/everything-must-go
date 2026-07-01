@@ -2,14 +2,19 @@
 
 [ext_resource type="Script" uid="uid://dec1flmonurh4" path="res://scripts/interactableObject.gd" id="1_jomrp"]
 [ext_resource type="PackedScene" uid="uid://2v7lwx1msbmp" path="res://assets/objects/Animal Food/Chicken Breast.glb" id="2_euq50"]
-[ext_resource type="Resource" uid="uid://bi628gw0egvm8" path="res://resources/objects/chicken_breast.tres" id="2_ptxti"]
+[ext_resource type="Script" uid="uid://dgee7q3f12wgw" path="res://resources/shoppingItemResources.gd" id="2_ptxti"]
+
+[sub_resource type="Resource" id="Resource_gubjb"]
+script = ExtResource("2_ptxti")
+objectName = "Chic"
+metadata/_custom_type_script = "uid://dgee7q3f12wgw"
 
 [sub_resource type="BoxShape3D" id="BoxShape3D_ptxti"]
 size = Vector3(2.109375, 1, 2.7072754)
 
 [node name="ChickenBreast" type="RigidBody3D" unique_id=1275525457]
 script = ExtResource("1_jomrp")
-item_data = ExtResource("2_ptxti")
+item_data = SubResource("Resource_gubjb")
 
 [node name="Chicken Breast" parent="." unique_id=1539942553 instance=ExtResource("2_euq50")]
 

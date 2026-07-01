@@ -1,0 +1,36 @@
+[gd_scene format=3 uid="uid://cdgxdb6q7bevm"]
+
+[ext_resource type="Script" uid="uid://dec1flmonurh4" path="res://scripts/interactableObject.gd" id="1_6w63c"]
+[ext_resource type="Script" uid="uid://dgee7q3f12wgw" path="res://resources/shoppingItemResources.gd" id="2_voivw"]
+[ext_resource type="PackedScene" uid="uid://bkwioq7daf2i6" path="res://tempAssets/tools/jetpack/Jetpack.glb" id="3_6w63c"]
+
+[sub_resource type="Resource" id="Resource_v0vrs"]
+script = ExtResource("2_voivw")
+isShoppingItem = false
+metadata/_custom_type_script = "uid://dgee7q3f12wgw"
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_voivw"]
+size = Vector3(2.2492676, 1.8642578, 1.1000977)
+
+[node name="Jetpack" type="RigidBody3D" unique_id=1113825715]
+script = ExtResource("1_6w63c")
+item_data = SubResource("Resource_v0vrs")
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="." unique_id=479512490]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.008911133, 0.9424398, -0.050048828)
+shape = SubResource("BoxShape3D_voivw")
+
+[node name="ObjectName" type="Label3D" parent="." unique_id=585172689]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 2.5681505, 0)
+billboard = 1
+text = "TEST"
+
+[node name="ObjectPrice" type="Label3D" parent="." unique_id=2126618168]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 2.3677475, 0)
+billboard = 1
+outline_modulate = Color(0, 0.45882353, 0, 1)
+text = "TEST"
+font_size = 20
+
+[node name="Jetpack" parent="." unique_id=266368661 instance=ExtResource("3_6w63c")]
+transform = Transform3D(0.8, 0, 0, 0, 0.8, 0, 0, 0, 0.8, 0, 0.07700169, 0.18487358)

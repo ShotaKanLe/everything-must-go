@@ -1,7 +1,192 @@
 [gd_scene format=3 uid="uid://cnsuwyt6wssp4"]
 
-[ext_resource type="PackedScene" uid="uid://d3xv0sgnlo6bi" path="res://assets/area/Electronic Store.glb" id="1_l3vss"]
+[ext_resource type="Script" uid="uid://bykyxaevrf8eg" path="res://scripts/electronic_store.gd" id="1_ftxc2"]
+[ext_resource type="PackedScene" uid="uid://djhrm0380lc3o" path="res://tempAssets/area/electronicStore/Electronic Store.glb" id="1_l3vss"]
+[ext_resource type="PackedScene" uid="uid://bs72ogkvdd7d6" path="res://scenes/mainCharacter/mainCharacter.tscn" id="2_fogkt"]
+[ext_resource type="Texture2D" uid="uid://cvv2u38l7yx4p" path="res://icon.svg" id="4_uvqvh"]
+[ext_resource type="PackedScene" uid="uid://dcdr1r01gtoxg" path="res://scenes/objects/stamina_regen_upgrade.tscn" id="5_pg0xx"]
 
-[node name="Node3D" type="Node3D" unique_id=900024237]
+[sub_resource type="BoxShape3D" id="BoxShape3D_fogkt"]
+size = Vector3(70.44028, 1.5946655, 71.74808)
 
-[node name="Electronic Store" parent="." unique_id=19779940 instance=ExtResource("1_l3vss")]
+[sub_resource type="BoxShape3D" id="BoxShape3D_ftxc2"]
+size = Vector3(1.305603, 31.568024, 67.608765)
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_uvqvh"]
+size = Vector3(5.0302734, 4.409668, 35.84723)
+
+[sub_resource type="ProceduralSkyMaterial" id="ProceduralSkyMaterial_fogkt"]
+
+[sub_resource type="Sky" id="Sky_ki6c0"]
+sky_material = SubResource("ProceduralSkyMaterial_fogkt")
+
+[sub_resource type="Environment" id="Environment_ftxc2"]
+background_mode = 2
+sky = SubResource("Sky_ki6c0")
+
+[node name="ElectronicStore" type="Node3D" unique_id=900024237]
+script = ExtResource("1_ftxc2")
+
+[node name="WorldEnvSetup" type="Node3D" parent="." unique_id=538909647]
+
+[node name="StaticBody3D" type="StaticBody3D" parent="WorldEnvSetup" unique_id=1069083907]
+
+[node name="Floor Collision" type="CollisionShape3D" parent="WorldEnvSetup/StaticBody3D" unique_id=1008259714]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.13374329, 0.29733276, -0.48432922)
+shape = SubResource("BoxShape3D_fogkt")
+
+[node name="WallCollision" type="CollisionShape3D" parent="WorldEnvSetup/StaticBody3D" unique_id=426651040]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 31.897892, 16.660082, -1.4212036)
+shape = SubResource("BoxShape3D_ftxc2")
+
+[node name="WallCollision2" type="CollisionShape3D" parent="WorldEnvSetup/StaticBody3D" unique_id=2116813319]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -31.460808, 16.660082, -1.4212036)
+shape = SubResource("BoxShape3D_ftxc2")
+
+[node name="WallCollision3" type="CollisionShape3D" parent="WorldEnvSetup/StaticBody3D" unique_id=485931089]
+transform = Transform3D(-4.371139e-08, 0, 1, 0, 1, 0, -1, 0, -4.371139e-08, 0.21683884, 16.660082, -29.93332)
+shape = SubResource("BoxShape3D_ftxc2")
+
+[node name="WallCollision4" type="CollisionShape3D" parent="WorldEnvSetup/StaticBody3D" unique_id=433120536]
+transform = Transform3D(-4.371139e-08, 0, 1, 0, 1, 0, -1, 0, -4.371139e-08, 0.21683884, 16.660082, 30.21352)
+shape = SubResource("BoxShape3D_ftxc2")
+
+[node name="RoofCollision" type="CollisionShape3D" parent="WorldEnvSetup/StaticBody3D" unique_id=1735947783]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.13374329, 22.602661, -0.48432922)
+shape = SubResource("BoxShape3D_fogkt")
+
+[node name="TableCollision" type="CollisionShape3D" parent="WorldEnvSetup/StaticBody3D" unique_id=1164721705]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -3.0756836, 1.704834, 0.6819153)
+shape = SubResource("BoxShape3D_uvqvh")
+debug_color = Color(0.99644405, 0.0020545574, 0.17038018, 1)
+
+[node name="TableCollision2" type="CollisionShape3D" parent="WorldEnvSetup/StaticBody3D" unique_id=1820104956]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 10.9953985, 1.704834, 0.6819153)
+shape = SubResource("BoxShape3D_uvqvh")
+debug_color = Color(0.99644405, 0.0020545574, 0.17038018, 1)
+
+[node name="TableCollision3" type="CollisionShape3D" parent="WorldEnvSetup/StaticBody3D" unique_id=75648421]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -16.118366, 1.704834, 0.6819153)
+shape = SubResource("BoxShape3D_uvqvh")
+debug_color = Color(0.99644405, 0.0020545574, 0.17038018, 1)
+
+[node name="WorldEnvironment" type="WorldEnvironment" parent="WorldEnvSetup" unique_id=1644852674]
+environment = SubResource("Environment_ftxc2")
+
+[node name="DirectionalLight3D" type="DirectionalLight3D" parent="WorldEnvSetup" unique_id=1016855711]
+transform = Transform3D(1, 0, 0, 0, 0.5073428, 0.86174434, 0, -0.86174434, 0.5073428, 0, 6.313469, 0)
+
+[node name="Electronic Store" parent="." unique_id=1631207022 instance=ExtResource("1_l3vss")]
+
+[node name="MainCharacter" parent="." unique_id=869498214 instance=ExtResource("2_fogkt")]
+transform = Transform3D(-0.9999933, 0, -0.0036477088, 0, 1, 0, 0.0036477088, 0, -0.9999933, 7.825996, 7.4025917, 3.8491077)
+
+[node name="ToolsSpawnPoint" type="Node3D" parent="." unique_id=449599586]
+
+[node name="PointA" type="Marker3D" parent="ToolsSpawnPoint" unique_id=1093949287]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -3, 5.6322813, 12.330247)
+
+[node name="PointA2" type="Marker3D" parent="ToolsSpawnPoint" unique_id=2087443698]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -3, 5.6322813, -1.7167978)
+
+[node name="PointA3" type="Marker3D" parent="ToolsSpawnPoint" unique_id=819838294]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -3, 5.6322813, -11.991313)
+
+[node name="PointB" type="Marker3D" parent="ToolsSpawnPoint" unique_id=1050451322]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 11.039096, 5.6322813, 10.226628)
+
+[node name="PointB2" type="Marker3D" parent="ToolsSpawnPoint" unique_id=1463777711]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 11.039096, 5.6322813, -2.8727808)
+
+[node name="PointB3" type="Marker3D" parent="ToolsSpawnPoint" unique_id=929596929]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 11.039096, 5.6322813, -13.29794)
+
+[node name="PointC" type="Marker3D" parent="ToolsSpawnPoint" unique_id=1514638781]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -15.577627, 5.6322813, 10.924695)
+
+[node name="PointC2" type="Marker3D" parent="ToolsSpawnPoint" unique_id=95613983]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -15.577627, 5.6322813, -10.016368)
+
+[node name="PointC3" type="Marker3D" parent="ToolsSpawnPoint" unique_id=1509551379]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -15.577627, 5.6322813, 0.3273306)
+
+[node name="CanvasLayer" type="CanvasLayer" parent="." unique_id=1906935260]
+
+[node name="HBoxContainerHP" type="HBoxContainer" parent="CanvasLayer" unique_id=564361859]
+anchors_preset = 2
+anchor_top = 1.0
+anchor_bottom = 1.0
+offset_top = -272.0
+offset_right = 280.0
+offset_bottom = -144.0
+grow_vertical = 0
+size_flags_horizontal = 0
+size_flags_vertical = 8
+
+[node name="Label" type="Label" parent="CanvasLayer/HBoxContainerHP" unique_id=611193852]
+layout_mode = 2
+text = "HP Karakter : "
+
+[node name="HPProgressBar" type="TextureProgressBar" parent="CanvasLayer/HBoxContainerHP" unique_id=1899892033]
+layout_mode = 2
+texture_progress = ExtResource("4_uvqvh")
+
+[node name="HBoxContainer" type="HBoxContainer" parent="CanvasLayer" unique_id=548556175]
+anchors_preset = 2
+anchor_top = 1.0
+anchor_bottom = 1.0
+offset_top = -128.0
+offset_right = 280.0
+grow_vertical = 0
+size_flags_horizontal = 0
+size_flags_vertical = 8
+
+[node name="Label" type="Label" parent="CanvasLayer/HBoxContainer" unique_id=690007738]
+layout_mode = 2
+text = "Stamina Karakter : "
+
+[node name="staminaProgressBar" type="TextureProgressBar" parent="CanvasLayer/HBoxContainer" unique_id=338291985]
+layout_mode = 2
+texture_progress = ExtResource("4_uvqvh")
+
+[node name="debugArea" type="Control" parent="CanvasLayer" unique_id=550352227]
+layout_mode = 3
+anchors_preset = 0
+offset_right = 40.0
+offset_bottom = 40.0
+
+[node name="openDebugMenu" type="Button" parent="CanvasLayer/debugArea" unique_id=627313449]
+layout_mode = 0
+offset_left = 1085.0
+offset_top = 31.0
+offset_right = 1238.0
+offset_bottom = 62.0
+text = "Open Debug Menu"
+
+[node name="debugListMenu" type="Control" parent="CanvasLayer/debugArea" unique_id=1028955076]
+anchors_preset = 0
+offset_right = 40.0
+offset_bottom = 40.0
+
+[node name="debugNextDay" type="Button" parent="CanvasLayer/debugArea/debugListMenu" unique_id=1467717465]
+layout_mode = 0
+offset_left = 1121.0
+offset_top = 78.0
+offset_right = 1200.0
+offset_bottom = 109.0
+text = "Next Day"
+
+[node name="debugResetDay" type="Button" parent="CanvasLayer/debugArea/debugListMenu" unique_id=1332491100]
+layout_mode = 0
+offset_left = 1114.0
+offset_top = 121.0
+offset_right = 1208.0
+offset_bottom = 152.0
+text = "Reset Day"
+
+[node name="Stamina Regen Upgrade" parent="." unique_id=1752593378 instance=ExtResource("5_pg0xx")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -17.472746, 6.4421434, 0)
+
+[connection signal="pressed" from="CanvasLayer/debugArea/openDebugMenu" to="." method="_on_open_debug_menu_pressed"]
+[connection signal="pressed" from="CanvasLayer/debugArea/debugListMenu/debugNextDay" to="." method="_on_debug_next_day_pressed"]
+[connection signal="pressed" from="CanvasLayer/debugArea/debugListMenu/debugResetDay" to="." method="_on_debug_reset_day_pressed"]

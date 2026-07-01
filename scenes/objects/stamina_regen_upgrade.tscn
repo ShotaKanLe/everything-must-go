@@ -1,0 +1,31 @@
+[gd_scene format=3 uid="uid://dcdr1r01gtoxg"]
+
+[ext_resource type="PackedScene" uid="uid://dex02uk83vpjj" path="res://assets/objects/Upgrades/Stamina Regen Upgrade/Stamina Regen Upgrade.glb" id="1_oprao"]
+[ext_resource type="Texture2D" uid="uid://7l5we4wujn4j" path="res://assets/objects/Upgrades/Stamina Regen Upgrade/Stamina Regen Upgrade_Main Box Shading.png" id="2_jgkv1"]
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_6d78c"]
+render_priority = 1
+transparency = 1
+shading_mode = 0
+albedo_color = Color(0, 0, 0, 1)
+grow = true
+grow_amount = 0.01
+stencil_mode = 3
+stencil_flags = 1
+stencil_compare = 5
+metadata/_stencil_owned = true
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_x1gt4"]
+next_pass = SubResource("StandardMaterial3D_6d78c")
+diffuse_mode = 3
+specular_mode = 1
+albedo_texture = ExtResource("2_jgkv1")
+rim_enabled = true
+rim = 0.0
+stencil_mode = 1
+stencil_flags = 2
+
+[node name="Stamina Regen Upgrade" unique_id=1752593378 instance=ExtResource("1_oprao")]
+
+[node name="Cube" parent="." index="0" unique_id=2064379979]
+surface_material_override/0 = SubResource("StandardMaterial3D_x1gt4")

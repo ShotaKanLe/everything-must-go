@@ -1,0 +1,36 @@
+[gd_scene format=3 uid="uid://bwlu6t3gab7fd"]
+
+[ext_resource type="Script" uid="uid://dec1flmonurh4" path="res://scripts/interactableObject.gd" id="1_clm81"]
+[ext_resource type="PackedScene" uid="uid://bcdytu263yjry" path="res://tempAssets/tools/baseball bat/Baseball Bat.glb" id="1_o8dnr"]
+[ext_resource type="Script" uid="uid://dgee7q3f12wgw" path="res://resources/shoppingItemResources.gd" id="2_0kqkd"]
+
+[sub_resource type="Resource" id="Resource_v0vrs"]
+script = ExtResource("2_0kqkd")
+isShoppingItem = false
+metadata/_custom_type_script = "uid://dgee7q3f12wgw"
+
+[sub_resource type="CapsuleShape3D" id="CapsuleShape3D_clm81"]
+radius = 0.16601563
+
+[node name="Baseball Bat" type="RigidBody3D" unique_id=1113825715]
+script = ExtResource("1_clm81")
+item_data = SubResource("Resource_v0vrs")
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="." unique_id=479512490]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1.003475, 0)
+shape = SubResource("CapsuleShape3D_clm81")
+
+[node name="Baseball Bat" parent="." unique_id=1914872647 instance=ExtResource("1_o8dnr")]
+transform = Transform3D(0.2, 0, 0, 0, 0.2, 0, 0, 0, 0.2, 0, -0.19036275, 0)
+
+[node name="ObjectName" type="Label3D" parent="." unique_id=585172689]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 2.3823624, 0)
+billboard = 1
+text = "TEST"
+
+[node name="ObjectPrice" type="Label3D" parent="." unique_id=2126618168]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 2.1819594, 0)
+billboard = 1
+outline_modulate = Color(0, 0.45882353, 0, 1)
+text = "TEST"
+font_size = 20

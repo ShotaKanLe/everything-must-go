@@ -17,6 +17,7 @@ config/icon="res://icon.svg"
 [autoload]
 
 Inventory="*uid://sb07nhiwpfri"
+LevelData="*uid://ljbsj4xrpk87"
 
 [display]
 
