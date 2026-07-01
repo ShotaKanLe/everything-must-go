@@ -1,0 +1,38 @@
+[gd_scene format=3 uid="uid://buf05lcimottq"]
+
+[ext_resource type="Script" uid="uid://dec1flmonurh4" path="res://scripts/interactableObject.gd" id="1_r3tei"]
+[ext_resource type="Script" uid="uid://dgee7q3f12wgw" path="res://scripts/Resources/shoppingItemResources.gd" id="2_j2gda"]
+[ext_resource type="PackedScene" uid="uid://bto36765wetth" path="res://assets/objects/Vegetables/Broccolli/Broccolli.glb" id="3_j2gda"]
+
+[sub_resource type="Resource" id="Resource_3s1gm"]
+script = ExtResource("2_j2gda")
+objectName = "Broccolli"
+objectCategory = "Vegetables"
+metadata/_custom_type_script = "uid://dgee7q3f12wgw"
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_nn65s"]
+size = Vector3(3.1816678, 3.935583, 1.6511486)
+
+[node name="Broccolli" type="RigidBody3D" unique_id=873317727]
+script = ExtResource("1_r3tei")
+item_data = SubResource("Resource_3s1gm")
+
+[node name="ObjectName" type="Label3D" parent="." unique_id=2124667790]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 6.657416, 0)
+billboard = 1
+text = "TEST"
+font_size = 96
+
+[node name="ObjectPrice" type="Label3D" parent="." unique_id=601371701]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 7.095416, 0)
+billboard = 1
+outline_modulate = Color(0, 0.45882353, 0, 1)
+text = "TEST"
+font_size = 84
+
+[node name="Broccolli" parent="." unique_id=856739275 instance=ExtResource("3_j2gda")]
+transform = Transform3D(0.8, 0, 0, 0, 0.8, 0, 0, 0, 0.8, 0, 1.943994, 0)
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="." unique_id=1472198663]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.088193685, 3.900197, 0.052056044)
+shape = SubResource("BoxShape3D_nn65s")

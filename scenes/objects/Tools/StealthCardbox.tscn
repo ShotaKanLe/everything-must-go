@@ -1,0 +1,7 @@
+[gd_scene format=3 uid="uid://dpldolyqt1e8p"]
+
+[ext_resource type="PackedScene" uid="uid://crnxblugf2nwb" path="res://assets/objects/Tools/Stealth Cardbox/Stealth Cardbox.glb" id="1_pbrqt"]
+
+[node name="StealthCardbox" type="RigidBody3D" unique_id=912345422]
+
+[node name="Stealth Cardbox" parent="." unique_id=1122437769 instance=ExtResource("1_pbrqt")]

@@ -1,0 +1,38 @@
+[gd_scene format=3 uid="uid://ccexu5vmhxbae"]
+
+[ext_resource type="Script" uid="uid://dec1flmonurh4" path="res://scripts/interactableObject.gd" id="1_tt7oo"]
+[ext_resource type="Script" uid="uid://dgee7q3f12wgw" path="res://scripts/Resources/shoppingItemResources.gd" id="2_6w50r"]
+[ext_resource type="PackedScene" uid="uid://csv4dqq4q0r5r" path="res://assets/objects/Snacks/Potato Chips/Potato Chips.glb" id="3_6w50r"]
+
+[sub_resource type="Resource" id="Resource_mvtyl"]
+script = ExtResource("2_6w50r")
+objectName = "Potato Chips"
+objectCategory = "Snacks"
+metadata/_custom_type_script = "uid://dgee7q3f12wgw"
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_mvtyl"]
+size = Vector3(1.3830967, 2.9316046, 1.3919622)
+
+[node name="PotatoChips" type="RigidBody3D" unique_id=1217414453]
+collision_mask = 2
+script = ExtResource("1_tt7oo")
+item_data = SubResource("Resource_mvtyl")
+
+[node name="Potato Chips" parent="." unique_id=410986376 instance=ExtResource("3_6w50r")]
+
+[node name="ObjectName" type="Label3D" parent="." unique_id=1529479258]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 3.5558248, 0)
+billboard = 1
+text = "TEST"
+font_size = 96
+
+[node name="ObjectPrice" type="Label3D" parent="." unique_id=836382478]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 3.9938245, 0)
+billboard = 1
+outline_modulate = Color(0, 0.45882353, 0, 1)
+text = "TEST"
+font_size = 84
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="." unique_id=1285226690]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.0061939657, 1.4867524, -0.01080054)
+shape = SubResource("BoxShape3D_mvtyl")

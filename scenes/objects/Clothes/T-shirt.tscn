@@ -1,0 +1,38 @@
+[gd_scene format=3 uid="uid://7c63acjyuwi4"]
+
+[ext_resource type="Script" uid="uid://dec1flmonurh4" path="res://scripts/interactableObject.gd" id="1_lpplr"]
+[ext_resource type="Script" uid="uid://dgee7q3f12wgw" path="res://scripts/Resources/shoppingItemResources.gd" id="2_5rhwp"]
+[ext_resource type="PackedScene" uid="uid://bspqjfy745rsd" path="res://assets/objects/Clothes/T-shirt/T-shirt.glb" id="3_5rhwp"]
+
+[sub_resource type="Resource" id="Resource_ehtmv"]
+script = ExtResource("2_5rhwp")
+objectName = "T-shirt"
+objectCategory = "Clothes"
+metadata/_custom_type_script = "uid://dgee7q3f12wgw"
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_ehtmv"]
+size = Vector3(3.2231617, 3.342041, 0.9581909)
+
+[node name="TShirt" type="RigidBody3D" unique_id=1812904591]
+script = ExtResource("1_lpplr")
+item_data = SubResource("Resource_ehtmv")
+
+[node name="ObjectName" type="Label3D" parent="." unique_id=354800568]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 5.6792946, 0)
+billboard = 1
+text = "TEST"
+font_size = 96
+
+[node name="ObjectPrice" type="Label3D" parent="." unique_id=169850884]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 6.1172943, 0)
+billboard = 1
+outline_modulate = Color(0, 0.45882353, 0, 1)
+text = "TEST"
+font_size = 84
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="." unique_id=2037361366]
+transform = Transform3D(0.9999568, -0.008691416, 0.003289502, 0.008693741, 0.999962, -0.0006924104, -0.0032833559, 0.000720992, 0.99999434, 0.032072257, 3.5509439, -0.22717452)
+shape = SubResource("BoxShape3D_ehtmv")
+
+[node name="T-shirt" parent="." unique_id=3317105 instance=ExtResource("3_5rhwp")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 2.9953222, 0)

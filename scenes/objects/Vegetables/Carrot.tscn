@@ -1,0 +1,37 @@
+[gd_scene format=3 uid="uid://dme3yj625a1d3"]
+
+[ext_resource type="Script" uid="uid://dec1flmonurh4" path="res://scripts/interactableObject.gd" id="1_8mdf7"]
+[ext_resource type="Script" uid="uid://dgee7q3f12wgw" path="res://scripts/Resources/shoppingItemResources.gd" id="2_swqju"]
+[ext_resource type="PackedScene" uid="uid://c0hy5ano20bu3" path="res://assets/objects/Vegetables/Carrot/Carrot.glb" id="3_340b3"]
+
+[sub_resource type="Resource" id="Resource_340b3"]
+script = ExtResource("2_swqju")
+objectName = "Carrot"
+objectCategory = "Vegetables"
+metadata/_custom_type_script = "uid://dgee7q3f12wgw"
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_swqju"]
+size = Vector3(0.8989465, 3.1369183, 0.8688784)
+
+[node name="Carrot" type="RigidBody3D" unique_id=640787175]
+script = ExtResource("1_8mdf7")
+item_data = SubResource("Resource_340b3")
+
+[node name="ObjectName" type="Label3D" parent="." unique_id=393572753]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.10076356, 3.4976196, 0)
+billboard = 1
+text = "TEST"
+font_size = 96
+
+[node name="ObjectPrice" type="Label3D" parent="." unique_id=597314273]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.10076356, 3.9356194, 0)
+billboard = 1
+outline_modulate = Color(0, 0.45882353, 0, 1)
+text = "TEST"
+font_size = 84
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="." unique_id=1627446066]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.08569059, 1.5242157, 0.049744457)
+shape = SubResource("BoxShape3D_swqju")
+
+[node name="Carrot" parent="." unique_id=1549148548 instance=ExtResource("3_340b3")]

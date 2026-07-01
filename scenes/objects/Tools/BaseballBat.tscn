@@ -1,0 +1,27 @@
+[gd_scene format=3 uid="uid://dgm2lx510vqy7"]
+
+[ext_resource type="PackedScene" uid="uid://cnfdqkqf6fq5y" path="res://assets/objects/Tools/Baseball Bat/Baseball Bat.glb" id="1_dmk6i"]
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_hs04u"]
+size = Vector3(1.4120026, 9.9592285, 1.2783723)
+
+[node name="BaseballBat" type="RigidBody3D" unique_id=759874666]
+
+[node name="ObjectName" type="Label3D" parent="." unique_id=668865670]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 12.118056, 0)
+billboard = 1
+text = "TEST"
+font_size = 96
+
+[node name="ObjectPrice" type="Label3D" parent="." unique_id=1497353933]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 12.556056, 0)
+billboard = 1
+outline_modulate = Color(0, 0.45882353, 0, 1)
+text = "TEST"
+font_size = 84
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="." unique_id=552213889]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.002696991, 5.997043, 0.016459882)
+shape = SubResource("BoxShape3D_hs04u")
+
+[node name="Baseball Bat" parent="." unique_id=1082789776 instance=ExtResource("1_dmk6i")]

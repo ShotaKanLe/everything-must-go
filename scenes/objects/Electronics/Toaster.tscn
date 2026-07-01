@@ -1,0 +1,38 @@
+[gd_scene format=3 uid="uid://dgs6is42dsko4"]
+
+[ext_resource type="PackedScene" uid="uid://dldc8w5v4s5ck" path="res://assets/objects/Electronics/Toaster/Toaster.glb" id="1_1j8by"]
+[ext_resource type="Script" uid="uid://dec1flmonurh4" path="res://scripts/interactableObject.gd" id="1_yv6v6"]
+[ext_resource type="Script" uid="uid://dgee7q3f12wgw" path="res://scripts/Resources/shoppingItemResources.gd" id="2_utufk"]
+
+[sub_resource type="Resource" id="Resource_2erkb"]
+script = ExtResource("2_utufk")
+objectName = "Toaster"
+objectCategory = "Electrics"
+metadata/_custom_type_script = "uid://dgee7q3f12wgw"
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_v1cqv"]
+size = Vector3(1.1491488, 1.3833476, 2.0072346)
+
+[node name="Toaster" type="RigidBody3D" unique_id=1105083520]
+collision_mask = 2
+script = ExtResource("1_yv6v6")
+item_data = SubResource("Resource_2erkb")
+
+[node name="ObjectName" type="Label3D" parent="." unique_id=1501617905]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1.6232581, 0)
+billboard = 1
+text = "TEST"
+font_size = 96
+
+[node name="ObjectPrice" type="Label3D" parent="." unique_id=253725944]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 2.0612578, 0)
+billboard = 1
+outline_modulate = Color(0, 0.45882353, 0, 1)
+text = "TEST"
+font_size = 84
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="." unique_id=432724310]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.005980164, 0.32246166, 0.004899502)
+shape = SubResource("BoxShape3D_v1cqv")
+
+[node name="Toaster" parent="." unique_id=1257404177 instance=ExtResource("1_1j8by")]

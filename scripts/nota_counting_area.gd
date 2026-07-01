@@ -1,7 +1,13 @@
-#extends Area3D
+extends Area3D
 #class_name NotaCountingArea
-#
-#@export var van : Van # Assign Van di inspector
+
+func _ready() -> void:
+	body_entered.connect(_on_body_entered)
+
+func _on_body_entered(body: RigidBody3D) -> void:
+	print("masuk: ", body.name)
+
+#@export var van : Van
 #
 #func _process_item(item: InteractableObject) -> void:
 	#var item_data := item.item_data

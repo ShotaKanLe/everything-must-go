@@ -1,0 +1,38 @@
+[gd_scene format=3 uid="uid://crqpk61tl4w30"]
+
+[ext_resource type="Script" uid="uid://dec1flmonurh4" path="res://scripts/interactableObject.gd" id="1_u5a4h"]
+[ext_resource type="Script" uid="uid://dgee7q3f12wgw" path="res://scripts/Resources/shoppingItemResources.gd" id="2_qm7gl"]
+[ext_resource type="PackedScene" uid="uid://b0dxx4ctlkwkg" path="res://assets/objects/Fruits/Banana/Banana.glb" id="3_qm7gl"]
+
+[sub_resource type="Resource" id="Resource_euaon"]
+script = ExtResource("2_qm7gl")
+objectName = "Banana"
+objectCategory = "Fruits"
+metadata/_custom_type_script = "uid://dgee7q3f12wgw"
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_euaon"]
+size = Vector3(2.5116916, 1.8728107, 2.4542527)
+
+[node name="Banana" type="RigidBody3D" unique_id=23402321]
+collision_mask = 2
+script = ExtResource("1_u5a4h")
+item_data = SubResource("Resource_euaon")
+
+[node name="Banana" parent="." unique_id=693164795 instance=ExtResource("3_qm7gl")]
+
+[node name="ObjectName" type="Label3D" parent="." unique_id=665735157]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1.072969, 0)
+billboard = 1
+text = "TEST"
+font_size = 96
+
+[node name="ObjectPrice" type="Label3D" parent="." unique_id=402226081]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1.5109687, 0)
+billboard = 1
+outline_modulate = Color(0, 0.45882353, 0, 1)
+text = "TEST"
+font_size = 84
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="." unique_id=2048787267]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.2636169, -0.2292223, -0.0043370724)
+shape = SubResource("BoxShape3D_euaon")

@@ -1,0 +1,28 @@
+[gd_scene format=3 uid="uid://cxy3qwggrmuk1"]
+
+[ext_resource type="PackedScene" uid="uid://dlhxs30un8sgd" path="res://assets/objects/Tools/Jetpack/Jetpack.glb" id="1_gbssq"]
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_magqb"]
+size = Vector3(3.3781996, 3.2047381, 2.2749171)
+
+[node name="Jetpack" type="RigidBody3D" unique_id=118396040]
+
+[node name="Jetpack" parent="." unique_id=2055599790 instance=ExtResource("1_gbssq")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 2.9953222, 0)
+
+[node name="ObjectName" type="Label3D" parent="." unique_id=2017118434]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 2.9953222, 0)
+billboard = 1
+text = "TEST"
+font_size = 96
+
+[node name="ObjectPrice" type="Label3D" parent="." unique_id=1164518141]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 3.433322, 0)
+billboard = 1
+outline_modulate = Color(0, 0.45882353, 0, 1)
+text = "TEST"
+font_size = 84
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="." unique_id=1142451657]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.26457262, 4.008795, -0.80333734)
+shape = SubResource("BoxShape3D_magqb")

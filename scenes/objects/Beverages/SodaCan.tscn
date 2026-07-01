@@ -1,0 +1,38 @@
+[gd_scene format=3 uid="uid://bm2jq6b2fu3ig"]
+
+[ext_resource type="Script" uid="uid://dec1flmonurh4" path="res://scripts/interactableObject.gd" id="1_7q4i1"]
+[ext_resource type="PackedScene" uid="uid://os8myr8vsya2" path="res://assets/objects/Beverages/Soda Can/Soda Can.glb" id="1_siq8x"]
+[ext_resource type="Script" uid="uid://dgee7q3f12wgw" path="res://scripts/Resources/shoppingItemResources.gd" id="2_pon4e"]
+
+[sub_resource type="Resource" id="Resource_pe4kv"]
+script = ExtResource("2_pon4e")
+objectName = "Soda Can"
+objectCategory = "Beverages"
+metadata/_custom_type_script = "uid://dgee7q3f12wgw"
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_7q4i1"]
+size = Vector3(2.063633, 3.4166126, 1.7537937)
+
+[node name="SodaCan" type="RigidBody3D" unique_id=1786256744]
+collision_mask = 2
+script = ExtResource("1_7q4i1")
+item_data = SubResource("Resource_pe4kv")
+
+[node name="ObjectName" type="Label3D" parent="." unique_id=1540966407]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 2.899396, 0)
+billboard = 1
+text = "TEST"
+font_size = 96
+
+[node name="ObjectPrice" type="Label3D" parent="." unique_id=1907487542]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 3.3373957, 0)
+billboard = 1
+outline_modulate = Color(0, 0.45882353, 0, 1)
+text = "TEST"
+font_size = 84
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="." unique_id=1242362165]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.013021469, 0.6537224, -0.037240922)
+shape = SubResource("BoxShape3D_7q4i1")
+
+[node name="Soda Can" parent="." unique_id=577376335 instance=ExtResource("1_siq8x")]
