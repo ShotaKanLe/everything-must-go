@@ -5,28 +5,28 @@
 [ext_resource type="PackedScene" uid="uid://dr88wtxxnm75r" path="res://scenes/tools_area.tscn" id="5_1jq6i"]
 [ext_resource type="PackedScene" uid="uid://c6k2siw7j7gi3" path="res://scenes/category_area.tscn" id="7_1xypn"]
 [ext_resource type="PackedScene" uid="uid://sb07nhiwpfri" path="res://scenes/inventory.tscn" id="7_al2iq"]
-[ext_resource type="PackedScene" uid="uid://qvevcekfpc3" path="res://assets/objects/Beverages/Milk.glb" id="8_fp4eh"]
-[ext_resource type="PackedScene" uid="uid://bxfqvurbx0ett" path="res://assets/objects/Beverages/Mineral Water.glb" id="9_ha8th"]
-[ext_resource type="PackedScene" uid="uid://b4osbvuhgpa5i" path="res://assets/objects/Beverages/Orange Juice.glb" id="10_3tio3"]
+[ext_resource type="PackedScene" uid="uid://chbgae7lgmpce" path="res://scenes/objects/Beverages/Milk.tscn" id="8_nt7sb"]
+[ext_resource type="PackedScene" uid="uid://h2hnxors72ha" path="res://scenes/objects/Beverages/MineralWater.tscn" id="9_aslay"]
+[ext_resource type="PackedScene" uid="uid://cg6ay0beyxoll" path="res://scenes/objects/Beverages/OrangeJuice.tscn" id="10_so3qn"]
 [ext_resource type="Script" uid="uid://b83grmv2lmq41" path="res://scripts/task_list.gd" id="11_fp4eh"]
-[ext_resource type="PackedScene" uid="uid://os8myr8vsya2" path="res://assets/objects/Beverages/Soda Can.glb" id="11_jmmcx"]
-[ext_resource type="PackedScene" uid="uid://dnd4ifwv8mnm5" path="res://scenes/objects/van.tscn" id="12_ha8th"]
-[ext_resource type="PackedScene" uid="uid://nhicgqbyttax" path="res://scenes/objects/chicken_breast.tscn" id="12_tokr4"]
-[ext_resource type="PackedScene" uid="uid://b2l8hrdytd2bq" path="res://assets/objects/Animal Food/Lobster.glb" id="13_hnm5q"]
-[ext_resource type="PackedScene" uid="uid://cae204k6son3f" path="res://assets/objects/Animal Food/Pork.glb" id="14_0eirs"]
-[ext_resource type="PackedScene" uid="uid://b4u0f4wuc81g7" path="res://assets/objects/Animal Food/Salmon.glb" id="15_gg62s"]
-[ext_resource type="PackedScene" uid="uid://otvomyvk6wnk" path="res://assets/objects/Electronics/Blender.glb" id="16_f44mt"]
-[ext_resource type="PackedScene" uid="uid://cp8ioc5fcqyu0" path="res://assets/objects/Electronics/Electric Kettle.glb" id="17_1s0h2"]
-[ext_resource type="PackedScene" uid="uid://bsqfn4u4vjpr1" path="res://assets/objects/Electronics/Microwave.glb" id="18_w72fx"]
-[ext_resource type="PackedScene" uid="uid://dtjmub24g1ub7" path="res://assets/objects/Electronics/Rice Cooker.glb" id="19_ybfn7"]
-[ext_resource type="PackedScene" uid="uid://d38aw5e6aqv4v" path="res://assets/objects/Fruits/Apple.glb" id="20_tokr4"]
-[ext_resource type="PackedScene" uid="uid://dmveg18vpci7t" path="res://assets/objects/Fruits/Avocado.glb" id="21_nt7sb"]
-[ext_resource type="PackedScene" uid="uid://b0dxx4ctlkwkg" path="res://assets/objects/Fruits/Banana.glb" id="22_aslay"]
-[ext_resource type="PackedScene" uid="uid://b21thyggvjjqb" path="res://assets/objects/Fruits/Melon.glb" id="23_so3qn"]
-[ext_resource type="PackedScene" uid="uid://bto36765wetth" path="res://assets/objects/Vegetables/Broccolli.glb" id="24_jx383"]
-[ext_resource type="PackedScene" uid="uid://bxpk2l6tqcows" path="res://assets/objects/Vegetables/Cabbage.glb" id="25_3tgni"]
-[ext_resource type="PackedScene" uid="uid://c0hy5ano20bu3" path="res://assets/objects/Vegetables/Carrot.glb" id="26_u82ob"]
-[ext_resource type="PackedScene" uid="uid://cd4me1j5dqn7a" path="res://assets/objects/Vegetables/Potato.glb" id="27_cebwr"]
+[ext_resource type="PackedScene" uid="uid://bm2jq6b2fu3ig" path="res://scenes/objects/Beverages/SodaCan.tscn" id="11_jx383"]
+[ext_resource type="PackedScene" uid="uid://dnd4ifwv8mnm5" path="res://scenes/van.tscn" id="12_ha8th"]
+[ext_resource type="PackedScene" uid="uid://nhicgqbyttax" path="res://scenes/objects/Animal Food/chicken_breast.tscn" id="12_nt7sb"]
+[ext_resource type="PackedScene" uid="uid://40f2041qntfl" path="res://scenes/objects/Animal Food/lobster.tscn" id="13_aslay"]
+[ext_resource type="PackedScene" uid="uid://bnpdnsxo85dq5" path="res://scenes/objects/Animal Food/pork.tscn" id="14_so3qn"]
+[ext_resource type="PackedScene" uid="uid://cggyvppjotasb" path="res://scenes/objects/Animal Food/salmon.tscn" id="15_jx383"]
+[ext_resource type="PackedScene" uid="uid://cf0sv2wserb1j" path="res://scenes/objects/Electronics/Blender.tscn" id="16_nt7sb"]
+[ext_resource type="PackedScene" uid="uid://bqh7m8sa3prw1" path="res://scenes/objects/Electronics/ElectricKettle.tscn" id="17_aslay"]
+[ext_resource type="PackedScene" uid="uid://b1o3yotchqjwk" path="res://scenes/objects/Electronics/Microwave.tscn" id="18_so3qn"]
+[ext_resource type="PackedScene" uid="uid://qqydcd1p6xcs" path="res://scenes/objects/Electronics/RiceCooker.tscn" id="19_jx383"]
+[ext_resource type="PackedScene" uid="uid://cjd5p3tabncpa" path="res://scenes/objects/Fruits/Apple.tscn" id="20_nt7sb"]
+[ext_resource type="PackedScene" uid="uid://c528eyx5ttvv7" path="res://scenes/objects/Fruits/Avocado.tscn" id="21_aslay"]
+[ext_resource type="PackedScene" uid="uid://crqpk61tl4w30" path="res://scenes/objects/Fruits/Banana.tscn" id="22_so3qn"]
+[ext_resource type="PackedScene" uid="uid://du6pteann1axg" path="res://scenes/objects/Fruits/Melon.tscn" id="23_jx383"]
+[ext_resource type="PackedScene" uid="uid://buf05lcimottq" path="res://scenes/objects/Vegetables/Broccolli.tscn" id="24_nt7sb"]
+[ext_resource type="PackedScene" uid="uid://cws1nc37kh0d8" path="res://scenes/objects/Vegetables/Cabbage.tscn" id="25_aslay"]
+[ext_resource type="PackedScene" uid="uid://dme3yj625a1d3" path="res://scenes/objects/Vegetables/Carrot.tscn" id="26_so3qn"]
+[ext_resource type="PackedScene" uid="uid://67sk1oxivaom" path="res://scenes/objects/Vegetables/Potato.tscn" id="27_jx383"]
 [ext_resource type="PackedScene" uid="uid://bh0nulj80v86t" path="res://assets/tes toon shader/Testing Toon Shader 3.glb" id="28_nt7sb"]
 
 [sub_resource type="ProceduralSkyMaterial" id="ProceduralSkyMaterial_ki6c0"]
@@ -325,23 +325,23 @@ task_list = NodePath("../CanvasLayer/TaskList")
 
 [node name="BeverageArea" parent="." unique_id=597242689 groups=["category_areas"] instance=ExtResource("7_1xypn")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 5.1, 83.068085)
-possible_item_scenes = Array[PackedScene]([ExtResource("8_fp4eh"), ExtResource("9_ha8th"), ExtResource("10_3tio3"), ExtResource("11_jmmcx")])
+possible_item_scenes = Array[PackedScene]([ExtResource("8_nt7sb"), ExtResource("9_aslay"), ExtResource("10_so3qn"), ExtResource("11_jx383")])
 
-[node name="FoodAnimalArea" parent="." unique_id=180689954 groups=["category_areas"] instance=ExtResource("7_1xypn")]
+[node name="AnimalFoodArea" parent="." unique_id=180689954 groups=["category_areas"] instance=ExtResource("7_1xypn")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 5, 5.1, 83.068)
-possible_item_scenes = Array[PackedScene]([ExtResource("12_tokr4"), ExtResource("13_hnm5q"), ExtResource("14_0eirs"), ExtResource("15_gg62s")])
+possible_item_scenes = Array[PackedScene]([ExtResource("12_nt7sb"), ExtResource("13_aslay"), ExtResource("14_so3qn"), ExtResource("15_jx383")])
 
 [node name="ElectronicArea" parent="." unique_id=1655227136 groups=["category_areas"] instance=ExtResource("7_1xypn")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -5, 5.1, 83.068)
-possible_item_scenes = Array[PackedScene]([ExtResource("16_f44mt"), ExtResource("17_1s0h2"), ExtResource("18_w72fx"), ExtResource("19_ybfn7")])
+possible_item_scenes = Array[PackedScene]([ExtResource("16_nt7sb"), ExtResource("17_aslay"), ExtResource("18_so3qn"), ExtResource("19_jx383")])
 
 [node name="FruitArea" parent="." unique_id=1021951454 groups=["category_areas"] instance=ExtResource("7_1xypn")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -10, 5.1, 83.068)
-possible_item_scenes = Array[PackedScene]([ExtResource("20_tokr4"), ExtResource("21_nt7sb"), ExtResource("22_aslay"), ExtResource("23_so3qn")])
+possible_item_scenes = Array[PackedScene]([ExtResource("20_nt7sb"), ExtResource("21_aslay"), ExtResource("22_so3qn"), ExtResource("23_jx383")])
 
 [node name="VegetableArea" parent="." unique_id=1648306922 groups=["category_areas"] instance=ExtResource("7_1xypn")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 10, 5.1, 83.068)
-possible_item_scenes = Array[PackedScene]([ExtResource("24_jx383"), ExtResource("25_3tgni"), ExtResource("26_u82ob"), ExtResource("27_cebwr")])
+possible_item_scenes = Array[PackedScene]([ExtResource("24_nt7sb"), ExtResource("25_aslay"), ExtResource("26_so3qn"), ExtResource("27_jx383")])
 
 [node name="Testing Toon Shader 3" parent="." unique_id=1702367721 instance=ExtResource("28_nt7sb")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 3.0844135, 1.499999, 15.730167)
