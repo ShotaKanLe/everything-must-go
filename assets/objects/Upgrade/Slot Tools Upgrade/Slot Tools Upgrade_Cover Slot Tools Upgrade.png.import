@@ -2,20 +2,20 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://dunakde6o1p5j"
-path.s3tc="res://.godot/imported/Stamina Regen Upgrade_Cover Stamina Regen Upgrade.png-dc7dd733fae5888cf1c6cf8b30117670.s3tc.ctex"
+uid="uid://dd3lwo130bcqt"
+path.s3tc="res://.godot/imported/Slot Tools Upgrade_Cover Slot Tools Upgrade.png-78f995cbeab481c39467bd73551dc901.s3tc.ctex"
 metadata={
 "imported_formats": ["s3tc_bptc"],
 "vram_texture": true
 }
 generator_parameters={
-"md5": "8333dc80ac36254c21949fcf9e4cdaf8"
+"md5": "ebeaa8f6bd4c4ed91fe94ecb863650e2"
 }
 
 [deps]
 
-source_file="res://assets/objects/Upgrades/Stamina Regen Upgrade/Stamina Regen Upgrade_Cover Stamina Regen Upgrade.png"
-dest_files=["res://.godot/imported/Stamina Regen Upgrade_Cover Stamina Regen Upgrade.png-dc7dd733fae5888cf1c6cf8b30117670.s3tc.ctex"]
+source_file="res://assets/objects/Upgrade/Slot Tools Upgrade/Slot Tools Upgrade_Cover Slot Tools Upgrade.png"
+dest_files=["res://.godot/imported/Slot Tools Upgrade_Cover Slot Tools Upgrade.png-78f995cbeab481c39467bd73551dc901.s3tc.ctex"]
 
 [params]
 

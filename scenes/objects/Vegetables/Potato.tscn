@@ -1,7 +1,7 @@
 [gd_scene format=3 uid="uid://67sk1oxivaom"]
 
 [ext_resource type="Script" uid="uid://dec1flmonurh4" path="res://scripts/interactableObject.gd" id="1_lno46"]
-[ext_resource type="Script" uid="uid://dgee7q3f12wgw" path="res://scripts/Resources/shoppingItemResources.gd" id="2_rr3rw"]
+[ext_resource type="Script" uid="uid://dgee7q3f12wgw" path="res://autoloads/resources/shoppingItemResources.gd" id="2_rr3rw"]
 [ext_resource type="PackedScene" uid="uid://cd4me1j5dqn7a" path="res://assets/objects/Vegetables/Potato/Potato.glb" id="3_fir4m"]
 
 [sub_resource type="Resource" id="Resource_fir4m"]

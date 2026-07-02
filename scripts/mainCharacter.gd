@@ -44,6 +44,7 @@ extends CharacterBody3D
 @export var rotation_sensitivity : float = 0.3
 
 @export var inventory_ui : Control
+@export var label_to_interact: Label
 
 var mouse_captured : bool = false
 var look_rotation : Vector2
@@ -160,7 +161,63 @@ func _input(event: InputEvent) -> void:
 			disable_freefly()
 
 	if event.is_action_pressed("interact"):
-		process_interaction()
+		if grabbed_object:
+			if grabbed_object.item_data is ToolItem:
+				purchase_grabbed_tool()
+			elif grabbed_object.item_data is UpgradeItem:
+				purchase_and_use_upgrade()
+		else:
+			process_interaction()
+
+func purchase_grabbed_tool() -> void:
+	var price = grabbed_object.current_price
+	
+	if LevelData.money >= price:
+		LevelData.money -= price
+		LevelData.money = snapped(LevelData.money, 0.01)
+		LevelData.owned_tools_list.append(grabbed_object.item_data)
+		
+		var tool_to_delete = grabbed_object
+		drop_object()
+		tool_to_delete.queue_free()
+	else:
+		if label_to_interact:
+			label_to_interact.text = "Not enough money!"
+
+func purchase_and_use_upgrade() -> void:
+	var price = grabbed_object.current_price
+	
+	if LevelData.money >= price:
+		LevelData.money -= price
+		LevelData.money = snapped(LevelData.money, 0.01)
+		
+		grabbed_object.item_data.apply_upgrade()
+		sync_player_stats()
+		
+		var upgrade_to_delete = grabbed_object
+		drop_object()
+		upgrade_to_delete.queue_free()
+	else:
+		if label_to_interact:
+			label_to_interact.text = "Not enough money!"
+
+func sync_player_stats() -> void:
+	max_hp = LevelData.get_max_hp()
+	current_hp = max_hp
+	if hp_progress_bar:
+		hp_progress_bar.max_value = max_hp
+		hp_progress_bar.value = current_hp
+		
+	max_stamina = LevelData.get_max_stamina()
+	current_stamina = max_stamina
+	if stamina_progress_bar:
+		stamina_progress_bar.max_value = max_stamina
+		stamina_progress_bar.value = current_stamina
+		
+	base_speed = LevelData.get_base_speed()
+	stamina_regen = LevelData.get_stamina_regen()
+	max_grab_distance = LevelData.get_max_grab_distance()
+	player_strength_level = LevelData.strength_level
 
 func process_interaction():
 	if ray.is_colliding():
@@ -308,17 +365,29 @@ func try_grab_object(object: InteractableObject) -> void:
 	if object.interact(player_strength_level):
 		grabbed_object = object
 		
-		# Jangan matikan visibilitas label saat di-grab, melainkan pertahankan posisinya tetap aktif
 		if hovered_object == object:
 			hovered_object = null
 		
-		grabbed_object.set_label_visibility(true) # Memastikan label tetap menyala saat di-grab
+		grabbed_object.set_label_visibility(true)
+		
+		if label_to_interact:
+			if grabbed_object.item_data is ToolItem:
+				label_to_interact.text = "Press E to purchase"
+				label_to_interact.visible = true
+			elif grabbed_object.item_data is UpgradeItem:
+				label_to_interact.text = "Press E to purchase and use immediately"
+				label_to_interact.visible = true
 		
 		current_grab_distance = camera_3d.global_position.distance_to(grabbed_object.global_position)
 		current_grab_distance = clamp(current_grab_distance, min_grab_distance, max_grab_distance)
 		grabbed_object.gravity_scale = 0.0
+		
 		if grabbed_object.item_data:
-			grabbed_object.mass = grabbed_object.item_data.weight
+			if "weight" in grabbed_object.item_data:
+				grabbed_object.mass = grabbed_object.item_data.weight
+			else:
+				grabbed_object.mass = 1.0
+				
 		laser_material.albedo_color = LASER_COLOR_GRAB
 		is_rotating = false
 
@@ -327,7 +396,10 @@ func drop_object() -> void:
 		if is_rotating:
 			_exit_rotation_mode()
 		
-		grabbed_object.set_label_visibility(false) # Sembunyikan label saat dilepas/dijatuhkan
+		grabbed_object.set_label_visibility(false)
+		
+		if label_to_interact:
+			label_to_interact.visible = false
 		
 		grabbed_object.gravity_scale = 1.0
 		grabbed_object.linear_velocity *= throw_momentum_factor
@@ -389,14 +461,18 @@ func release_mouse():
 	Input.set_mouse_mode(Input.MOUSE_MODE_VISIBLE)
 	mouse_captured = false
 
-func can_lift_object(item: ShoppingItem, player_strength_level_param: int) -> bool:
-	if player_strength_level_param >= item.strengthLevelToLift:
-		return true
-	return false
+func can_lift_object(item: BaseItem, player_strength_level_param: int) -> bool:
+	if "strengthLevelToLift" in item:
+		return player_strength_level_param >= item.strengthLevelToLift
+	return true
 
-func calculate_movement_penalty(item: ShoppingItem, player_strength_level_param: int, current_base_speed: float) -> float:
+func calculate_movement_penalty(item: BaseItem, player_strength_level_param: int, current_base_speed: float) -> float:
+	var item_weight : float = 1.0
+	if "weight" in item:
+		item_weight = item.weight
+		
 	var strength_factor : float = float(player_strength_level_param + 1)
-	var weight_penalty : float = item.weight / strength_factor
+	var weight_penalty : float = item_weight / strength_factor
 	var final_speed : float = current_base_speed - (weight_penalty * 0.1)
 	return max(final_speed, current_base_speed * 0.2)
 	

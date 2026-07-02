@@ -4,12 +4,12 @@ importer="scene"
 importer_version=1
 type="PackedScene"
 uid="uid://273yeahv8u3n"
-path="res://.godot/imported/Slot Tools Upgrade.glb-2f969acfb22a67945fd17d7fcaffba93.scn"
+path="res://.godot/imported/Slot Tools Upgrade.glb-c3f3f5829b269072f52e72303423d1d0.scn"
 
 [deps]
 
-source_file="res://assets/objects/Upgrade/Sloot Tools Upgrade/Slot Tools Upgrade.glb"
-dest_files=["res://.godot/imported/Slot Tools Upgrade.glb-2f969acfb22a67945fd17d7fcaffba93.scn"]
+source_file="res://assets/objects/Upgrade/Slot Tools Upgrade/Slot Tools Upgrade.glb"
+dest_files=["res://.godot/imported/Slot Tools Upgrade.glb-c3f3f5829b269072f52e72303423d1d0.scn"]
 
 [params]
 

@@ -4,7 +4,6 @@
 [ext_resource type="PackedScene" uid="uid://djhrm0380lc3o" path="res://tempAssets/area/electronicStore/Electronic Store.glb" id="1_l3vss"]
 [ext_resource type="PackedScene" uid="uid://bs72ogkvdd7d6" path="res://scenes/mainCharacter/mainCharacter.tscn" id="2_fogkt"]
 [ext_resource type="Texture2D" uid="uid://cvv2u38l7yx4p" path="res://icon.svg" id="4_uvqvh"]
-[ext_resource type="PackedScene" uid="uid://dcdr1r01gtoxg" path="res://scenes/objects/stamina_regen_upgrade.tscn" id="5_pg0xx"]
 
 [sub_resource type="BoxShape3D" id="BoxShape3D_fogkt"]
 size = Vector3(70.44028, 1.5946655, 71.74808)
@@ -77,9 +76,30 @@ environment = SubResource("Environment_ftxc2")
 transform = Transform3D(1, 0, 0, 0, 0.5073428, 0.86174434, 0, -0.86174434, 0.5073428, 0, 6.313469, 0)
 
 [node name="Electronic Store" parent="." unique_id=1631207022 instance=ExtResource("1_l3vss")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.03355217, 0.073106766, 0.0050764084)
 
 [node name="MainCharacter" parent="." unique_id=869498214 instance=ExtResource("2_fogkt")]
 transform = Transform3D(-0.9999933, 0, -0.0036477088, 0, 1, 0, 0.0036477088, 0, -0.9999933, 7.825996, 7.4025917, 3.8491077)
+
+[node name="UpgradeSpawnPoint" type="Node3D" parent="." unique_id=609535756]
+
+[node name="PointC" type="Marker3D" parent="UpgradeSpawnPoint" unique_id=1514638781]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -15.577627, 5.6322813, 7.6202307)
+
+[node name="PointC2" type="Marker3D" parent="UpgradeSpawnPoint" unique_id=95613983]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -15.577627, 5.6322813, -10.016368)
+
+[node name="PointC3" type="Marker3D" parent="UpgradeSpawnPoint" unique_id=1509551379]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -15.577627, 5.6322813, 1.6072798)
+
+[node name="PointC4" type="Marker3D" parent="UpgradeSpawnPoint" unique_id=526282014]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -15.577627, 5.6322813, -4.2980337)
+
+[node name="PointC5" type="Marker3D" parent="UpgradeSpawnPoint" unique_id=1278317922]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -15.577627, 5.6322813, -13.500577)
+
+[node name="PointC6" type="Marker3D" parent="UpgradeSpawnPoint" unique_id=1182236829]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -15.577627, 5.6322813, 13.9763155)
 
 [node name="ToolsSpawnPoint" type="Node3D" parent="." unique_id=449599586]
 
@@ -100,15 +120,6 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 11.039096, 5.6322813, -2.8727
 
 [node name="PointB3" type="Marker3D" parent="ToolsSpawnPoint" unique_id=929596929]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 11.039096, 5.6322813, -13.29794)
-
-[node name="PointC" type="Marker3D" parent="ToolsSpawnPoint" unique_id=1514638781]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -15.577627, 5.6322813, 10.924695)
-
-[node name="PointC2" type="Marker3D" parent="ToolsSpawnPoint" unique_id=95613983]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -15.577627, 5.6322813, -10.016368)
-
-[node name="PointC3" type="Marker3D" parent="ToolsSpawnPoint" unique_id=1509551379]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -15.577627, 5.6322813, 0.3273306)
 
 [node name="CanvasLayer" type="CanvasLayer" parent="." unique_id=1906935260]
 
@@ -157,10 +168,10 @@ offset_bottom = 40.0
 
 [node name="openDebugMenu" type="Button" parent="CanvasLayer/debugArea" unique_id=627313449]
 layout_mode = 0
-offset_left = 1085.0
-offset_top = 31.0
-offset_right = 1238.0
-offset_bottom = 62.0
+offset_left = 1080.0
+offset_top = 102.0
+offset_right = 1233.0
+offset_bottom = 133.0
 text = "Open Debug Menu"
 
 [node name="debugListMenu" type="Control" parent="CanvasLayer/debugArea" unique_id=1028955076]
@@ -170,22 +181,41 @@ offset_bottom = 40.0
 
 [node name="debugNextDay" type="Button" parent="CanvasLayer/debugArea/debugListMenu" unique_id=1467717465]
 layout_mode = 0
-offset_left = 1121.0
-offset_top = 78.0
-offset_right = 1200.0
-offset_bottom = 109.0
+offset_left = 1116.0
+offset_top = 149.0
+offset_right = 1195.0
+offset_bottom = 180.0
 text = "Next Day"
 
 [node name="debugResetDay" type="Button" parent="CanvasLayer/debugArea/debugListMenu" unique_id=1332491100]
 layout_mode = 0
-offset_left = 1114.0
-offset_top = 121.0
-offset_right = 1208.0
-offset_bottom = 152.0
+offset_left = 1109.0
+offset_top = 192.0
+offset_right = 1203.0
+offset_bottom = 223.0
 text = "Reset Day"
 
-[node name="Stamina Regen Upgrade" parent="." unique_id=1752593378 instance=ExtResource("5_pg0xx")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -17.472746, 6.4421434, 0)
+[node name="LabelToInteract" type="Label" parent="CanvasLayer" unique_id=147371051]
+visible = false
+offset_left = -1.0
+offset_top = 510.0
+offset_right = 1277.0
+offset_bottom = 558.0
+theme_override_font_sizes/font_size = 24
+text = "Press E To Interact"
+horizontal_alignment = 1
+
+[node name="ContainerMoney" type="HBoxContainer" parent="CanvasLayer" unique_id=1826972154]
+anchors_preset = 1
+anchor_left = 1.0
+anchor_right = 1.0
+offset_left = -133.0
+offset_bottom = 62.0
+grow_horizontal = 0
+
+[node name="Label" type="Label" parent="CanvasLayer/ContainerMoney" unique_id=349629919]
+layout_mode = 2
+text = "100 $"
 
 [connection signal="pressed" from="CanvasLayer/debugArea/openDebugMenu" to="." method="_on_open_debug_menu_pressed"]
 [connection signal="pressed" from="CanvasLayer/debugArea/debugListMenu/debugNextDay" to="." method="_on_debug_next_day_pressed"]

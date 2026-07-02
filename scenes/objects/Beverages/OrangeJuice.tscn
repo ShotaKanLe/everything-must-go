@@ -2,7 +2,7 @@
 
 [ext_resource type="Script" uid="uid://dec1flmonurh4" path="res://scripts/interactableObject.gd" id="1_5rr52"]
 [ext_resource type="PackedScene" uid="uid://b4osbvuhgpa5i" path="res://assets/objects/Beverages/Orange Juice/Orange Juice.glb" id="1_5t3xi"]
-[ext_resource type="Script" uid="uid://dgee7q3f12wgw" path="res://scripts/Resources/shoppingItemResources.gd" id="2_sgy0l"]
+[ext_resource type="Script" uid="uid://dgee7q3f12wgw" path="res://autoloads/resources/shoppingItemResources.gd" id="2_sgy0l"]
 
 [sub_resource type="Resource" id="Resource_yu57d"]
 script = ExtResource("2_sgy0l")

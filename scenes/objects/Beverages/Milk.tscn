@@ -1,7 +1,7 @@
 [gd_scene format=3 uid="uid://chbgae7lgmpce"]
 
 [ext_resource type="Script" uid="uid://dec1flmonurh4" path="res://scripts/interactableObject.gd" id="1_vk1yq"]
-[ext_resource type="Script" uid="uid://dgee7q3f12wgw" path="res://scripts/Resources/shoppingItemResources.gd" id="2_juubu"]
+[ext_resource type="Script" uid="uid://dgee7q3f12wgw" path="res://autoloads/resources/shoppingItemResources.gd" id="2_juubu"]
 [ext_resource type="PackedScene" uid="uid://qvevcekfpc3" path="res://assets/objects/Beverages/Milk/Milk.glb" id="3_8qitn"]
 
 [sub_resource type="Resource" id="Resource_q4b84"]

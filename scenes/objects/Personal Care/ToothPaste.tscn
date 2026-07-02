@@ -1,7 +1,7 @@
 [gd_scene format=3 uid="uid://bbo0yd8eeo1g5"]
 
 [ext_resource type="Script" uid="uid://dec1flmonurh4" path="res://scripts/interactableObject.gd" id="1_t4ily"]
-[ext_resource type="Script" uid="uid://dgee7q3f12wgw" path="res://scripts/Resources/shoppingItemResources.gd" id="2_wll21"]
+[ext_resource type="Script" uid="uid://dgee7q3f12wgw" path="res://autoloads/resources/shoppingItemResources.gd" id="2_wll21"]
 [ext_resource type="PackedScene" uid="uid://6agj85qo4hj3" path="res://assets/objects/Personal Care/ToothPaste/Toothpaste.glb" id="3_ew1uh"]
 
 [sub_resource type="Resource" id="Resource_ew1uh"]

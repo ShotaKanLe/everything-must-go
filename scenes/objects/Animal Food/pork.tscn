@@ -2,7 +2,7 @@
 
 [ext_resource type="Script" uid="uid://dec1flmonurh4" path="res://scripts/interactableObject.gd" id="1_0xq2r"]
 [ext_resource type="PackedScene" uid="uid://cae204k6son3f" path="res://assets/objects/Animal Food/Pork/Pork.glb" id="1_lgnc0"]
-[ext_resource type="Script" uid="uid://dgee7q3f12wgw" path="res://scripts/Resources/shoppingItemResources.gd" id="2_rowfx"]
+[ext_resource type="Script" uid="uid://dgee7q3f12wgw" path="res://autoloads/resources/shoppingItemResources.gd" id="2_rowfx"]
 
 [sub_resource type="Resource" id="Resource_vw3i4"]
 script = ExtResource("2_rowfx")

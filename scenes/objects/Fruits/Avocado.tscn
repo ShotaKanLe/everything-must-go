@@ -1,7 +1,7 @@
 [gd_scene format=3 uid="uid://c528eyx5ttvv7"]
 
 [ext_resource type="Script" uid="uid://dec1flmonurh4" path="res://scripts/interactableObject.gd" id="1_y037m"]
-[ext_resource type="Script" uid="uid://dgee7q3f12wgw" path="res://scripts/Resources/shoppingItemResources.gd" id="2_2fpfj"]
+[ext_resource type="Script" uid="uid://dgee7q3f12wgw" path="res://autoloads/resources/shoppingItemResources.gd" id="2_2fpfj"]
 [ext_resource type="PackedScene" uid="uid://dmveg18vpci7t" path="res://assets/objects/Fruits/Avocado/Avocado.glb" id="3_2fpfj"]
 
 [sub_resource type="Resource" id="Resource_lnoyk"]

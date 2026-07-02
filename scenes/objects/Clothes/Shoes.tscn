@@ -1,7 +1,7 @@
 [gd_scene format=3 uid="uid://chp267nwawc4t"]
 
 [ext_resource type="Script" uid="uid://dec1flmonurh4" path="res://scripts/interactableObject.gd" id="1_gmr2k"]
-[ext_resource type="Script" uid="uid://dgee7q3f12wgw" path="res://scripts/Resources/shoppingItemResources.gd" id="2_oab57"]
+[ext_resource type="Script" uid="uid://dgee7q3f12wgw" path="res://autoloads/resources/shoppingItemResources.gd" id="2_oab57"]
 [ext_resource type="PackedScene" uid="uid://0tr0e1ixsy4p" path="res://assets/objects/Clothes/Shoes/Shoes.glb" id="3_oab57"]
 
 [sub_resource type="Resource" id="Resource_snk3o"]

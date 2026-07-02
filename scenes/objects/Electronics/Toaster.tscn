@@ -2,7 +2,7 @@
 
 [ext_resource type="PackedScene" uid="uid://dldc8w5v4s5ck" path="res://assets/objects/Electronics/Toaster/Toaster.glb" id="1_1j8by"]
 [ext_resource type="Script" uid="uid://dec1flmonurh4" path="res://scripts/interactableObject.gd" id="1_yv6v6"]
-[ext_resource type="Script" uid="uid://dgee7q3f12wgw" path="res://scripts/Resources/shoppingItemResources.gd" id="2_utufk"]
+[ext_resource type="Script" uid="uid://dgee7q3f12wgw" path="res://autoloads/resources/shoppingItemResources.gd" id="2_utufk"]
 
 [sub_resource type="Resource" id="Resource_2erkb"]
 script = ExtResource("2_utufk")

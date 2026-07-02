@@ -1,7 +1,7 @@
 [gd_scene format=3 uid="uid://d07s6jclwntxt"]
 
 [ext_resource type="Script" uid="uid://dec1flmonurh4" path="res://scripts/interactableObject.gd" id="1_otvpj"]
-[ext_resource type="Script" uid="uid://dgee7q3f12wgw" path="res://scripts/Resources/shoppingItemResources.gd" id="2_y7fde"]
+[ext_resource type="Script" uid="uid://dgee7q3f12wgw" path="res://autoloads/resources/shoppingItemResources.gd" id="2_y7fde"]
 [ext_resource type="PackedScene" uid="uid://dt2qqijdtek6x" path="res://assets/objects/Personal Care/Tissue Roll Pack/Tissue Roll Pack.glb" id="3_y7fde"]
 
 [sub_resource type="Resource" id="Resource_u5xdk"]

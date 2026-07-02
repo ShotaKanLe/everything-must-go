@@ -293,6 +293,14 @@ offset_top = 50.0
 offset_right = 91.0
 offset_bottom = 90.0
 
+[node name="LabelToInteract" type="Label" parent="CanvasLayer" unique_id=476946652]
+offset_left = 517.0
+offset_top = 510.0
+offset_right = 731.0
+offset_bottom = 558.0
+theme_override_font_sizes/font_size = 24
+text = "Press E To Interact"
+
 [node name="debugArea" type="Control" parent="CanvasLayer" unique_id=103782584]
 layout_mode = 3
 anchors_preset = 0
@@ -301,43 +309,56 @@ offset_bottom = 40.0
 
 [node name="openDebugMenu" type="Button" parent="CanvasLayer/debugArea" unique_id=1784189978]
 layout_mode = 0
-offset_left = 1085.0
-offset_top = 31.0
-offset_right = 1238.0
-offset_bottom = 62.0
+offset_left = 1078.0
+offset_top = 104.0
+offset_right = 1231.0
+offset_bottom = 135.0
 text = "Open Debug Menu"
 
 [node name="debugListMenu" type="Control" parent="CanvasLayer/debugArea" unique_id=1185149770]
-visible = false
 anchors_preset = 0
 offset_right = 40.0
 offset_bottom = 40.0
 
 [node name="debugNextDay" type="Button" parent="CanvasLayer/debugArea/debugListMenu" unique_id=1259134426]
 layout_mode = 0
-offset_left = 1121.0
-offset_top = 78.0
-offset_right = 1200.0
-offset_bottom = 109.0
+offset_left = 1114.0
+offset_top = 151.0
+offset_right = 1193.0
+offset_bottom = 182.0
 text = "Next Day"
 
 [node name="debugClosedDay" type="Button" parent="CanvasLayer/debugArea/debugListMenu" unique_id=886601393]
 layout_mode = 0
-offset_left = 1115.0
-offset_top = 123.0
-offset_right = 1209.0
-offset_bottom = 154.0
+offset_left = 1108.0
+offset_top = 196.0
+offset_right = 1202.0
+offset_bottom = 227.0
 text = "Closed Day"
 
 [node name="debugResetDay" type="Button" parent="CanvasLayer/debugArea/debugListMenu" unique_id=1807355342]
 layout_mode = 0
-offset_left = 1114.0
-offset_top = 163.0
-offset_right = 1208.0
-offset_bottom = 194.0
+offset_left = 1107.0
+offset_top = 236.0
+offset_right = 1201.0
+offset_bottom = 267.0
 text = "Reset Day"
 
-[node name="Pathfind" type="Node3D" parent="." unique_id=1488544774]
+[node name="ContainerMoney" type="HBoxContainer" parent="CanvasLayer" unique_id=224266612]
+anchors_preset = 1
+anchor_left = 1.0
+anchor_right = 1.0
+offset_left = -133.0
+offset_bottom = 62.0
+grow_horizontal = 0
+
+[node name="MoneyLabel" type="Label" parent="CanvasLayer/ContainerMoney" unique_id=726942795]
+layout_mode = 2
+text = "Money : "
+
+[node name="Label" type="Label" parent="CanvasLayer/ContainerMoney" unique_id=1753882874]
+layout_mode = 2
+text = "100 $"
 
 [connection signal="pressed" from="CanvasLayer/debugArea/openDebugMenu" to="." method="_on_open_debug_menu_pressed"]
 [connection signal="pressed" from="CanvasLayer/debugArea/debugListMenu/debugNextDay" to="." method="_on_debug_next_day_pressed"]

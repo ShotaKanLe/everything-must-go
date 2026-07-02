@@ -2,24 +2,20 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://dd3lwo130bcqt"
-path.s3tc="res://.godot/imported/Slot Tools Upgrade_Cover Slot Tools Upgrade.png-b7385285897b22dbbfc1a043b5866fe7.s3tc.ctex"
+uid="uid://bisngs13mjg1v"
+path="res://.godot/imported/Cover Slot Tools Upgrade.png-62ef811db877ce0b02cfe6e8899b0713.ctex"
 metadata={
-"imported_formats": ["s3tc_bptc"],
-"vram_texture": true
-}
-generator_parameters={
-"md5": "ebeaa8f6bd4c4ed91fe94ecb863650e2"
+"vram_texture": false
 }
 
 [deps]
 
-source_file="res://assets/objects/Upgrade/Sloot Tools Upgrade/Slot Tools Upgrade_Cover Slot Tools Upgrade.png"
-dest_files=["res://.godot/imported/Slot Tools Upgrade_Cover Slot Tools Upgrade.png-b7385285897b22dbbfc1a043b5866fe7.s3tc.ctex"]
+source_file="res://assets/objects/Upgrade/Slot Tools Upgrade/Cover Slot Tools Upgrade.png"
+dest_files=["res://.godot/imported/Cover Slot Tools Upgrade.png-62ef811db877ce0b02cfe6e8899b0713.ctex"]
 
 [params]
 
-compress/mode=2
+compress/mode=0
 compress/high_quality=false
 compress/lossy_quality=0.7
 compress/uastc_level=0
@@ -27,7 +23,7 @@ compress/rdo_quality_loss=0.0
 compress/hdr_compression=1
 compress/normal_map=0
 compress/channel_pack=0
-mipmaps/generate=true
+mipmaps/generate=false
 mipmaps/limit=-1
 roughness/mode=0
 roughness/src_normal=""
@@ -41,4 +37,4 @@ process/normal_map_invert_y=false
 process/hdr_as_srgb=false
 process/hdr_clamp_exposure=false
 process/size_limit=0
-detect_3d/compress_to=0
+detect_3d/compress_to=1

@@ -1,13 +1,12 @@
 extends RigidBody3D
 class_name InteractableObject
 
-@export var item_data : ShoppingItem
+@export var item_data : BaseItem
 @export var break_velocity_threshold : float = 6.0
 
 var current_price : float = 0.0
 var is_label_active : bool = false
 
-# Menyimpan posisi relatif (offset) yang sudah Anda atur di editor
 var name_label_offset : Vector3 = Vector3.ZERO
 var price_label_offset : Vector3 = Vector3.ZERO
 
@@ -17,9 +16,11 @@ var price_label_offset : Vector3 = Vector3.ZERO
 
 func _ready() -> void:
 	if item_data and current_price == 0.0:
-		current_price = item_data.get_random_price()
+		if item_data.has_method("get_random_price"):
+			current_price = item_data.get_random_price()
+		else:
+			current_price = randf_range(item_data.minimumPrice, item_data.maximumPrice)
 		
-	# Ambil posisi Y dan XZ yang sudah Anda set manual di editor scene masing-masing
 	if name_label:
 		name_label_offset = name_label.position
 		name_label.visible = false
@@ -33,8 +34,6 @@ func _ready() -> void:
 
 func _process(_delta: float) -> void:
 	if is_label_active:
-		# Posisikan label secara global berdasarkan posisi object + offset dari editor
-		# Basis() direset agar rotasi label tetap tegak dan tidak ikut berputar
 		if name_label and name_label.visible:
 			name_label.global_position = global_position + name_label_offset
 			name_label.global_transform.basis = Basis()
@@ -44,8 +43,16 @@ func _process(_delta: float) -> void:
 			price_label.global_transform.basis = Basis()
 
 func interact(player_strength: int) -> bool:
-	if item_data and player_strength >= item_data.strengthLevelToLift:
-		return true
+	if not item_data:
+		return false
+		
+	if item_data is ShoppingItem:
+		return player_strength >= item_data.strengthLevelToLift
+	elif item_data is ToolItem:
+		return true 
+	elif item_data is UpgradeItem:
+		return true 
+		
 	return false
 
 func set_label_visibility(visible: bool) -> void:
@@ -72,7 +79,7 @@ func set_label_visibility(visible: bool) -> void:
 			price_label.visible = false
 
 func _on_body_entered(_body: Node) -> void:
-	if item_data and item_data.isFragile:
+	if item_data is ShoppingItem and item_data.isFragile:
 		var impact_speed := linear_velocity.length()
 		if impact_speed >= break_velocity_threshold:
 			destroy_and_fracture()

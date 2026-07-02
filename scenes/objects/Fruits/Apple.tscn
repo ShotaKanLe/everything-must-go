@@ -1,7 +1,7 @@
 [gd_scene format=3 uid="uid://cjd5p3tabncpa"]
 
 [ext_resource type="Script" uid="uid://dec1flmonurh4" path="res://scripts/interactableObject.gd" id="1_2gkxt"]
-[ext_resource type="Script" uid="uid://dgee7q3f12wgw" path="res://scripts/Resources/shoppingItemResources.gd" id="2_ag1ri"]
+[ext_resource type="Script" uid="uid://dgee7q3f12wgw" path="res://autoloads/resources/shoppingItemResources.gd" id="2_ag1ri"]
 [ext_resource type="PackedScene" uid="uid://d38aw5e6aqv4v" path="res://assets/objects/Fruits/Apple/Apple.glb" id="3_ag1ri"]
 
 [sub_resource type="Resource" id="Resource_k03cp"]

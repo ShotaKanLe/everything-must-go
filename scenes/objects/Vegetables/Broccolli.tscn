@@ -1,7 +1,7 @@
 [gd_scene format=3 uid="uid://buf05lcimottq"]
 
 [ext_resource type="Script" uid="uid://dec1flmonurh4" path="res://scripts/interactableObject.gd" id="1_r3tei"]
-[ext_resource type="Script" uid="uid://dgee7q3f12wgw" path="res://scripts/Resources/shoppingItemResources.gd" id="2_j2gda"]
+[ext_resource type="Script" uid="uid://dgee7q3f12wgw" path="res://autoloads/resources/shoppingItemResources.gd" id="2_j2gda"]
 [ext_resource type="PackedScene" uid="uid://bto36765wetth" path="res://assets/objects/Vegetables/Broccolli/Broccolli.glb" id="3_j2gda"]
 
 [sub_resource type="Resource" id="Resource_3s1gm"]

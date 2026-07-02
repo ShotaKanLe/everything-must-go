@@ -2,7 +2,7 @@
 
 [ext_resource type="PackedScene" uid="uid://b4u0f4wuc81g7" path="res://assets/objects/Animal Food/Salmon/Salmon.glb" id="1_1up7c"]
 [ext_resource type="Script" uid="uid://dec1flmonurh4" path="res://scripts/interactableObject.gd" id="1_asgnq"]
-[ext_resource type="Script" uid="uid://dgee7q3f12wgw" path="res://scripts/Resources/shoppingItemResources.gd" id="2_asgnq"]
+[ext_resource type="Script" uid="uid://dgee7q3f12wgw" path="res://autoloads/resources/shoppingItemResources.gd" id="2_asgnq"]
 
 [sub_resource type="Resource" id="Resource_gmyf3"]
 script = ExtResource("2_asgnq")
