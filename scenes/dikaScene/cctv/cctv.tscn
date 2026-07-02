@@ -1,0 +1,20 @@
+[gd_scene format=3 uid="uid://4o1uccwa0ehv"]
+
+[ext_resource type="PackedScene" uid="uid://b8162d5ocf0hj" path="res://assets/objects/Security/CCTV/Cctv.glb" id="1_t35at"]
+[ext_resource type="Script" uid="uid://bvujbitxbg3ox" path="res://scripts/dikaScript/cctv.gd" id="1_uptj8"]
+
+[sub_resource type="ConvexPolygonShape3D" id="ConvexPolygonShape3D_t35at"]
+points = PackedVector3Array(0, 0, 0, 8, -20, 10, 5.656, -20, 4.344, 0, -20, 2, -5.656, -20, 4.344, -8, -20, 10, -5.656, -20, 15.656, 0, -20, 18, 5.656, -20, 15.656)
+
+[node name="Cctv" type="StaticBody3D" unique_id=351989188]
+script = ExtResource("1_uptj8")
+
+[node name="Cctv" parent="." unique_id=1141222578 instance=ExtResource("1_t35at")]
+
+[node name="CctvArea" type="Area3D" parent="." unique_id=792011864]
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="CctvArea" unique_id=2091235510]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.85414076, 0.8249264)
+shape = SubResource("ConvexPolygonShape3D_t35at")
+
+[connection signal="body_entered" from="CctvArea" to="." method="_on_cctv_area_body_entered"]

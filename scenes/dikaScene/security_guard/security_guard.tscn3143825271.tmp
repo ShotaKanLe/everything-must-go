@@ -1,0 +1,22 @@
+[gd_scene format=3 uid="uid://bf0egbphp4gye"]
+
+[ext_resource type="PackedScene" uid="uid://dw0gara5jru6" path="res://assets/char/Char.glb" id="1_68ioe"]
+[ext_resource type="Script" uid="uid://cs70pwkk3qvqv" path="res://scripts/dikaScript/security_guard.gd" id="1_wch7u"]
+
+[sub_resource type="CapsuleShape3D" id="CapsuleShape3D_wch7u"]
+radius = 1.0
+height = 4.5374513
+
+[node name="SecurityGuard" type="CharacterBody3D" unique_id=1072282227 groups=["player"]]
+script = ExtResource("1_wch7u")
+
+[node name="Char" parent="." unique_id=6333429 instance=ExtResource("1_68ioe")]
+
+[node name="Collider" type="CollisionShape3D" parent="." unique_id=1163056635]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 2.2687256, 0.4096973)
+shape = SubResource("CapsuleShape3D_wch7u")
+
+[node name="NavigationAgent3D" type="NavigationAgent3D" parent="." unique_id=778521069]
+path_desired_distance = 0.5
+target_desired_distance = 0.5
+avoidance_enabled = true
