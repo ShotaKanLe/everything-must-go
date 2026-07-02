@@ -8,6 +8,7 @@
 script = ExtResource("2_j2gda")
 objectName = "Broccolli"
 objectCategory = "Vegetables"
+isIllegalToSteal = false
 metadata/_custom_type_script = "uid://dgee7q3f12wgw"
 
 [sub_resource type="BoxShape3D" id="BoxShape3D_nn65s"]
