@@ -1,0 +1,43 @@
+[gd_scene format=3 uid="uid://kv86akay6r7d"]
+
+[ext_resource type="PackedScene" uid="uid://c0hy5ano20bu3" path="res://assets/objects/Vegetables/Carrot/Carrot.glb" id="1_k15rl"]
+[ext_resource type="Texture2D" uid="uid://bndtsyruubp04" path="res://assets/objects/Vegetables/Carrot/Carrot_Base Carrot Texture.png" id="2_1srdh"]
+[ext_resource type="Material" uid="uid://b2vituk71xuw" path="res://scenes/inheritated objects/in_carrot.tres" id="3_1srdh"]
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_af86t"]
+render_priority = 1
+transparency = 1
+shading_mode = 0
+albedo_color = Color(0, 0, 0, 1)
+grow = true
+grow_amount = 0.02
+stencil_mode = 3
+stencil_flags = 1
+stencil_compare = 5
+metadata/_stencil_owned = true
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_6hdm0"]
+next_pass = SubResource("StandardMaterial3D_af86t")
+diffuse_mode = 3
+specular_mode = 1
+albedo_texture = ExtResource("2_1srdh")
+rim_enabled = true
+rim = 0.11
+rim_tint = 1.0
+stencil_mode = 1
+stencil_flags = 2
+stencil_outline_thickness = 0.02
+
+[node name="Carrot" unique_id=563933212 instance=ExtResource("1_k15rl")]
+
+[node name="Cube" parent="." index="0" unique_id=2011340058]
+surface_material_override/0 = SubResource("StandardMaterial3D_6hdm0")
+
+[node name="Plane" parent="." index="1" unique_id=827112363]
+surface_material_override/0 = ExtResource("3_1srdh")
+
+[node name="Plane_001" parent="." index="2" unique_id=1811060420]
+surface_material_override/0 = ExtResource("3_1srdh")
+
+[node name="Plane_002" parent="." index="3" unique_id=1545754455]
+surface_material_override/0 = ExtResource("3_1srdh")

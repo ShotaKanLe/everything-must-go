@@ -1,18 +1,32 @@
 [gd_scene format=3 uid="uid://cnsuwyt6wssp4"]
 
 [ext_resource type="Script" uid="uid://bykyxaevrf8eg" path="res://scripts/electronic_store.gd" id="1_ftxc2"]
-[ext_resource type="PackedScene" uid="uid://djhrm0380lc3o" path="res://tempAssets/area/electronicStore/Electronic Store.glb" id="1_l3vss"]
 [ext_resource type="PackedScene" uid="uid://bs72ogkvdd7d6" path="res://scenes/mainCharacter/mainCharacter.tscn" id="2_fogkt"]
-[ext_resource type="Texture2D" uid="uid://cvv2u38l7yx4p" path="res://icon.svg" id="4_uvqvh"]
+[ext_resource type="PackedScene" uid="uid://vm8qb0siilfm" path="res://scenes/inheritated objects/in_electronic_store.tscn" id="2_uvqvh"]
+[ext_resource type="PackedScene" uid="uid://dha2rxooxfk4g" path="res://scenes/objects/Absurds/cashier_table.tscn" id="3_pg0xx"]
+[ext_resource type="PackedScene" uid="uid://b81yd4e1ogcxg" path="res://scenes/objects/Absurds/wooden_table.tscn" id="4_nw178"]
+[ext_resource type="PackedScene" uid="uid://c4ungg2qnwldp" path="res://scenes/objects/Absurds/fridge.tscn" id="5_3gwl6"]
+[ext_resource type="Script" uid="uid://dgee7q3f12wgw" path="res://autoloads/resources/shoppingItemResources.gd" id="6_4g7ls"]
+[ext_resource type="PackedScene" uid="uid://cjcb6b8qem00m" path="res://scenes/inheritated objects/shelf.tscn" id="6_ogd68"]
+[ext_resource type="PackedScene" uid="uid://dh5rctjb7od48" path="res://scenes/objects/Absurds/showcase_shelf.tscn" id="8_c5kom"]
+[ext_resource type="PackedScene" uid="uid://b72jv8f1bsyo7" path="res://scenes/objects/Absurds/trashcan.tscn" id="9_c5kom"]
+[ext_resource type="Texture2D" uid="uid://cpp3x7yn7ajvc" path="res://assets/user_interface/in_game/Sidebar_Open.png" id="11_uudty"]
+[ext_resource type="PackedScene" uid="uid://lt2otpo0fuxa" path="res://scenes/User Interface/label.tscn" id="12_jirrj"]
+[ext_resource type="Texture2D" uid="uid://5prsimnknx7u" path="res://assets/user_interface/in_game/EnergyIcon.png" id="13_y0psu"]
+[ext_resource type="Texture2D" uid="uid://cndrwy67qra6r" path="res://assets/user_interface/in_game/EnergyBarFill.png" id="14_q85fl"]
+[ext_resource type="Texture2D" uid="uid://bxqicpp5a6eml" path="res://assets/user_interface/in_game/EnergyBarOutline.png" id="15_s1f4t"]
+[ext_resource type="FontFile" uid="uid://cxdgfb2dxi44c" path="res://assets/fonts/Malam Poek.ttf" id="16_v0gcw"]
+[ext_resource type="Texture2D" uid="uid://dliviy3h44n83" path="res://assets/user_interface/in_game/DolarIcon.png" id="17_vwbwt"]
+[ext_resource type="Texture2D" uid="uid://cv8y5p0765gal" path="res://assets/user_interface/in_game/HumbergerMenuIcon.png" id="18_rbf0d"]
 
 [sub_resource type="BoxShape3D" id="BoxShape3D_fogkt"]
-size = Vector3(70.44028, 1.5946655, 71.74808)
+size = Vector3(67.85555, 1.5946655, 71.74808)
 
 [sub_resource type="BoxShape3D" id="BoxShape3D_ftxc2"]
-size = Vector3(1.305603, 31.568024, 67.608765)
+size = Vector3(2.1547546, 27.477821, 58.794662)
 
-[sub_resource type="BoxShape3D" id="BoxShape3D_uvqvh"]
-size = Vector3(5.0302734, 4.409668, 35.84723)
+[sub_resource type="BoxShape3D" id="BoxShape3D_pg0xx"]
+size = Vector3(2.1547546, 27.477821, 58.794662)
 
 [sub_resource type="ProceduralSkyMaterial" id="ProceduralSkyMaterial_fogkt"]
 
@@ -23,6 +37,11 @@ sky_material = SubResource("ProceduralSkyMaterial_fogkt")
 background_mode = 2
 sky = SubResource("Sky_ki6c0")
 
+[sub_resource type="Resource" id="Resource_lvmxf"]
+script = ExtResource("6_4g7ls")
+objectNameId = "Wooden Shelf"
+metadata/_custom_type_script = "uid://dgee7q3f12wgw"
+
 [node name="ElectronicStore" type="Node3D" unique_id=900024237]
 script = ExtResource("1_ftxc2")
 
@@ -31,43 +50,34 @@ script = ExtResource("1_ftxc2")
 [node name="StaticBody3D" type="StaticBody3D" parent="WorldEnvSetup" unique_id=1069083907]
 
 [node name="Floor Collision" type="CollisionShape3D" parent="WorldEnvSetup/StaticBody3D" unique_id=1008259714]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.13374329, 0.29733276, -0.48432922)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -1.1586189, -0.10166168, -0.48432922)
 shape = SubResource("BoxShape3D_fogkt")
+debug_color = Color(0.95538765, 0.1218913, 0.4429015, 0.41960785)
 
 [node name="WallCollision" type="CollisionShape3D" parent="WorldEnvSetup/StaticBody3D" unique_id=426651040]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 31.897892, 16.660082, -1.4212036)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 28.562885, 11.083075, -0.14687347)
 shape = SubResource("BoxShape3D_ftxc2")
-
-[node name="WallCollision2" type="CollisionShape3D" parent="WorldEnvSetup/StaticBody3D" unique_id=2116813319]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -31.460808, 16.660082, -1.4212036)
-shape = SubResource("BoxShape3D_ftxc2")
-
-[node name="WallCollision3" type="CollisionShape3D" parent="WorldEnvSetup/StaticBody3D" unique_id=485931089]
-transform = Transform3D(-4.371139e-08, 0, 1, 0, 1, 0, -1, 0, -4.371139e-08, 0.21683884, 16.660082, -29.93332)
-shape = SubResource("BoxShape3D_ftxc2")
-
-[node name="WallCollision4" type="CollisionShape3D" parent="WorldEnvSetup/StaticBody3D" unique_id=433120536]
-transform = Transform3D(-4.371139e-08, 0, 1, 0, 1, 0, -1, 0, -4.371139e-08, 0.21683884, 16.660082, 30.21352)
-shape = SubResource("BoxShape3D_ftxc2")
+debug_color = Color(0, 0, 0, 1)
 
 [node name="RoofCollision" type="CollisionShape3D" parent="WorldEnvSetup/StaticBody3D" unique_id=1735947783]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.13374329, 22.602661, -0.48432922)
 shape = SubResource("BoxShape3D_fogkt")
+debug_color = Color(0.95538765, 0.1218913, 0.4429015, 0.41960785)
 
-[node name="TableCollision" type="CollisionShape3D" parent="WorldEnvSetup/StaticBody3D" unique_id=1164721705]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -3.0756836, 1.704834, 0.6819153)
-shape = SubResource("BoxShape3D_uvqvh")
-debug_color = Color(0.99644405, 0.0020545574, 0.17038018, 1)
+[node name="WallCollision2" type="CollisionShape3D" parent="WorldEnvSetup/StaticBody3D" unique_id=1021702484]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -28.362204, 11.083075, -0.14687347)
+shape = SubResource("BoxShape3D_ftxc2")
+debug_color = Color(0, 0, 0, 1)
 
-[node name="TableCollision2" type="CollisionShape3D" parent="WorldEnvSetup/StaticBody3D" unique_id=1820104956]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 10.9953985, 1.704834, 0.6819153)
-shape = SubResource("BoxShape3D_uvqvh")
-debug_color = Color(0.99644405, 0.0020545574, 0.17038018, 1)
+[node name="WallCollision3" type="CollisionShape3D" parent="WorldEnvSetup/StaticBody3D" unique_id=834327332]
+transform = Transform3D(-4.371139e-08, 0, 1, 0, 1, 0, -1, 0, -4.371139e-08, 0.79919624, 11.083075, -26.343868)
+shape = SubResource("BoxShape3D_pg0xx")
+debug_color = Color(0, 0, 0, 1)
 
-[node name="TableCollision3" type="CollisionShape3D" parent="WorldEnvSetup/StaticBody3D" unique_id=75648421]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -16.118366, 1.704834, 0.6819153)
-shape = SubResource("BoxShape3D_uvqvh")
-debug_color = Color(0.99644405, 0.0020545574, 0.17038018, 1)
+[node name="WallCollision4" type="CollisionShape3D" parent="WorldEnvSetup/StaticBody3D" unique_id=494040696]
+transform = Transform3D(-4.371139e-08, 0, 1, 0, 1, 0, -1, 0, -4.371139e-08, 0.79919624, 11.083075, 27.26817)
+shape = SubResource("BoxShape3D_pg0xx")
+debug_color = Color(0, 0, 0, 1)
 
 [node name="WorldEnvironment" type="WorldEnvironment" parent="WorldEnvSetup" unique_id=1644852674]
 environment = SubResource("Environment_ftxc2")
@@ -75,148 +85,228 @@ environment = SubResource("Environment_ftxc2")
 [node name="DirectionalLight3D" type="DirectionalLight3D" parent="WorldEnvSetup" unique_id=1016855711]
 transform = Transform3D(1, 0, 0, 0, 0.5073428, 0.86174434, 0, -0.86174434, 0.5073428, 0, 6.313469, 0)
 
-[node name="Electronic Store" parent="." unique_id=1631207022 instance=ExtResource("1_l3vss")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.03355217, 0.073106766, 0.0050764084)
+[node name="Electronic Store" parent="WorldEnvSetup" unique_id=664049868 instance=ExtResource("2_uvqvh")]
+transform = Transform3D(0.8, 0, 0, 0, 0.8, 0, 0, 0, 0.8, -0.008755207, -0.48574066, -0.3034954)
+
+[node name="List Object" type="Node3D" parent="WorldEnvSetup" unique_id=1771139653]
+
+[node name="Cashier Table" parent="WorldEnvSetup/List Object" unique_id=1275525457 instance=ExtResource("3_pg0xx")]
+transform = Transform3D(-4.371139e-08, 0, 1, 0, 1, 0, -1, 0, -4.371139e-08, 0, 0, -17.846035)
+
+[node name="Wooden Table" parent="WorldEnvSetup/List Object" unique_id=1655902475 instance=ExtResource("4_nw178")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.11498308, 0.5978279, 19.283747)
+
+[node name="Wooden Table2" parent="WorldEnvSetup/List Object" unique_id=1799773995 instance=ExtResource("4_nw178")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.11498308, 0.5978279, -6.113863)
+
+[node name="Wooden Table3" parent="WorldEnvSetup/List Object" unique_id=977502674 instance=ExtResource("4_nw178")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.11498308, 0.5978279, 6.5620975)
+
+[node name="Fridge" parent="WorldEnvSetup/List Object" unique_id=896432113 instance=ExtResource("5_3gwl6")]
+transform = Transform3D(-0.9979827, 0, -0.06348726, 0, 1, 0, 0.06348726, 0, -0.9979827, -25.410748, 1.6020446, 0)
+item_data = SubResource("Resource_lvmxf")
+
+[node name="Wooden Shelf" parent="WorldEnvSetup/List Object" unique_id=425643764 instance=ExtResource("6_ogd68")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -17.556782, 0.22974682, -24.116518)
+
+[node name="Showcase Shelf" parent="WorldEnvSetup/List Object" unique_id=2074333192 instance=ExtResource("8_c5kom")]
+transform = Transform3D(-1, 0, -8.742278e-08, 0, 1, 0, 8.742278e-08, 0, -1, -26.587881, 0.47482777, -8.55281)
+
+[node name="Fridge2" parent="WorldEnvSetup/List Object" unique_id=243809067 instance=ExtResource("9_c5kom")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -24.189571, 1.772789, 6.4292135)
 
 [node name="MainCharacter" parent="." unique_id=869498214 instance=ExtResource("2_fogkt")]
-transform = Transform3D(-0.9999933, 0, -0.0036477088, 0, 1, 0, 0.0036477088, 0, -0.9999933, 7.825996, 7.4025917, 3.8491077)
+transform = Transform3D(-0.9999933, 0, -0.0036477088, 0, 1, 0, 0.0036477088, 0, -0.9999933, 17.788725, 4.759221, -17.961922)
 
 [node name="UpgradeSpawnPoint" type="Node3D" parent="." unique_id=609535756]
 
 [node name="PointC" type="Marker3D" parent="UpgradeSpawnPoint" unique_id=1514638781]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -15.577627, 5.6322813, 7.6202307)
+transform = Transform3D(-1, 0, -8.742278e-08, 0, 1, 0, 8.742278e-08, 0, -1, 12.1865225, 6.070242, 19.552782)
 
-[node name="PointC2" type="Marker3D" parent="UpgradeSpawnPoint" unique_id=95613983]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -15.577627, 5.6322813, -10.016368)
+[node name="PointC2" type="Marker3D" parent="UpgradeSpawnPoint" unique_id=1446655196]
+transform = Transform3D(-1, 0, -8.742278e-08, 0, 1, 0, 8.742278e-08, 0, -1, 7.7504597, 6.070242, 19.552782)
 
-[node name="PointC3" type="Marker3D" parent="UpgradeSpawnPoint" unique_id=1509551379]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -15.577627, 5.6322813, 1.6072798)
+[node name="PointC3" type="Marker3D" parent="UpgradeSpawnPoint" unique_id=1494879558]
+transform = Transform3D(-1, 0, -8.742278e-08, 0, 1, 0, 8.742278e-08, 0, -1, 3.760786, 6.070242, 19.552782)
 
-[node name="PointC4" type="Marker3D" parent="UpgradeSpawnPoint" unique_id=526282014]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -15.577627, 5.6322813, -4.2980337)
+[node name="PointC4" type="Marker3D" parent="UpgradeSpawnPoint" unique_id=2024699388]
+transform = Transform3D(-1, 0, -8.742278e-08, 0, 1, 0, 8.742278e-08, 0, -1, -0.2342453, 6.070242, 19.552782)
 
-[node name="PointC5" type="Marker3D" parent="UpgradeSpawnPoint" unique_id=1278317922]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -15.577627, 5.6322813, -13.500577)
+[node name="PointC5" type="Marker3D" parent="UpgradeSpawnPoint" unique_id=30642647]
+transform = Transform3D(-1, 0, -8.742278e-08, 0, 1, 0, 8.742278e-08, 0, -1, -4.2406673, 6.070242, 19.552782)
 
-[node name="PointC6" type="Marker3D" parent="UpgradeSpawnPoint" unique_id=1182236829]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -15.577627, 5.6322813, 13.9763155)
+[node name="PointC6" type="Marker3D" parent="UpgradeSpawnPoint" unique_id=1881358563]
+transform = Transform3D(-1, 0, -8.742278e-08, 0, 1, 0, 8.742278e-08, 0, -1, -8.48912, 6.070242, 19.552782)
 
 [node name="ToolsSpawnPoint" type="Node3D" parent="." unique_id=449599586]
 
 [node name="PointA" type="Marker3D" parent="ToolsSpawnPoint" unique_id=1093949287]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -3, 5.6322813, 12.330247)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -10.698996, 5.2802258, -6.1635017)
 
 [node name="PointA2" type="Marker3D" parent="ToolsSpawnPoint" unique_id=2087443698]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -3, 5.6322813, -1.7167978)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -1.7435138, 5.2802258, -5.886694)
 
 [node name="PointA3" type="Marker3D" parent="ToolsSpawnPoint" unique_id=819838294]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -3, 5.6322813, -11.991313)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.15459538, 5.1552916, 6.791486)
 
 [node name="PointB" type="Marker3D" parent="ToolsSpawnPoint" unique_id=1050451322]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 11.039096, 5.6322813, 10.226628)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 7.7054253, 5.2802258, -5.9023075)
 
 [node name="PointB2" type="Marker3D" parent="ToolsSpawnPoint" unique_id=1463777711]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 11.039096, 5.6322813, -2.8727808)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -11.008461, 4.9838924, 6.843253)
 
 [node name="PointB3" type="Marker3D" parent="ToolsSpawnPoint" unique_id=929596929]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 11.039096, 5.6322813, -13.29794)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 9.963073, 5.0861416, 7.0943737)
 
-[node name="CanvasLayer" type="CanvasLayer" parent="." unique_id=1906935260]
+[node name="CanvasLayer" type="CanvasLayer" parent="." unique_id=437576553]
 
-[node name="HBoxContainerHP" type="HBoxContainer" parent="CanvasLayer" unique_id=564361859]
-anchors_preset = 2
-anchor_top = 1.0
-anchor_bottom = 1.0
-offset_top = -272.0
-offset_right = 280.0
-offset_bottom = -144.0
-grow_vertical = 0
-size_flags_horizontal = 0
-size_flags_vertical = 8
-
-[node name="Label" type="Label" parent="CanvasLayer/HBoxContainerHP" unique_id=611193852]
-layout_mode = 2
-text = "HP Karakter : "
-
-[node name="HPProgressBar" type="TextureProgressBar" parent="CanvasLayer/HBoxContainerHP" unique_id=1899892033]
-layout_mode = 2
-texture_progress = ExtResource("4_uvqvh")
-
-[node name="HBoxContainer" type="HBoxContainer" parent="CanvasLayer" unique_id=548556175]
-anchors_preset = 2
-anchor_top = 1.0
-anchor_bottom = 1.0
-offset_top = -128.0
-offset_right = 280.0
-grow_vertical = 0
-size_flags_horizontal = 0
-size_flags_vertical = 8
-
-[node name="Label" type="Label" parent="CanvasLayer/HBoxContainer" unique_id=690007738]
-layout_mode = 2
-text = "Stamina Karakter : "
-
-[node name="staminaProgressBar" type="TextureProgressBar" parent="CanvasLayer/HBoxContainer" unique_id=338291985]
-layout_mode = 2
-texture_progress = ExtResource("4_uvqvh")
-
-[node name="debugArea" type="Control" parent="CanvasLayer" unique_id=550352227]
+[node name="LabelList" type="Control" parent="CanvasLayer" unique_id=2004923589]
 layout_mode = 3
 anchors_preset = 0
 offset_right = 40.0
 offset_bottom = 40.0
 
-[node name="openDebugMenu" type="Button" parent="CanvasLayer/debugArea" unique_id=627313449]
-layout_mode = 0
-offset_left = 1080.0
-offset_top = 102.0
-offset_right = 1233.0
-offset_bottom = 133.0
-text = "Open Debug Menu"
+[node name="SidebarOpen" type="Sprite2D" parent="CanvasLayer/LabelList" unique_id=1216898642]
+visible = false
+position = Vector2(96.700005, 343.1)
+scale = Vector2(0.6, 0.6)
+texture = ExtResource("11_uudty")
 
-[node name="debugListMenu" type="Control" parent="CanvasLayer/debugArea" unique_id=1028955076]
+[node name="NotaListLabel" parent="CanvasLayer/LabelList" unique_id=1350703745 instance=ExtResource("12_jirrj")]
+layout_mode = 0
+offset_left = 28.700005
+offset_top = 236.1
+offset_right = 141.70001
+offset_bottom = 259.1
+text = "Nota List"
+horizontal_alignment = 1
+
+[node name="HBoxContainer" type="Control" parent="CanvasLayer" unique_id=2117356842]
+layout_mode = 3
+anchors_preset = 2
+anchor_top = 1.0
+anchor_bottom = 1.0
+offset_left = 20.0
+offset_top = -75.0
+offset_right = 470.0
+grow_vertical = 0
+size_flags_horizontal = 0
+size_flags_vertical = 8
+
+[node name="TextureRect" type="TextureRect" parent="CanvasLayer/HBoxContainer" unique_id=94804175]
+layout_mode = 0
+offset_left = 5.0
+offset_top = -26.0
+offset_right = 42.0
+offset_bottom = 49.0
+texture = ExtResource("13_y0psu")
+stretch_mode = 3
+
+[node name="staminaProgressBar" type="TextureProgressBar" parent="CanvasLayer/HBoxContainer" unique_id=1292926485]
+layout_mode = 0
+offset_left = 61.0
+offset_top = -8.0
+offset_right = 470.0
+offset_bottom = 33.0
+texture_progress = ExtResource("14_q85fl")
+
+[node name="EnergyBarOutline" type="Sprite2D" parent="CanvasLayer/HBoxContainer" unique_id=1127277249]
+position = Vector2(266, 10)
+texture = ExtResource("15_s1f4t")
+
+[node name="NotaList" type="VBoxContainer" parent="CanvasLayer" unique_id=1026246713]
+offset_left = 25.0
+offset_top = 50.0
+offset_right = 91.0
+offset_bottom = 90.0
+
+[node name="LabelToInteract" type="Label" parent="CanvasLayer" unique_id=1370025068]
+offset_left = 2.0
+offset_top = 510.0
+offset_right = 1280.0
+offset_bottom = 558.0
+theme_override_colors/font_shadow_color = Color(0.6627451, 0.078431375, 0.3137255, 1)
+theme_override_fonts/font = ExtResource("16_v0gcw")
+theme_override_font_sizes/font_size = 24
+text = "Press E To Interact"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="debugArea" type="Control" parent="CanvasLayer" unique_id=1578898037]
+visible = false
+layout_mode = 3
 anchors_preset = 0
 offset_right = 40.0
 offset_bottom = 40.0
 
-[node name="debugNextDay" type="Button" parent="CanvasLayer/debugArea/debugListMenu" unique_id=1467717465]
+[node name="openDebugMenu" type="Button" parent="CanvasLayer/debugArea" unique_id=1031856715]
 layout_mode = 0
-offset_left = 1116.0
-offset_top = 149.0
-offset_right = 1195.0
-offset_bottom = 180.0
+offset_left = 1078.0
+offset_top = 104.0
+offset_right = 1231.0
+offset_bottom = 135.0
+text = "Open Debug Menu"
+
+[node name="debugListMenu" type="Control" parent="CanvasLayer/debugArea" unique_id=1205822674]
+anchors_preset = 0
+offset_right = 40.0
+offset_bottom = 40.0
+
+[node name="debugNextDay" type="Button" parent="CanvasLayer/debugArea/debugListMenu" unique_id=2118847244]
+layout_mode = 0
+offset_left = 1114.0
+offset_top = 151.0
+offset_right = 1193.0
+offset_bottom = 182.0
 text = "Next Day"
 
-[node name="debugResetDay" type="Button" parent="CanvasLayer/debugArea/debugListMenu" unique_id=1332491100]
+[node name="debugClosedDay" type="Button" parent="CanvasLayer/debugArea/debugListMenu" unique_id=1457108442]
 layout_mode = 0
-offset_left = 1109.0
-offset_top = 192.0
-offset_right = 1203.0
-offset_bottom = 223.0
+offset_left = 1108.0
+offset_top = 196.0
+offset_right = 1202.0
+offset_bottom = 227.0
+text = "Closed Day"
+
+[node name="debugResetDay" type="Button" parent="CanvasLayer/debugArea/debugListMenu" unique_id=465748154]
+layout_mode = 0
+offset_left = 1107.0
+offset_top = 236.0
+offset_right = 1201.0
+offset_bottom = 267.0
 text = "Reset Day"
 
-[node name="LabelToInteract" type="Label" parent="CanvasLayer" unique_id=147371051]
-visible = false
-offset_left = -1.0
-offset_top = 510.0
-offset_right = 1277.0
-offset_bottom = 558.0
-theme_override_font_sizes/font_size = 24
-text = "Press E To Interact"
-horizontal_alignment = 1
-
-[node name="ContainerMoney" type="HBoxContainer" parent="CanvasLayer" unique_id=1826972154]
+[node name="ContainerMoney" type="HBoxContainer" parent="CanvasLayer" unique_id=2025092354]
 anchors_preset = 1
 anchor_left = 1.0
 anchor_right = 1.0
-offset_left = -133.0
-offset_bottom = 62.0
+offset_left = -160.0
+offset_top = 24.0
+offset_right = -27.0
+offset_bottom = 86.0
 grow_horizontal = 0
 
-[node name="Label" type="Label" parent="CanvasLayer/ContainerMoney" unique_id=349629919]
+[node name="Label" type="Label" parent="CanvasLayer/ContainerMoney" unique_id=421763065]
 layout_mode = 2
-text = "100 $"
+theme_override_colors/font_shadow_color = Color(0.6901961, 0.078431375, 0.32941177, 1)
+theme_override_colors/font_outline_color = Color(0.72156864, 0.08235294, 0.34509805, 1)
+theme_override_fonts/font = ExtResource("16_v0gcw")
+theme_override_font_sizes/font_size = 32
+text = "100"
 
-[connection signal="pressed" from="CanvasLayer/debugArea/openDebugMenu" to="." method="_on_open_debug_menu_pressed"]
-[connection signal="pressed" from="CanvasLayer/debugArea/debugListMenu/debugNextDay" to="." method="_on_debug_next_day_pressed"]
-[connection signal="pressed" from="CanvasLayer/debugArea/debugListMenu/debugResetDay" to="." method="_on_debug_reset_day_pressed"]
+[node name="TextureRect" type="TextureRect" parent="CanvasLayer/ContainerMoney" unique_id=928815647]
+layout_mode = 2
+texture = ExtResource("17_vwbwt")
+expand_mode = 2
+
+[node name="MenuButton" type="Button" parent="CanvasLayer" unique_id=1000783275]
+offset_left = 7.2478943
+offset_top = 12.247894
+offset_right = 77.247894
+offset_bottom = 70.247894
+flat = true
+
+[node name="MenuSprite" type="Sprite2D" parent="CanvasLayer" unique_id=144041530]
+position = Vector2(38.247894, 39.247894)
+scale = Vector2(0.6449579, 0.6449579)
+texture = ExtResource("18_rbf0d")

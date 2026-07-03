@@ -1,0 +1,42 @@
+[gd_scene format=3 uid="uid://cjcb6b8qem00m"]
+
+[ext_resource type="Script" uid="uid://dec1flmonurh4" path="res://scripts/interactableObject.gd" id="1_6qwth"]
+[ext_resource type="Script" uid="uid://dgee7q3f12wgw" path="res://autoloads/resources/shoppingItemResources.gd" id="2_ux41a"]
+[ext_resource type="FontFile" uid="uid://cxdgfb2dxi44c" path="res://assets/fonts/Malam Poek.ttf" id="3_g1djl"]
+[ext_resource type="PackedScene" uid="uid://bobinmxifrckj" path="res://scenes/inheritated objects/in_shelf.tscn" id="4_6qwth"]
+
+[sub_resource type="Resource" id="Resource_lvmxf"]
+script = ExtResource("2_ux41a")
+objectNameId = "Wooden Shelf"
+metadata/_custom_type_script = "uid://dgee7q3f12wgw"
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_ptxti"]
+size = Vector3(12.116577, 11.05047, 2.5859494)
+
+[node name="Wooden Shelf" type="RigidBody3D" unique_id=1275525457]
+script = ExtResource("1_6qwth")
+item_data = SubResource("Resource_lvmxf")
+
+[node name="ObjectName" type="Label3D" parent="." unique_id=335997831]
+transform = Transform3D(1.3, 0, 0, 0, 1.3, 0, 0, 0, 1.3, 0.13884711, 10.093496, 0)
+billboard = 1
+text = "TEST
+"
+font = ExtResource("3_g1djl")
+font_size = 96
+
+[node name="ObjectPrice" type="Label3D" parent="." unique_id=906287399]
+transform = Transform3D(1.3, 0, 0, 0, 1.3, 0, 0, 0, 1.3, 0.13884711, 9.642012, 0)
+billboard = 1
+outline_modulate = Color(0, 0.6059047, 0, 1)
+text = "TEST
+"
+font = ExtResource("3_g1djl")
+font_size = 60
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="." unique_id=603273157]
+transform = Transform3D(0.75, 0, 0, 0, 0.75, 0, 0, 0, 0.75, 0.21889317, 4.970402, 0.5156174)
+shape = SubResource("BoxShape3D_ptxti")
+
+[node name="Shelf2" parent="." unique_id=15801561 instance=ExtResource("4_6qwth")]
+transform = Transform3D(0.75, 0, 0, 0, 0.75, 0, 0, 0, 0.75, -1.2187948, 0, 0)

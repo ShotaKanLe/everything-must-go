@@ -1,0 +1,9 @@
+[gd_scene format=3 uid="uid://b7i8088xdgb65"]
+
+[ext_resource type="PackedScene" uid="uid://2v7lwx1msbmp" path="res://assets/objects/Animal Food/Chicken Breast/Chicken Breast.glb" id="1_vmc5d"]
+[ext_resource type="Material" uid="uid://co4iky8hdm25w" path="res://shader/chicken_breast_outline_texture.tres" id="2_e5ih4"]
+
+[node name="Chicken Breast" unique_id=1927446741 instance=ExtResource("1_vmc5d")]
+
+[node name="Cube" parent="." index="0" unique_id=2144059459]
+surface_material_override/0 = ExtResource("2_e5ih4")

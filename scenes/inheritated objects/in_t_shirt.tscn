@@ -1,0 +1,33 @@
+[gd_scene format=3 uid="uid://s6til0s0rbg"]
+
+[ext_resource type="PackedScene" uid="uid://bspqjfy745rsd" path="res://assets/objects/Clothes/T-shirt/T-shirt.glb" id="1_j6fn2"]
+[ext_resource type="Texture2D" uid="uid://b8nihc8yguky8" path="res://assets/objects/Clothes/T-shirt/T-shirt_Base Texture.png" id="2_lfpnq"]
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_af86t"]
+render_priority = 1
+transparency = 1
+shading_mode = 0
+albedo_color = Color(0, 0, 0, 1)
+grow = true
+grow_amount = 0.02
+stencil_mode = 3
+stencil_flags = 1
+stencil_compare = 5
+metadata/_stencil_owned = true
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_jc62m"]
+next_pass = SubResource("StandardMaterial3D_af86t")
+diffuse_mode = 3
+specular_mode = 1
+albedo_texture = ExtResource("2_lfpnq")
+rim_enabled = true
+rim = 0.11
+rim_tint = 1.0
+stencil_mode = 1
+stencil_flags = 2
+stencil_outline_thickness = 0.02
+
+[node name="T-shirt" unique_id=1724742901 instance=ExtResource("1_j6fn2")]
+
+[node name="Plane" parent="." index="0" unique_id=696477357]
+surface_material_override/0 = SubResource("StandardMaterial3D_jc62m")

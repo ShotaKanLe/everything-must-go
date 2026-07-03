@@ -1,0 +1,32 @@
+[gd_scene format=3 uid="uid://cteja47mvofon"]
+
+[ext_resource type="PackedScene" uid="uid://dal4pkhpf8t0a" path="res://assets/objects/Absurds/Escalator/Escalator.glb" id="1_30sqm"]
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_af86t"]
+render_priority = 1
+transparency = 1
+shading_mode = 0
+albedo_color = Color(0, 0, 0, 1)
+grow = true
+grow_amount = 0.02
+stencil_mode = 3
+stencil_flags = 1
+stencil_compare = 5
+metadata/_stencil_owned = true
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_38y1r"]
+next_pass = SubResource("StandardMaterial3D_af86t")
+diffuse_mode = 3
+specular_mode = 1
+albedo_color = Color(0.41981313, 0.41981313, 0.4198131, 1)
+rim_enabled = true
+rim = 0.11
+rim_tint = 1.0
+stencil_mode = 1
+stencil_flags = 2
+stencil_outline_thickness = 0.02
+
+[node name="Escalator" unique_id=1507998659 instance=ExtResource("1_30sqm")]
+
+[node name="ESKAVATOR" parent="." index="0" unique_id=1595120370]
+surface_material_override/0 = SubResource("StandardMaterial3D_38y1r")

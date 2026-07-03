@@ -2,37 +2,43 @@
 
 [ext_resource type="Script" uid="uid://dec1flmonurh4" path="res://scripts/interactableObject.gd" id="1_vjnga"]
 [ext_resource type="Script" uid="uid://dgee7q3f12wgw" path="res://autoloads/resources/shoppingItemResources.gd" id="2_klscy"]
-[ext_resource type="PackedScene" uid="uid://bac342y8e8ltp" path="res://assets/objects/Snacks/Chocolate Bar/Chocolate Bar.glb" id="3_klscy"]
+[ext_resource type="PackedScene" uid="uid://n7a2rg1f6lbd" path="res://scenes/inheritated objects/in_chocolate_bar.tscn" id="4_84sjk"]
+[ext_resource type="FontFile" uid="uid://cxdgfb2dxi44c" path="res://assets/fonts/Malam Poek.ttf" id="4_ygrsm"]
 
 [sub_resource type="Resource" id="Resource_ygrsm"]
 script = ExtResource("2_klscy")
-objectName = "Chocolate Bar"
+objectNameId = "Chocolate Bar"
 objectCategory = "Snacks"
+objectName = "Chocolate Bar"
 metadata/_custom_type_script = "uid://dgee7q3f12wgw"
 
 [sub_resource type="BoxShape3D" id="BoxShape3D_ygrsm"]
 size = Vector3(0.9810479, 0.20301169, 1.9734136)
 
 [node name="ChocolateBar" type="RigidBody3D" unique_id=527662353]
-collision_mask = 2
+collision_mask = 3
 script = ExtResource("1_vjnga")
 item_data = SubResource("Resource_ygrsm")
-
-[node name="ObjectName" type="Label3D" parent="." unique_id=1005011241]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.5750332, 0)
-billboard = 1
-text = "TEST"
-font_size = 96
-
-[node name="ObjectPrice" type="Label3D" parent="." unique_id=744362079]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1.0130329, 0)
-billboard = 1
-outline_modulate = Color(0, 0.45882353, 0, 1)
-text = "TEST"
-font_size = 84
 
 [node name="CollisionShape3D" type="CollisionShape3D" parent="." unique_id=1673987752]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.019398928, -0.13738534, 0.0021541715)
 shape = SubResource("BoxShape3D_ygrsm")
 
-[node name="Chocolate Bar" parent="." unique_id=926465203 instance=ExtResource("3_klscy")]
+[node name="ObjectName" type="Label3D" parent="." unique_id=924015931]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.88213205, 0)
+billboard = 1
+text = "TEST
+"
+font = ExtResource("4_ygrsm")
+font_size = 96
+
+[node name="ObjectPrice" type="Label3D" parent="." unique_id=1880301185]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.43064678, 0)
+billboard = 1
+outline_modulate = Color(0, 0.6059047, 0, 1)
+text = "TEST
+"
+font = ExtResource("4_ygrsm")
+font_size = 60
+
+[node name="Chocolate Bar2" parent="." unique_id=1916537060 instance=ExtResource("4_84sjk")]

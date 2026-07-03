@@ -1,38 +1,44 @@
 [gd_scene format=3 uid="uid://bm2jq6b2fu3ig"]
 
 [ext_resource type="Script" uid="uid://dec1flmonurh4" path="res://scripts/interactableObject.gd" id="1_7q4i1"]
-[ext_resource type="PackedScene" uid="uid://os8myr8vsya2" path="res://assets/objects/Beverages/Soda Can/Soda Can.glb" id="1_siq8x"]
 [ext_resource type="Script" uid="uid://dgee7q3f12wgw" path="res://autoloads/resources/shoppingItemResources.gd" id="2_pon4e"]
+[ext_resource type="FontFile" uid="uid://cxdgfb2dxi44c" path="res://assets/fonts/Malam Poek.ttf" id="4_pe4kv"]
+[ext_resource type="PackedScene" uid="uid://bq4rtt8o85lbq" path="res://scenes/inheritated objects/in_soda_can.tscn" id="4_y2626"]
 
 [sub_resource type="Resource" id="Resource_pe4kv"]
 script = ExtResource("2_pon4e")
-objectName = "Soda Can"
+objectNameId = "Soda Can"
 objectCategory = "Beverages"
+objectName = "Soda Can"
 metadata/_custom_type_script = "uid://dgee7q3f12wgw"
 
 [sub_resource type="BoxShape3D" id="BoxShape3D_7q4i1"]
-size = Vector3(2.063633, 3.4166126, 1.7537937)
+size = Vector3(2.063633, 4, 1.7537937)
 
 [node name="SodaCan" type="RigidBody3D" unique_id=1786256744]
-collision_mask = 2
 script = ExtResource("1_7q4i1")
 item_data = SubResource("Resource_pe4kv")
 
-[node name="ObjectName" type="Label3D" parent="." unique_id=1540966407]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 2.899396, 0)
-billboard = 1
-text = "TEST"
-font_size = 96
-
-[node name="ObjectPrice" type="Label3D" parent="." unique_id=1907487542]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 3.3373957, 0)
-billboard = 1
-outline_modulate = Color(0, 0.45882353, 0, 1)
-text = "TEST"
-font_size = 84
-
 [node name="CollisionShape3D" type="CollisionShape3D" parent="." unique_id=1242362165]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.013021469, 0.6537224, -0.037240922)
+transform = Transform3D(0.4, 0, 0, 0, 0.4, 0, 0, 0, 0.4, 0.013021469, 0.3703999, -0.037240922)
 shape = SubResource("BoxShape3D_7q4i1")
 
-[node name="Soda Can" parent="." unique_id=577376335 instance=ExtResource("1_siq8x")]
+[node name="ObjectName" type="Label3D" parent="." unique_id=1439417550]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1.8038437, 0)
+billboard = 1
+text = "TEST
+"
+font = ExtResource("4_pe4kv")
+font_size = 96
+
+[node name="ObjectPrice" type="Label3D" parent="." unique_id=412124914]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1.3523585, 0)
+billboard = 1
+outline_modulate = Color(0, 0.6059047, 0, 1)
+text = "TEST
+"
+font = ExtResource("4_pe4kv")
+font_size = 60
+
+[node name="Soda Can2" parent="." unique_id=1769193024 instance=ExtResource("4_y2626")]
+transform = Transform3D(0.4, 0, 0, 0, 0.4, 0, 0, 0, 0.4, 0, 0, 0)

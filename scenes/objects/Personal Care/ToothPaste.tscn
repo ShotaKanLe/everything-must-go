@@ -2,38 +2,43 @@
 
 [ext_resource type="Script" uid="uid://dec1flmonurh4" path="res://scripts/interactableObject.gd" id="1_t4ily"]
 [ext_resource type="Script" uid="uid://dgee7q3f12wgw" path="res://autoloads/resources/shoppingItemResources.gd" id="2_wll21"]
-[ext_resource type="PackedScene" uid="uid://6agj85qo4hj3" path="res://assets/objects/Personal Care/ToothPaste/Toothpaste.glb" id="3_ew1uh"]
+[ext_resource type="PackedScene" uid="uid://bmhtd7hf85q8h" path="res://scenes/inheritated objects/in_toothpaste.tscn" id="4_cbkvh"]
+[ext_resource type="FontFile" uid="uid://cxdgfb2dxi44c" path="res://assets/fonts/Malam Poek.ttf" id="4_o5e7b"]
 
 [sub_resource type="Resource" id="Resource_ew1uh"]
 script = ExtResource("2_wll21")
-objectName = "Tooth Paste"
+objectNameId = "Tooth Paste"
 objectCategory = "Personal Care"
+objectName = "Tooth Paste"
 metadata/_custom_type_script = "uid://dgee7q3f12wgw"
 
 [sub_resource type="BoxShape3D" id="BoxShape3D_wll21"]
 size = Vector3(2.8534074, 7.861378, 1.3737241)
 
 [node name="ToothPaste" type="RigidBody3D" unique_id=809492216]
-collision_mask = 2
 script = ExtResource("1_t4ily")
 item_data = SubResource("Resource_ew1uh")
 
-[node name="Toothpaste" parent="." unique_id=455078643 instance=ExtResource("3_ew1uh")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1.6232581, 0)
+[node name="CollisionShape3D" type="CollisionShape3D" parent="." unique_id=1532777277]
+transform = Transform3D(0.2, 0, 0, 0, 0.2, 0, 0, 0, 0.2, 0.023884416, 0.7007413, -0.021139443)
+shape = SubResource("BoxShape3D_wll21")
 
-[node name="ObjectName" type="Label3D" parent="." unique_id=645164446]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 9.817097, 0)
+[node name="ObjectName" type="Label3D" parent="." unique_id=189468684]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 2.253674, 0)
 billboard = 1
-text = "TEST"
+text = "TEST
+"
+font = ExtResource("4_o5e7b")
 font_size = 96
 
-[node name="ObjectPrice" type="Label3D" parent="." unique_id=1149275835]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 10.255096, 0)
+[node name="ObjectPrice" type="Label3D" parent="." unique_id=1789436160]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1.8021889, 0)
 billboard = 1
-outline_modulate = Color(0, 0.45882353, 0, 1)
-text = "TEST"
-font_size = 84
+outline_modulate = Color(0, 0.6059047, 0, 1)
+text = "TEST
+"
+font = ExtResource("4_o5e7b")
+font_size = 60
 
-[node name="CollisionShape3D" type="CollisionShape3D" parent="." unique_id=1532777277]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.023884416, 5.3602333, -0.021139443)
-shape = SubResource("BoxShape3D_wll21")
+[node name="Toothpaste2" parent="." unique_id=1301981252 instance=ExtResource("4_cbkvh")]
+transform = Transform3D(0.2, 0, 0, 0, 0.2, 0, 0, 0, 0.2, 0, -0.050860286, 0)

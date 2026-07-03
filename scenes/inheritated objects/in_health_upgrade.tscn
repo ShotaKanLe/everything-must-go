@@ -1,0 +1,32 @@
+[gd_scene format=3 uid="uid://b587crqy30os6"]
+
+[ext_resource type="PackedScene" uid="uid://s55qvdjp0bd0" path="res://assets/objects/Upgrade/Health Upgrade/Health Upgrade.glb" id="1_2erc7"]
+[ext_resource type="Texture2D" uid="uid://ckx3g7cw67jt5" path="res://assets/objects/Upgrade/Health Upgrade/Health Upgrade_Base Texture.png" id="2_f3knk"]
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_af86t"]
+render_priority = 1
+transparency = 1
+shading_mode = 0
+albedo_color = Color(0, 0, 0, 1)
+grow = true
+grow_amount = 0.01
+stencil_mode = 3
+stencil_flags = 1
+stencil_compare = 5
+metadata/_stencil_owned = true
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_lem3y"]
+next_pass = SubResource("StandardMaterial3D_af86t")
+diffuse_mode = 3
+specular_mode = 1
+albedo_texture = ExtResource("2_f3knk")
+rim_enabled = true
+rim = 0.11
+rim_tint = 1.0
+stencil_mode = 1
+stencil_flags = 2
+
+[node name="Health Upgrade" unique_id=307420929 instance=ExtResource("1_2erc7")]
+
+[node name="Cube" parent="." index="0" unique_id=1053822074]
+surface_material_override/0 = SubResource("StandardMaterial3D_lem3y")

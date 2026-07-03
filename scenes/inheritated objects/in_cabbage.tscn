@@ -1,0 +1,40 @@
+[gd_scene format=3 uid="uid://3logoajo5ubd"]
+
+[ext_resource type="PackedScene" uid="uid://bxpk2l6tqcows" path="res://assets/objects/Vegetables/Cabbage/Cabbage.glb" id="1_pqbwv"]
+[ext_resource type="Texture2D" uid="uid://b2tee4k36f45m" path="res://assets/objects/Vegetables/Cabbage/Cabbage_Main Cabbage Texture.png" id="2_vmyes"]
+[ext_resource type="Material" uid="uid://duo7x2vsxublw" path="res://scenes/inheritated objects/in_cabbage.tres" id="3_vmyes"]
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_af86t"]
+render_priority = 1
+transparency = 1
+shading_mode = 0
+albedo_color = Color(0, 0, 0, 1)
+grow = true
+grow_amount = 0.02
+stencil_mode = 3
+stencil_flags = 1
+stencil_compare = 5
+metadata/_stencil_owned = true
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_seax8"]
+next_pass = SubResource("StandardMaterial3D_af86t")
+diffuse_mode = 3
+specular_mode = 1
+albedo_texture = ExtResource("2_vmyes")
+rim_enabled = true
+rim = 0.11
+rim_tint = 1.0
+stencil_mode = 1
+stencil_flags = 2
+stencil_outline_thickness = 0.02
+
+[node name="Cabbage" unique_id=2017199 instance=ExtResource("1_pqbwv")]
+
+[node name="Sphere" parent="." index="0" unique_id=1225902644]
+surface_material_override/0 = SubResource("StandardMaterial3D_seax8")
+
+[node name="Plane" parent="." index="1" unique_id=1443591418]
+surface_material_override/0 = ExtResource("3_vmyes")
+
+[node name="Plane_001" parent="." index="2" unique_id=810371706]
+surface_material_override/0 = ExtResource("3_vmyes")

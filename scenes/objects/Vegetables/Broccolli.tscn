@@ -2,38 +2,44 @@
 
 [ext_resource type="Script" uid="uid://dec1flmonurh4" path="res://scripts/interactableObject.gd" id="1_r3tei"]
 [ext_resource type="Script" uid="uid://dgee7q3f12wgw" path="res://autoloads/resources/shoppingItemResources.gd" id="2_j2gda"]
-[ext_resource type="PackedScene" uid="uid://bto36765wetth" path="res://assets/objects/Vegetables/Broccolli/Broccolli.glb" id="3_j2gda"]
+[ext_resource type="PackedScene" uid="uid://d3ydcge40gndh" path="res://scenes/inheritated objects/in_broccolli.tscn" id="3_j2gda"]
+[ext_resource type="FontFile" uid="uid://cxdgfb2dxi44c" path="res://assets/fonts/Malam Poek.ttf" id="4_nn65s"]
 
 [sub_resource type="Resource" id="Resource_3s1gm"]
 script = ExtResource("2_j2gda")
-objectName = "Broccolli"
+objectNameId = "Broccoli"
 objectCategory = "Vegetables"
 isIllegalToSteal = false
+objectName = "Broccolli"
 metadata/_custom_type_script = "uid://dgee7q3f12wgw"
 
 [sub_resource type="BoxShape3D" id="BoxShape3D_nn65s"]
-size = Vector3(3.1816678, 3.935583, 1.6511486)
+size = Vector3(4.4878607, 5.691411, 2.3452823)
 
 [node name="Broccolli" type="RigidBody3D" unique_id=873317727]
 script = ExtResource("1_r3tei")
 item_data = SubResource("Resource_3s1gm")
 
-[node name="ObjectName" type="Label3D" parent="." unique_id=2124667790]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 6.657416, 0)
+[node name="CollisionShape3D" type="CollisionShape3D" parent="." unique_id=1472198663]
+transform = Transform3D(0.3, 0, 0, 0, 0.3, 0, 0, 0, 0.3, -0.03067217, 0.66684794, 0.04657297)
+shape = SubResource("BoxShape3D_nn65s")
+
+[node name="Broccolli2" parent="." unique_id=62209449 instance=ExtResource("3_j2gda")]
+transform = Transform3D(0.3, 0, 0, 0, 0.3, 0, 0, 0, 0.3, 0, 0, 0)
+
+[node name="ObjectName" type="Label3D" parent="." unique_id=1058451924]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 2.2583601, 0)
 billboard = 1
-text = "TEST"
+text = "TEST
+"
+font = ExtResource("4_nn65s")
 font_size = 96
 
-[node name="ObjectPrice" type="Label3D" parent="." unique_id=601371701]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 7.095416, 0)
+[node name="ObjectPrice" type="Label3D" parent="." unique_id=1500958194]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1.8068749, 0)
 billboard = 1
-outline_modulate = Color(0, 0.45882353, 0, 1)
-text = "TEST"
-font_size = 84
-
-[node name="Broccolli" parent="." unique_id=856739275 instance=ExtResource("3_j2gda")]
-transform = Transform3D(0.8, 0, 0, 0, 0.8, 0, 0, 0, 0.8, 0, 1.943994, 0)
-
-[node name="CollisionShape3D" type="CollisionShape3D" parent="." unique_id=1472198663]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.088193685, 3.900197, 0.052056044)
-shape = SubResource("BoxShape3D_nn65s")
+outline_modulate = Color(0, 0.6059047, 0, 1)
+text = "TEST
+"
+font = ExtResource("4_nn65s")
+font_size = 60

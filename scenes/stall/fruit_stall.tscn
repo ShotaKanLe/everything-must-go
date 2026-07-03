@@ -1,0 +1,26 @@
+[gd_scene format=3 uid="uid://bftsm7ui2rndw"]
+
+[ext_resource type="PackedScene" uid="uid://bebmgyj7ffy03" path="res://assets/stall/fruit/Fruit Stall.glb" id="1_q740e"]
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_wky5u"]
+size = Vector3(165.15488, 9.235825, 26.79712)
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_q740e"]
+size = Vector3(165.15488, 3.7863693, 26.79712)
+
+[node name="Fruit Stall" type="Node3D" unique_id=278354136]
+
+[node name="Fruit Stall" parent="." unique_id=138340444 instance=ExtResource("1_q740e")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -210.70677, 0, 212.62561)
+
+[node name="StaticBody3D" type="StaticBody3D" parent="." unique_id=449892156]
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="StaticBody3D" unique_id=930494953]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 10.5125885, 4.1179123, -3.2852783)
+shape = SubResource("BoxShape3D_wky5u")
+debug_color = Color(0, 0, 0, 1)
+
+[node name="CollisionShape3D2" type="CollisionShape3D" parent="StaticBody3D" unique_id=1522242650]
+transform = Transform3D(1, 0, 0, 0, 0.93575215, -0.35265836, 0, 0.35265836, 0.93575215, 10.5125885, 10.854221, -4.0231953)
+shape = SubResource("BoxShape3D_q740e")
+debug_color = Color(0, 0, 0, 1)

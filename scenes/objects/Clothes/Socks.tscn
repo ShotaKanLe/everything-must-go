@@ -2,36 +2,43 @@
 
 [ext_resource type="Script" uid="uid://dec1flmonurh4" path="res://scripts/interactableObject.gd" id="1_unl2q"]
 [ext_resource type="Script" uid="uid://dgee7q3f12wgw" path="res://autoloads/resources/shoppingItemResources.gd" id="2_wgplm"]
-[ext_resource type="PackedScene" uid="uid://dgaidnbagaxlg" path="res://assets/objects/Clothes/Socks/Socks.glb" id="3_wgplm"]
+[ext_resource type="PackedScene" uid="uid://c27qryvwedmf" path="res://scenes/inheritated objects/in_socks.tscn" id="3_wgplm"]
+[ext_resource type="FontFile" uid="uid://cxdgfb2dxi44c" path="res://assets/fonts/Malam Poek.ttf" id="4_k5ytp"]
 
 [sub_resource type="Resource" id="Resource_k5ytp"]
 script = ExtResource("2_wgplm")
-objectName = "Socks"
+objectNameId = "Socks"
 objectCategory = "Clothes"
+objectName = "Socks"
 metadata/_custom_type_script = "uid://dgee7q3f12wgw"
 
 [sub_resource type="BoxShape3D" id="BoxShape3D_k5ytp"]
-size = Vector3(1.5198517, 1.1441171, 0.37520802)
+size = Vector3(1.5198517, 1.2184024, 0.51268625)
 
 [node name="Socks" type="RigidBody3D" unique_id=493255222]
 script = ExtResource("1_unl2q")
 item_data = SubResource("Resource_k5ytp")
 
-[node name="ObjectName" type="Label3D" parent="." unique_id=110966473]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1.8832116, 0)
-billboard = 1
-text = "TEST"
-font_size = 96
-
-[node name="ObjectPrice" type="Label3D" parent="." unique_id=1864197935]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 2.3212113, 0)
-billboard = 1
-outline_modulate = Color(0, 0.45882353, 0, 1)
-text = "TEST"
-font_size = 84
-
 [node name="CollisionShape3D" type="CollisionShape3D" parent="." unique_id=917946680]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.105472565, 0.6096337, -0.19452369)
+transform = Transform3D(0.8, 0, 0, 0, 0.8, 0, 0, 0, 0.8, 0.105472565, 0.52863526, -0.1395324)
 shape = SubResource("BoxShape3D_k5ytp")
 
-[node name="Socks" parent="." unique_id=2045676282 instance=ExtResource("3_wgplm")]
+[node name="Socks2" parent="." unique_id=673941575 instance=ExtResource("3_wgplm")]
+transform = Transform3D(0.8, 0, 0, 0, 0.8, 0, 0, 0, 0.8, 0, 0, 0)
+
+[node name="ObjectName" type="Label3D" parent="." unique_id=2116403835]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1.6481636, -0.12691975)
+billboard = 1
+text = "TEST
+"
+font = ExtResource("4_k5ytp")
+font_size = 96
+
+[node name="ObjectPrice" type="Label3D" parent="." unique_id=1883378877]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1.1966783, -0.12691975)
+billboard = 1
+outline_modulate = Color(0, 0.6059047, 0, 1)
+text = "TEST
+"
+font = ExtResource("4_k5ytp")
+font_size = 60

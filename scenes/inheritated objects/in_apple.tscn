@@ -1,0 +1,61 @@
+[gd_scene format=3 uid="uid://cp51ugvig7bis"]
+
+[ext_resource type="PackedScene" uid="uid://d38aw5e6aqv4v" path="res://assets/objects/Fruits/Apple/Apple.glb" id="1_x1hsy"]
+[ext_resource type="Texture2D" uid="uid://bfiojef8xrucr" path="res://assets/objects/Fruits/Apple/Apple_Apple Texture.png" id="2_jkdrn"]
+[ext_resource type="Texture2D" uid="uid://be8u4q0vqbin3" path="res://assets/objects/Fruits/Apple/Apple_Apple Stick Texture.png" id="3_jkdrn"]
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_af86t"]
+render_priority = 1
+transparency = 1
+shading_mode = 0
+albedo_color = Color(0, 0, 0, 1)
+grow = true
+grow_amount = 0.02
+stencil_mode = 3
+stencil_flags = 1
+stencil_compare = 5
+metadata/_stencil_owned = true
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_7v6ok"]
+next_pass = SubResource("StandardMaterial3D_af86t")
+diffuse_mode = 3
+specular_mode = 1
+albedo_texture = ExtResource("2_jkdrn")
+rim_enabled = true
+rim = 0.11
+rim_tint = 1.0
+stencil_mode = 1
+stencil_flags = 2
+stencil_outline_thickness = 0.02
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_6fwwn"]
+render_priority = 1
+transparency = 1
+shading_mode = 0
+albedo_color = Color(0, 0, 0, 1)
+grow = true
+grow_amount = 0.02
+stencil_mode = 3
+stencil_flags = 1
+stencil_compare = 5
+metadata/_stencil_owned = true
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_e7tye"]
+next_pass = SubResource("StandardMaterial3D_6fwwn")
+diffuse_mode = 3
+specular_mode = 1
+albedo_texture = ExtResource("3_jkdrn")
+rim_enabled = true
+rim = 0.11
+rim_tint = 1.0
+stencil_mode = 1
+stencil_flags = 2
+stencil_outline_thickness = 0.02
+
+[node name="Apple" unique_id=1125936904 instance=ExtResource("1_x1hsy")]
+
+[node name="Cube" parent="." index="0" unique_id=952700195]
+surface_material_override/0 = SubResource("StandardMaterial3D_7v6ok")
+
+[node name="Cube_001" parent="." index="1" unique_id=843701842]
+surface_material_override/0 = SubResource("StandardMaterial3D_e7tye")

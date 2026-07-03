@@ -1,0 +1,49 @@
+[gd_scene format=3 uid="uid://dox2f8q22tym5"]
+
+[ext_resource type="PackedScene" uid="uid://b21thyggvjjqb" path="res://assets/objects/Fruits/Melon/Melon.glb" id="1_67fh7"]
+[ext_resource type="Texture2D" uid="uid://bpgudgnrqudfx" path="res://assets/objects/Fruits/Melon/Melon_Main Melon Texture.png" id="2_4gcux"]
+[ext_resource type="Material" uid="uid://cdewp0kiusv1d" path="res://scenes/inheritated objects/in_melon.tres" id="3_7sger"]
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_af86t"]
+render_priority = 1
+transparency = 1
+shading_mode = 0
+albedo_color = Color(0, 0, 0, 1)
+grow = true
+grow_amount = 0.02
+stencil_mode = 3
+stencil_flags = 1
+stencil_compare = 5
+metadata/_stencil_owned = true
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_7sger"]
+next_pass = SubResource("StandardMaterial3D_af86t")
+diffuse_mode = 3
+specular_mode = 1
+albedo_texture = ExtResource("2_4gcux")
+rim_enabled = true
+rim = 0.11
+rim_tint = 1.0
+stencil_mode = 1
+stencil_flags = 2
+stencil_outline_thickness = 0.02
+
+[node name="Melon" unique_id=1642801170 instance=ExtResource("1_67fh7")]
+
+[node name="Sphere" parent="." index="0" unique_id=489339073]
+surface_material_override/0 = SubResource("StandardMaterial3D_7sger")
+
+[node name="Sphere_001" parent="." index="1" unique_id=1121467810]
+surface_material_override/0 = ExtResource("3_7sger")
+
+[node name="Sphere_002" parent="." index="2" unique_id=1073967063]
+surface_material_override/0 = ExtResource("3_7sger")
+
+[node name="Sphere_003" parent="." index="3" unique_id=1425820324]
+surface_material_override/0 = ExtResource("3_7sger")
+
+[node name="Sphere_004" parent="." index="4" unique_id=1006673681]
+surface_material_override/0 = ExtResource("3_7sger")
+
+[node name="Cube" parent="." index="5" unique_id=320201471]
+surface_material_override/0 = ExtResource("3_7sger")

@@ -1,39 +1,42 @@
 [gd_scene format=3 uid="uid://nhicgqbyttax"]
 
 [ext_resource type="Script" uid="uid://dec1flmonurh4" path="res://scripts/interactableObject.gd" id="1_jomrp"]
-[ext_resource type="PackedScene" uid="uid://2v7lwx1msbmp" path="res://assets/objects/Animal Food/Chicken Breast/Chicken Breast.glb" id="2_euq50"]
 [ext_resource type="Script" uid="uid://dgee7q3f12wgw" path="res://autoloads/resources/shoppingItemResources.gd" id="2_lvmxf"]
+[ext_resource type="FontFile" uid="uid://cxdgfb2dxi44c" path="res://assets/fonts/Malam Poek.ttf" id="3_182gg"]
+[ext_resource type="PackedScene" uid="uid://b7i8088xdgb65" path="res://scenes/inheritated objects/in_chicken_breast.tscn" id="3_lvmxf"]
 
-[sub_resource type="Resource" id="Resource_182gg"]
+[sub_resource type="Resource" id="Resource_lvmxf"]
 script = ExtResource("2_lvmxf")
-objectName = "Chicken Breast"
+objectNameId = "Chicken Breast"
 metadata/_custom_type_script = "uid://dgee7q3f12wgw"
 
 [sub_resource type="BoxShape3D" id="BoxShape3D_ptxti"]
-size = Vector3(1.9754028, 0.29467773, 2.585205)
+size = Vector3(2.1996155, 0.399292, 2.585205)
 
 [node name="ChickenBreast" type="RigidBody3D" unique_id=1275525457]
-collision_mask = 2
 script = ExtResource("1_jomrp")
-item_data = SubResource("Resource_182gg")
-
-[node name="Chicken Breast" parent="." unique_id=1539942553 instance=ExtResource("2_euq50")]
+item_data = SubResource("Resource_lvmxf")
 
 [node name="ObjectName" type="Label3D" parent="." unique_id=335997831]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.762, 0)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1.1048265, 0)
 billboard = 1
 text = "TEST
 "
+font = ExtResource("3_182gg")
 font_size = 96
 
 [node name="ObjectPrice" type="Label3D" parent="." unique_id=906287399]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1.2, 0)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.6533412, 0)
 billboard = 1
-outline_modulate = Color(0, 0.45882353, 0, 1)
+outline_modulate = Color(0, 0.6059047, 0, 1)
 text = "TEST
 "
-font_size = 84
+font = ExtResource("3_182gg")
+font_size = 60
 
 [node name="CollisionShape3D" type="CollisionShape3D" parent="." unique_id=603273157]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.0920105, 0.006225586, 0.030151367)
+transform = Transform3D(0.8, 0, 0, 0, 0.8, 0, 0, 0, 0.8, 0.024746701, 0.037609864, 0.030151367)
 shape = SubResource("BoxShape3D_ptxti")
+
+[node name="Chicken Breast2" parent="." unique_id=1927446741 instance=ExtResource("3_lvmxf")]
+transform = Transform3D(0.8, 0, 0, 0, 0.8, 0, 0, 0, 0.8, 0, 0, 0)

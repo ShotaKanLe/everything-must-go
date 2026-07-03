@@ -2,11 +2,12 @@
 
 [ext_resource type="Script" uid="uid://dec1flmonurh4" path="res://scripts/interactableObject.gd" id="1_irqym"]
 [ext_resource type="Script" uid="uid://diy16i4lqvgt4" path="res://autoloads/resources/upgradeItemResources.gd" id="2_2vyf5"]
-[ext_resource type="PackedScene" uid="uid://bcner53cfx8in" path="res://assets/objects/Upgrade/Strenght Upgrade/Strenght Upgrade.glb" id="3_irqym"]
+[ext_resource type="PackedScene" uid="uid://doc65jhbld4n" path="res://scenes/inheritated objects/in_strenght_upgrade.tscn" id="3_irqym"]
+[ext_resource type="FontFile" uid="uid://cxdgfb2dxi44c" path="res://assets/fonts/Malam Poek.ttf" id="4_2vyf5"]
 
 [sub_resource type="Resource" id="Resource_i0otn"]
 script = ExtResource("2_2vyf5")
-upgrade_type = 7
+upgrade_type = 2
 objectName = "Double Jump Upgrade"
 minimumPrice = 10.0
 maximumPrice = 100.0
@@ -23,16 +24,21 @@ item_data = SubResource("Resource_i0otn")
 transform = Transform3D(0.99973017, 0, 0.023228243, 0, 1, 0, -0.023228243, 0, 0.99973017, 0.01114722, 0.36798644, -0.0050474554)
 shape = SubResource("BoxShape3D_voivw")
 
-[node name="ObjectName" type="Label3D" parent="." unique_id=585172689]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1.7377868, 0)
-billboard = 1
-text = "TEST"
+[node name="Strenght Upgrade2" parent="." unique_id=1272074436 instance=ExtResource("3_irqym")]
 
-[node name="ObjectPrice" type="Label3D" parent="." unique_id=2126618168]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1.5373838, 0)
+[node name="ObjectName" type="Label3D" parent="." unique_id=166108858]
+transform = Transform3D(0.9999827, -0.004522403, 0.0037572684, 0.0045481743, 0.99996597, -0.0068821665, -0.00372603, 0.0068991287, 0.99996924, -0.0010208992, 2.1643822, 0.0015574275)
 billboard = 1
-outline_modulate = Color(0, 0.45882353, 0, 1)
-text = "TEST"
-font_size = 20
+text = "TEST
+"
+font = ExtResource("4_2vyf5")
+font_size = 96
 
-[node name="Strenght Upgrade" parent="." unique_id=860598175 instance=ExtResource("3_irqym")]
+[node name="ObjectPrice" type="Label3D" parent="." unique_id=1413062574]
+transform = Transform3D(0.9999827, -0.004522403, 0.0037572684, 0.0045481743, 0.99996597, -0.0068821665, -0.00372603, 0.0068991287, 0.99996924, 0.0010208992, 1.7129123, -0.0015574275)
+billboard = 1
+outline_modulate = Color(0, 0.6059047, 0, 1)
+text = "TEST
+"
+font = ExtResource("4_2vyf5")
+font_size = 60

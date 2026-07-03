@@ -2,38 +2,43 @@
 
 [ext_resource type="Script" uid="uid://dec1flmonurh4" path="res://scripts/interactableObject.gd" id="1_rd1aa"]
 [ext_resource type="Script" uid="uid://dgee7q3f12wgw" path="res://autoloads/resources/shoppingItemResources.gd" id="2_ith7s"]
-[ext_resource type="PackedScene" uid="uid://dpubcp5a5fo3h" path="res://assets/objects/Snacks/Gummy Bear/Gummy Bear.glb" id="3_ith7s"]
+[ext_resource type="PackedScene" uid="uid://c745gmxep1r74" path="res://scenes/inheritated objects/in_gummy_bear.tscn" id="4_c2oiw"]
+[ext_resource type="FontFile" uid="uid://cxdgfb2dxi44c" path="res://assets/fonts/Malam Poek.ttf" id="4_uikhv"]
 
 [sub_resource type="Resource" id="Resource_uikhv"]
 script = ExtResource("2_ith7s")
-objectName = "Gummy Bear"
+objectNameId = "Gummy Bear"
 objectCategory = "Snacks"
+objectName = "Gummy Bear"
 metadata/_custom_type_script = "uid://dgee7q3f12wgw"
 
 [sub_resource type="BoxShape3D" id="BoxShape3D_uikhv"]
 size = Vector3(1.2336805, 2.1870294, 1.1478047)
 
 [node name="GummyBear" type="RigidBody3D" unique_id=1313286885]
-collision_mask = 2
 script = ExtResource("1_rd1aa")
 item_data = SubResource("Resource_uikhv")
 
-[node name="ObjectName" type="Label3D" parent="." unique_id=716370098]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 6.2896132, 0)
-billboard = 1
-text = "TEST"
-font_size = 96
-
-[node name="ObjectPrice" type="Label3D" parent="." unique_id=2143797110]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 6.727613, 0)
-billboard = 1
-outline_modulate = Color(0, 0.45882353, 0, 1)
-text = "TEST"
-font_size = 84
-
 [node name="CollisionShape3D" type="CollisionShape3D" parent="." unique_id=972508088]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.040029675, 4.540941, 0.030950308)
+transform = Transform3D(0.4, 0, 0, 0, 0.4, 0, 0, 0, 0.4, -0.014244229, 0.0057199597, 0.022042513)
 shape = SubResource("BoxShape3D_uikhv")
 
-[node name="Gummy Bear" parent="." unique_id=636419735 instance=ExtResource("3_ith7s")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 4.5554786, 0)
+[node name="ObjectName" type="Label3D" parent="." unique_id=1409495456]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1.4204032, 0)
+billboard = 1
+text = "TEST
+"
+font = ExtResource("4_uikhv")
+font_size = 96
+
+[node name="ObjectPrice" type="Label3D" parent="." unique_id=806825294]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.96891797, 0)
+billboard = 1
+outline_modulate = Color(0, 0.6059047, 0, 1)
+text = "TEST
+"
+font = ExtResource("4_uikhv")
+font_size = 60
+
+[node name="Gummy Bear2" parent="." unique_id=1423537483 instance=ExtResource("4_c2oiw")]
+transform = Transform3D(0.4, 0, 0, 0, 0.4, 0, 0, 0, 0.4, 0, 0, 0)

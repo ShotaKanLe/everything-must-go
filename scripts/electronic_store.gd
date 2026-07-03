@@ -13,7 +13,6 @@ var doubleJumpUpgradeScene = preload("res://scenes/objects/Upgrades/double_jump_
 var rangeUpgradeScene = preload("res://scenes/objects/Upgrades/range_upgrade.tscn")
 var speedUpgradeScene = preload("res://scenes/objects/Upgrades/speed_upgrade.tscn")
 var staminaRegenUpgradeScene = preload("res://scenes/objects/Upgrades/stamina_regen_upgrade.tscn")
-var slotToolUpgradeScene = preload("res://scenes/objects/Upgrades/slot_tool_upgrade.tscn")
 
 @onready var tools_spawn_point: Node3D = $ToolsSpawnPoint
 @onready var labelToInteract: Label = $CanvasLayer/LabelToInteract
@@ -165,15 +164,13 @@ func get_scene_by_name(object_name: String) -> PackedScene:
 			return speedUpgradeScene
 		"Stamina Regen Upgrade":
 			return staminaRegenUpgradeScene
-		"Slot Tools Upgrade":
-			return slotToolUpgradeScene
 			
 		_:
 			return null
 
 func setupMoneyUI():
 	var money = LevelData.money
-	$CanvasLayer/ContainerMoney/Label.text = "Money : %.2f $" % money
+	$CanvasLayer/ContainerMoney/Label.text = str(LevelData.money)
 
 func spawn_upgrades() -> void:
 	if not upgrades_spawn_point:
@@ -226,9 +223,6 @@ func spawn_upgrades() -> void:
 				UpgradeItemArrayList.STAMINA_REGEN:
 					current_lvl = LevelData.stamina_regen_level
 					max_lvl = 10
-				UpgradeItemArrayList.SLOT_TOOLS:
-					current_lvl = LevelData.slot_tools_level
-					max_lvl = 2
 			
 			var spawned_already = spawned_counts.get(type, 0)
 			

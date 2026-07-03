@@ -1,27 +1,38 @@
 [gd_scene format=3 uid="uid://dmr3yo4ojemlw"]
 
-[ext_resource type="PackedScene" uid="uid://c1hu6lvxriwow" path="res://assets/objects/Tools/Cardbox/Cardbox.glb" id="1_3s3kx"]
+[ext_resource type="Script" uid="uid://dec1flmonurh4" path="res://scripts/interactableObject.gd" id="1_xtvoj"]
+[ext_resource type="Script" uid="uid://dgee7q3f12wgw" path="res://autoloads/resources/shoppingItemResources.gd" id="2_dngfb"]
+[ext_resource type="PackedScene" uid="uid://2yq8rek8jjxp" path="res://scenes/inheritated objects/in_cardbox.tscn" id="3_xtvoj"]
+
+[sub_resource type="Resource" id="Resource_mtre6"]
+script = ExtResource("2_dngfb")
+metadata/_custom_type_script = "uid://dgee7q3f12wgw"
 
 [sub_resource type="BoxShape3D" id="BoxShape3D_db3jk"]
-size = Vector3(1.9902003, 1.2366399, 1.979517)
+size = Vector3(2, 1.2366399, 2)
 
 [node name="Cardbox" type="RigidBody3D" unique_id=1871032020]
-
-[node name="ObjectName" type="Label3D" parent="." unique_id=2114047618]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1.438446, 0)
-billboard = 1
-text = "TEST"
-font_size = 96
-
-[node name="ObjectPrice" type="Label3D" parent="." unique_id=1185375438]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1.8764458, 0)
-billboard = 1
-outline_modulate = Color(0, 0.45882353, 0, 1)
-text = "TEST"
-font_size = 84
+script = ExtResource("1_xtvoj")
+item_data = SubResource("Resource_mtre6")
 
 [node name="CollisionShape3D" type="CollisionShape3D" parent="." unique_id=718824096]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.006823778, 0.24519128, 0.0032146275)
+transform = Transform3D(0.8, 0, 0, 0, 0.8, 0, 0, 0, 0.8, 0.011723638, 0.24519128, 0.013456136)
 shape = SubResource("BoxShape3D_db3jk")
 
-[node name="Cardbox" parent="." unique_id=1806295149 instance=ExtResource("1_3s3kx")]
+[node name="ObjectName" type="Label3D" parent="." unique_id=149043396]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1.852957, 0)
+billboard = 1
+text = "TEST
+"
+font_size = 96
+
+[node name="ObjectPrice" type="Label3D" parent="." unique_id=512933328]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1.4014717, 0)
+billboard = 1
+outline_modulate = Color(0, 0.45882353, 0, 1)
+text = "TEST
+"
+font_size = 84
+
+[node name="Cardbox2" parent="." unique_id=1073811602 instance=ExtResource("3_xtvoj")]
+transform = Transform3D(0.8, 0, 0, 0, 0.8, 0, 0, 0, 0.8, 0, 0, 0)

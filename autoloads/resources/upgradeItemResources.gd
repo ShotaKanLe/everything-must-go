@@ -8,7 +8,6 @@ enum UpgradeType {
 	RANGE,
 	SPEED,
 	STAMINA_REGEN,
-	SLOT_TOOLS,
 	DOUBLE_JUMP
 }
 
@@ -29,7 +28,5 @@ func apply_upgrade() -> void:
 			LevelData.speed_level += upgrade_amount
 		UpgradeType.STAMINA_REGEN:
 			LevelData.stamina_regen_level += upgrade_amount
-		UpgradeType.SLOT_TOOLS:
-			LevelData.slot_tools_level += upgrade_amount
 		UpgradeType.DOUBLE_JUMP:
 			LevelData.double_jump_upgrade = true

@@ -1,0 +1,46 @@
+[gd_scene format=3 uid="uid://4ssij8aawlco"]
+
+[ext_resource type="PackedScene" uid="uid://b0dxx4ctlkwkg" path="res://assets/objects/Fruits/Banana/Banana.glb" id="1_mvrme"]
+[ext_resource type="Material" uid="uid://bxy617j2mcg5f" path="res://scenes/inheritated objects/in_banana.tres" id="2_npequ"]
+[ext_resource type="Texture2D" uid="uid://dd4x6odede4gj" path="res://assets/objects/Fruits/Banana/Banana_Banana Stick Texture.png" id="3_1stwn"]
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_af86t"]
+render_priority = 1
+transparency = 1
+shading_mode = 0
+albedo_color = Color(0, 0, 0, 1)
+grow = true
+grow_amount = 0.02
+stencil_mode = 3
+stencil_flags = 1
+stencil_compare = 5
+metadata/_stencil_owned = true
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_ln4xd"]
+next_pass = SubResource("StandardMaterial3D_af86t")
+diffuse_mode = 3
+specular_mode = 1
+albedo_texture = ExtResource("3_1stwn")
+rim_enabled = true
+rim = 0.11
+rim_tint = 1.0
+stencil_mode = 1
+stencil_flags = 2
+stencil_outline_thickness = 0.02
+
+[node name="Banana" unique_id=1682222967 instance=ExtResource("1_mvrme")]
+
+[node name="Cube" parent="." index="0" unique_id=1784657745]
+surface_material_override/0 = ExtResource("2_npequ")
+
+[node name="Cube_001" parent="." index="1" unique_id=509216064]
+surface_material_override/0 = ExtResource("2_npequ")
+
+[node name="Cube_002" parent="." index="2" unique_id=19512828]
+surface_material_override/0 = ExtResource("2_npequ")
+
+[node name="Cube_003" parent="." index="3" unique_id=589366467]
+surface_material_override/0 = ExtResource("2_npequ")
+
+[node name="Cube_004" parent="." index="4" unique_id=1221038591]
+surface_material_override/0 = SubResource("StandardMaterial3D_ln4xd")

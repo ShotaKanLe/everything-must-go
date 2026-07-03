@@ -1,0 +1,52 @@
+[gd_scene format=3 uid="uid://c5bqbu3rre0ia"]
+
+[ext_resource type="PackedScene" uid="uid://bxfqvurbx0ett" path="res://assets/objects/Beverages/Mineral Water/Mineral Water.glb" id="1_sv84j"]
+[ext_resource type="Texture2D" uid="uid://bflx0wntdw86q" path="res://assets/objects/Beverages/Mineral Water/Mineral Water_Base Mineral Water Texture.png" id="2_6oxb3"]
+[ext_resource type="Texture2D" uid="uid://cp4b8ghfhlmes" path="res://assets/objects/Beverages/Mineral Water/Mineral Water_Tie Mineral Water Texture.png" id="3_6oxb3"]
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_af86t"]
+render_priority = 1
+transparency = 1
+shading_mode = 0
+albedo_color = Color(0, 0, 0, 1)
+grow = true
+grow_amount = 0.02
+stencil_mode = 3
+stencil_flags = 1
+stencil_compare = 5
+metadata/_stencil_owned = true
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_u7ypc"]
+next_pass = SubResource("StandardMaterial3D_af86t")
+diffuse_mode = 3
+specular_mode = 1
+albedo_texture = ExtResource("2_6oxb3")
+rim_enabled = true
+rim = 0.11
+rim_tint = 1.0
+stencil_mode = 1
+stencil_flags = 2
+stencil_outline_thickness = 0.02
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_q0um8"]
+next_pass = SubResource("StandardMaterial3D_af86t")
+diffuse_mode = 3
+specular_mode = 1
+albedo_texture = ExtResource("3_6oxb3")
+rim_enabled = true
+rim = 0.11
+rim_tint = 1.0
+stencil_mode = 1
+stencil_flags = 2
+stencil_outline_thickness = 0.02
+
+[node name="Mineral Water" unique_id=1905852044 instance=ExtResource("1_sv84j")]
+
+[node name="Cylinder" parent="." index="0" unique_id=1992544206]
+surface_material_override/0 = SubResource("StandardMaterial3D_u7ypc")
+
+[node name="Cylinder_001" parent="." index="1" unique_id=1676690698]
+surface_material_override/0 = SubResource("StandardMaterial3D_q0um8")
+
+[node name="Cylinder_002" parent="." index="2" unique_id=1326893669]
+surface_material_override/0 = SubResource("StandardMaterial3D_q0um8")

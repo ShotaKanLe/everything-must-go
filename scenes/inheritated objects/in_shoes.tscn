@@ -1,0 +1,48 @@
+[gd_scene format=3 uid="uid://ciud4oaidg66g"]
+
+[ext_resource type="PackedScene" uid="uid://0tr0e1ixsy4p" path="res://assets/objects/Clothes/Shoes/Shoes.glb" id="1_4tbdm"]
+[ext_resource type="Texture2D" uid="uid://covuhrseop8qa" path="res://assets/objects/Clothes/Shoes/Shoes_Base Texture.png" id="2_o6hvi"]
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_af86t"]
+render_priority = 1
+transparency = 1
+shading_mode = 0
+albedo_color = Color(0, 0, 0, 1)
+grow = true
+grow_amount = 0.02
+stencil_mode = 3
+stencil_flags = 1
+stencil_compare = 5
+metadata/_stencil_owned = true
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_w61ol"]
+next_pass = SubResource("StandardMaterial3D_af86t")
+diffuse_mode = 3
+specular_mode = 1
+albedo_texture = ExtResource("2_o6hvi")
+rim_enabled = true
+rim = 0.11
+rim_tint = 1.0
+stencil_mode = 1
+stencil_flags = 2
+stencil_outline_thickness = 0.02
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_w3q2u"]
+next_pass = SubResource("StandardMaterial3D_af86t")
+diffuse_mode = 3
+specular_mode = 1
+albedo_texture = ExtResource("2_o6hvi")
+rim_enabled = true
+rim = 0.11
+rim_tint = 1.0
+stencil_mode = 1
+stencil_flags = 2
+stencil_outline_thickness = 0.02
+
+[node name="Shoes" unique_id=1984244739 instance=ExtResource("1_4tbdm")]
+
+[node name="Cube" parent="." index="0" unique_id=1522746455]
+surface_material_override/0 = SubResource("StandardMaterial3D_w61ol")
+
+[node name="Cube_001" parent="." index="1" unique_id=1913062265]
+surface_material_override/0 = SubResource("StandardMaterial3D_w3q2u")

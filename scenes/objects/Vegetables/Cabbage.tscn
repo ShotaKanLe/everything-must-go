@@ -2,36 +2,43 @@
 
 [ext_resource type="Script" uid="uid://dec1flmonurh4" path="res://scripts/interactableObject.gd" id="1_0s84m"]
 [ext_resource type="Script" uid="uid://dgee7q3f12wgw" path="res://autoloads/resources/shoppingItemResources.gd" id="2_6xsvc"]
-[ext_resource type="PackedScene" uid="uid://bxpk2l6tqcows" path="res://assets/objects/Vegetables/Cabbage/Cabbage.glb" id="3_6xsvc"]
+[ext_resource type="PackedScene" uid="uid://3logoajo5ubd" path="res://scenes/inheritated objects/in_cabbage.tscn" id="3_6xsvc"]
+[ext_resource type="FontFile" uid="uid://cxdgfb2dxi44c" path="res://assets/fonts/Malam Poek.ttf" id="4_m55pj"]
 
 [sub_resource type="Resource" id="Resource_m55pj"]
 script = ExtResource("2_6xsvc")
-objectName = "Cabbage"
+objectNameId = "Cabbage"
 objectCategory = "Vegetables"
+objectName = "Cabbage"
 metadata/_custom_type_script = "uid://dgee7q3f12wgw"
 
 [sub_resource type="BoxShape3D" id="BoxShape3D_0s84m"]
-size = Vector3(1.9248047, 2.2584863, 1.956708)
+size = Vector3(1.9248047, 2.0393994, 1.956708)
 
 [node name="Cabbage" type="RigidBody3D" unique_id=1930649383]
 script = ExtResource("1_0s84m")
 item_data = SubResource("Resource_m55pj")
 
-[node name="ObjectName" type="Label3D" parent="." unique_id=1174077739]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 2.592591, 0)
-billboard = 1
-text = "TEST"
-font_size = 96
-
-[node name="ObjectPrice" type="Label3D" parent="." unique_id=1932339263]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 3.0305908, 0)
-billboard = 1
-outline_modulate = Color(0, 0.45882353, 0, 1)
-text = "TEST"
-font_size = 84
-
 [node name="CollisionShape3D" type="CollisionShape3D" parent="." unique_id=1034993145]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.01471591, 0.91380095, -0.00047501922)
+transform = Transform3D(0.7, 0, 0, 0, 0.7, 0, 0, 0, 0.7, -0.01471591, 0.63542056, -0.00047501922)
 shape = SubResource("BoxShape3D_0s84m")
 
-[node name="Cabbage" parent="." unique_id=2019608882 instance=ExtResource("3_6xsvc")]
+[node name="Cabbage2" parent="." unique_id=2017199 instance=ExtResource("3_6xsvc")]
+transform = Transform3D(0.7, 0, 0, 0, 0.7, 0, 0, 0, 0.7, 0, 0, 0)
+
+[node name="ObjectName" type="Label3D" parent="." unique_id=581703243]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 2.323674, 0)
+billboard = 1
+text = "TEST
+"
+font = ExtResource("4_m55pj")
+font_size = 96
+
+[node name="ObjectPrice" type="Label3D" parent="." unique_id=1122246349]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1.8721887, 0)
+billboard = 1
+outline_modulate = Color(0, 0.6059047, 0, 1)
+text = "TEST
+"
+font = ExtResource("4_m55pj")
+font_size = 60

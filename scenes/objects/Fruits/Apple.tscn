@@ -2,37 +2,43 @@
 
 [ext_resource type="Script" uid="uid://dec1flmonurh4" path="res://scripts/interactableObject.gd" id="1_2gkxt"]
 [ext_resource type="Script" uid="uid://dgee7q3f12wgw" path="res://autoloads/resources/shoppingItemResources.gd" id="2_ag1ri"]
-[ext_resource type="PackedScene" uid="uid://d38aw5e6aqv4v" path="res://assets/objects/Fruits/Apple/Apple.glb" id="3_ag1ri"]
+[ext_resource type="FontFile" uid="uid://cxdgfb2dxi44c" path="res://assets/fonts/Malam Poek.ttf" id="4_53upi"]
+[ext_resource type="PackedScene" uid="uid://cp51ugvig7bis" path="res://scenes/inheritated objects/in_apple.tscn" id="5_53upi"]
 
 [sub_resource type="Resource" id="Resource_k03cp"]
 script = ExtResource("2_ag1ri")
-objectName = "Apple"
+objectNameId = "Apple"
 objectCategory = "Fruits"
+objectName = "Apple"
 metadata/_custom_type_script = "uid://dgee7q3f12wgw"
 
 [sub_resource type="BoxShape3D" id="BoxShape3D_k03cp"]
-size = Vector3(2.4239154, 2.492343, 1.6901133)
+size = Vector3(2.4239154, 3.2666793, 2.3316255)
 
 [node name="Apple" type="RigidBody3D" unique_id=2106508795]
-collision_mask = 2
 script = ExtResource("1_2gkxt")
 item_data = SubResource("Resource_k03cp")
 
-[node name="Apple" parent="." unique_id=2064119572 instance=ExtResource("3_ag1ri")]
+[node name="CollisionShape3D" type="CollisionShape3D" parent="." unique_id=1888828505]
+transform = Transform3D(0.4, 0, 0, 0, 0.4, 0, 0, 0, 0.4, 0.021905154, 0.09969066, -0.021163698)
+shape = SubResource("BoxShape3D_k03cp")
 
-[node name="ObjectName" type="Label3D" parent="." unique_id=532495896]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1.943994, 0)
+[node name="ObjectName" type="Label3D" parent="." unique_id=1123367381]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1.3614235, 0)
 billboard = 1
-text = "TEST"
+text = "TEST
+"
+font = ExtResource("4_53upi")
 font_size = 96
 
-[node name="ObjectPrice" type="Label3D" parent="." unique_id=1483055406]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 2.3819938, 0)
+[node name="ObjectPrice" type="Label3D" parent="." unique_id=1054144929]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.9099382, 0)
 billboard = 1
-outline_modulate = Color(0, 0.45882353, 0, 1)
-text = "TEST"
-font_size = 84
+outline_modulate = Color(0, 0.6059047, 0, 1)
+text = "TEST
+"
+font = ExtResource("4_53upi")
+font_size = 60
 
-[node name="CollisionShape3D" type="CollisionShape3D" parent="." unique_id=1888828505]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.021905154, 0.25455794, 0.044608474)
-shape = SubResource("BoxShape3D_k03cp")
+[node name="Apple2" parent="." unique_id=1125936904 instance=ExtResource("5_53upi")]
+transform = Transform3D(0.5, 0, 0, 0, 0.5, 0, 0, 0, 0.5, 0, 0, 0)

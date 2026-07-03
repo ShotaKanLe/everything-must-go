@@ -1,39 +1,45 @@
 [gd_scene format=3 uid="uid://h2hnxors72ha"]
 
-[ext_resource type="PackedScene" uid="uid://bxfqvurbx0ett" path="res://assets/objects/Beverages/Mineral Water/Mineral Water.glb" id="1_e18ue"]
 [ext_resource type="Script" uid="uid://dec1flmonurh4" path="res://scripts/interactableObject.gd" id="1_lre8a"]
 [ext_resource type="Script" uid="uid://dgee7q3f12wgw" path="res://autoloads/resources/shoppingItemResources.gd" id="2_kbmio"]
+[ext_resource type="FontFile" uid="uid://cxdgfb2dxi44c" path="res://assets/fonts/Malam Poek.ttf" id="4_kbmio"]
+[ext_resource type="PackedScene" uid="uid://c5bqbu3rre0ia" path="res://scenes/inheritated objects/in_mineral_water.tscn" id="5_o1nfm"]
 
 [sub_resource type="Resource" id="Resource_o1nfm"]
 script = ExtResource("2_kbmio")
-objectName = "Mineral Water"
+objectNameId = "Mineral Water"
 objectCategory = "Beverages"
 isFragile = true
+objectName = "Mineral Water"
 metadata/_custom_type_script = "uid://dgee7q3f12wgw"
 
 [sub_resource type="BoxShape3D" id="BoxShape3D_n81n0"]
-size = Vector3(1.5073853, 3.3654518, 1.2715225)
+size = Vector3(1.5073853, 3.4970026, 1.2715225)
 
 [node name="MineralWater" type="RigidBody3D" unique_id=764094409]
-collision_mask = 2
 script = ExtResource("1_lre8a")
 item_data = SubResource("Resource_o1nfm")
 
-[node name="Mineral Water" parent="." unique_id=1640882828 instance=ExtResource("1_e18ue")]
+[node name="CollisionShape3D" type="CollisionShape3D" parent="." unique_id=1967623870]
+transform = Transform3D(0.5, 0, 0, 0, 0.5, 0, 0, 0, 0.5, 0.01102829, 0.6451348, 0.029709876)
+shape = SubResource("BoxShape3D_n81n0")
 
-[node name="ObjectName" type="Label3D" parent="." unique_id=1887043365]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 3.5858002, 0)
+[node name="ObjectName" type="Label3D" parent="." unique_id=29982556]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 2.2595696, 0)
 billboard = 1
-text = "TEST"
+text = "TEST
+"
+font = ExtResource("4_kbmio")
 font_size = 96
 
-[node name="ObjectPrice" type="Label3D" parent="." unique_id=1940903909]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 4.0238, 0)
+[node name="ObjectPrice" type="Label3D" parent="." unique_id=1298460047]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1.8080844, 0)
 billboard = 1
-outline_modulate = Color(0, 0.45882353, 0, 1)
-text = "TEST"
-font_size = 84
+outline_modulate = Color(0, 0.6059047, 0, 1)
+text = "TEST
+"
+font = ExtResource("4_kbmio")
+font_size = 60
 
-[node name="CollisionShape3D" type="CollisionShape3D" parent="." unique_id=1967623870]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.01102829, 1.350474, 0.029709876)
-shape = SubResource("BoxShape3D_n81n0")
+[node name="Mineral Water2" parent="." unique_id=1905852044 instance=ExtResource("5_o1nfm")]
+transform = Transform3D(0.5, 0, 0, 0, 0.5, 0, 0, 0, 0.5, 0, 0, 0)

@@ -1,0 +1,42 @@
+[gd_scene format=3 uid="uid://cpddch8lhnc2f"]
+
+[ext_resource type="Script" uid="uid://dec1flmonurh4" path="res://scripts/interactableObject.gd" id="1_fxu74"]
+[ext_resource type="Script" uid="uid://dgee7q3f12wgw" path="res://autoloads/resources/shoppingItemResources.gd" id="2_beerl"]
+[ext_resource type="FontFile" uid="uid://cxdgfb2dxi44c" path="res://assets/fonts/Malam Poek.ttf" id="3_eka3l"]
+[ext_resource type="PackedScene" uid="uid://cd4ivvfen671j" path="res://scenes/inheritated objects/in_mall_pillar.tscn" id="4_fxu74"]
+
+[sub_resource type="Resource" id="Resource_u4c62"]
+script = ExtResource("2_beerl")
+objectNameId = "Mall Pillar"
+metadata/_custom_type_script = "uid://dgee7q3f12wgw"
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_ptxti"]
+size = Vector3(3.9212685, 67.28079, 4.5112896)
+
+[node name="Mall Pillar" type="RigidBody3D" unique_id=1275525457]
+script = ExtResource("1_fxu74")
+item_data = SubResource("Resource_u4c62")
+
+[node name="ObjectName" type="Label3D" parent="." unique_id=335997831]
+transform = Transform3D(1.3, 0, 0, 0, 1.3, 0, 0, 0, 1.3, 0.41607237, 11.504246, -3.4993873)
+billboard = 1
+text = "TEST
+"
+font = ExtResource("3_eka3l")
+font_size = 96
+
+[node name="ObjectPrice" type="Label3D" parent="." unique_id=906287399]
+transform = Transform3D(1.3, 0, 0, 0, 1.3, 0, 0, 0, 1.3, 0.41607237, 11.052762, -3.4993873)
+billboard = 1
+outline_modulate = Color(0, 0.6059047, 0, 1)
+text = "TEST
+"
+font = ExtResource("3_eka3l")
+font_size = 60
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="." unique_id=603273157]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.028972626, 20.281136, -0.33975148)
+shape = SubResource("BoxShape3D_ptxti")
+
+[node name="Mall Pillar2" parent="." unique_id=1213942864 instance=ExtResource("4_fxu74")]
+transform = Transform3D(0.6, 0, 0, 0, 0.6, 0, 0, 0, 0.6, 0, 23.05909, 0)

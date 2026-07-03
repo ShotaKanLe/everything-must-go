@@ -1,0 +1,16 @@
+[gd_scene format=3 uid="uid://djqcc2sdvgs61"]
+
+[ext_resource type="PackedScene" uid="uid://b2l8hrdytd2bq" path="res://assets/objects/Animal Food/Lobster/Lobster.glb" id="1_ps7sr"]
+[ext_resource type="Material" uid="uid://co4iky8hdm25w" path="res://shader/chicken_breast_outline_texture.tres" id="2_2e7wk"]
+[ext_resource type="Material" uid="uid://5e3i1xixpqlu" path="res://scenes/inheritated objects/in_lobster.tres" id="2_jek0h"]
+
+[node name="Lobster" unique_id=354106750 instance=ExtResource("1_ps7sr")]
+
+[node name="Cube" parent="." index="0" unique_id=1901705381]
+surface_material_override/0 = ExtResource("2_2e7wk")
+
+[node name="Cube_001" parent="." index="1" unique_id=987879595]
+surface_material_override/0 = ExtResource("2_jek0h")
+
+[node name="Cube_002" parent="." index="2" unique_id=693862320]
+surface_material_override/0 = ExtResource("2_jek0h")

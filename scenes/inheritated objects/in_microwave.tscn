@@ -1,0 +1,33 @@
+[gd_scene format=3 uid="uid://cvmfl45yf1u2o"]
+
+[ext_resource type="PackedScene" uid="uid://bsqfn4u4vjpr1" path="res://assets/objects/Electronics/Microwave/Microwave.glb" id="1_embd7"]
+[ext_resource type="Texture2D" uid="uid://4cuuqsoe6lmf" path="res://assets/objects/Electronics/Microwave/Microwave_Base Microwave Texture.png" id="2_c6kam"]
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_af86t"]
+render_priority = 1
+transparency = 1
+shading_mode = 0
+albedo_color = Color(0, 0, 0, 1)
+grow = true
+grow_amount = 0.02
+stencil_mode = 3
+stencil_flags = 1
+stencil_compare = 5
+metadata/_stencil_owned = true
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_uqirl"]
+next_pass = SubResource("StandardMaterial3D_af86t")
+diffuse_mode = 3
+specular_mode = 1
+albedo_texture = ExtResource("2_c6kam")
+rim_enabled = true
+rim = 0.11
+rim_tint = 1.0
+stencil_mode = 1
+stencil_flags = 2
+stencil_outline_thickness = 0.02
+
+[node name="Microwave" unique_id=386314817 instance=ExtResource("1_embd7")]
+
+[node name="Cube_001" parent="." index="1" unique_id=853051960]
+surface_material_override/0 = SubResource("StandardMaterial3D_uqirl")

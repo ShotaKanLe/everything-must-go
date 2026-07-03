@@ -8,7 +8,6 @@ enum {
 	RANGE,
 	SPEED,
 	STAMINA_REGEN,
-	SLOT_TOOLS,
 	DOUBLE_JUMP
 }
 
@@ -48,12 +47,6 @@ enum {
 		"minimumPrice" : 12,
 		"maximumPrice" : 25,
 		"upgradeType" : STAMINA_REGEN,
-	},
-	{
-		"objectName" : "Slot Tools Upgrade",
-		"minimumPrice" : 30,
-		"maximumPrice" : 60,
-		"upgradeType" : SLOT_TOOLS,
 	},
 	{
 		"objectName" : "Double Jump Upgrade",

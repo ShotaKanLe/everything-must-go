@@ -1,0 +1,49 @@
+[gd_scene format=3 uid="uid://bdxkkapy63ogr"]
+
+[ext_resource type="PackedScene" uid="uid://otvomyvk6wnk" path="res://assets/objects/Electronics/Blender/Blender.glb" id="1_txtk5"]
+[ext_resource type="Texture2D" uid="uid://chtuugdxkr4rs" path="res://assets/objects/Electronics/Blender/Blender_Main Blue Color Texture.png" id="2_7f4r2"]
+[ext_resource type="Texture2D" uid="uid://ch57uetvdm34v" path="res://assets/objects/Electronics/Blender/Blender_Main White Color.png" id="3_7f4r2"]
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_af86t"]
+render_priority = 1
+transparency = 1
+shading_mode = 0
+albedo_color = Color(0, 0, 0, 1)
+grow = true
+grow_amount = 0.02
+stencil_mode = 3
+stencil_flags = 1
+stencil_compare = 5
+metadata/_stencil_owned = true
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_0l3ex"]
+next_pass = SubResource("StandardMaterial3D_af86t")
+diffuse_mode = 3
+specular_mode = 1
+albedo_texture = ExtResource("2_7f4r2")
+rim_enabled = true
+rim = 0.11
+rim_tint = 1.0
+stencil_mode = 1
+stencil_flags = 2
+stencil_outline_thickness = 0.02
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_ybvfs"]
+next_pass = SubResource("StandardMaterial3D_af86t")
+diffuse_mode = 3
+specular_mode = 1
+albedo_texture = ExtResource("3_7f4r2")
+rim_enabled = true
+rim = 0.11
+rim_tint = 1.0
+stencil_mode = 1
+stencil_flags = 2
+stencil_outline_thickness = 0.02
+
+[node name="Blender" unique_id=1343856800 instance=ExtResource("1_txtk5")]
+
+[node name="Cube" parent="." index="0" unique_id=2143923725]
+surface_material_override/0 = SubResource("StandardMaterial3D_0l3ex")
+
+[node name="Cylinder" parent="." index="1" unique_id=978891582]
+surface_material_override/0 = SubResource("StandardMaterial3D_ybvfs")

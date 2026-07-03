@@ -1,0 +1,49 @@
+[gd_scene format=3 uid="uid://chply6ew2s78i"]
+
+[ext_resource type="PackedScene" uid="uid://cxqrcg4r3ctjw" path="res://assets/objects/Snacks/Popcorn/Popcorn.glb" id="1_nw2r7"]
+[ext_resource type="Texture2D" uid="uid://bg3meu0ruqa0n" path="res://assets/objects/Snacks/Popcorn/Popcorn_Popcorn Warp.png" id="2_5auh3"]
+[ext_resource type="Texture2D" uid="uid://ub1t16d8381k" path="res://assets/objects/Snacks/Popcorn/Popcorn_Popcorn Wrap.png" id="3_6keq3"]
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_af86t"]
+render_priority = 1
+transparency = 1
+shading_mode = 0
+albedo_color = Color(0, 0, 0, 1)
+grow = true
+grow_amount = 0.02
+stencil_mode = 3
+stencil_flags = 1
+stencil_compare = 5
+metadata/_stencil_owned = true
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_6keq3"]
+next_pass = SubResource("StandardMaterial3D_af86t")
+diffuse_mode = 3
+specular_mode = 1
+albedo_texture = ExtResource("2_5auh3")
+rim_enabled = true
+rim = 0.11
+rim_tint = 1.0
+stencil_mode = 1
+stencil_flags = 2
+stencil_outline_thickness = 0.02
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_wwxyu"]
+next_pass = SubResource("StandardMaterial3D_af86t")
+diffuse_mode = 3
+specular_mode = 1
+albedo_texture = ExtResource("3_6keq3")
+rim_enabled = true
+rim = 0.11
+rim_tint = 1.0
+stencil_mode = 1
+stencil_flags = 2
+stencil_outline_thickness = 0.02
+
+[node name="Popcorn" unique_id=654569821 instance=ExtResource("1_nw2r7")]
+
+[node name="Cube" parent="." index="0" unique_id=122709631]
+surface_material_override/0 = SubResource("StandardMaterial3D_6keq3")
+
+[node name="Sphere" parent="." index="1" unique_id=1323321808]
+surface_material_override/0 = SubResource("StandardMaterial3D_wwxyu")

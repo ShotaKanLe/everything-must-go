@@ -1,0 +1,9 @@
+[gd_scene format=3 uid="uid://eu4io2l2kg3v"]
+
+[ext_resource type="PackedScene" uid="uid://bqedbk26v31mt" path="res://assets/objects/Animal Food/Wagyu/Wagyu.glb" id="1_qq5bb"]
+[ext_resource type="Material" uid="uid://co4iky8hdm25w" path="res://shader/chicken_breast_outline_texture.tres" id="2_8epkt"]
+
+[node name="Wagyu" unique_id=1531836085 instance=ExtResource("1_qq5bb")]
+
+[node name="Cube" parent="." index="0" unique_id=1656870180]
+surface_material_override/0 = ExtResource("2_8epkt")

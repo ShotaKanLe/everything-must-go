@@ -1,38 +1,44 @@
 [gd_scene format=3 uid="uid://cf0sv2wserb1j"]
 
 [ext_resource type="Script" uid="uid://dec1flmonurh4" path="res://scripts/interactableObject.gd" id="1_hf7pf"]
-[ext_resource type="PackedScene" uid="uid://otvomyvk6wnk" path="res://assets/objects/Electronics/Blender/Blender.glb" id="1_u8u8u"]
 [ext_resource type="Script" uid="uid://dgee7q3f12wgw" path="res://autoloads/resources/shoppingItemResources.gd" id="2_0x0lp"]
+[ext_resource type="FontFile" uid="uid://cxdgfb2dxi44c" path="res://assets/fonts/Malam Poek.ttf" id="4_ng2ue"]
+[ext_resource type="PackedScene" uid="uid://bdxkkapy63ogr" path="res://scenes/inheritated objects/in_blender.tscn" id="4_qbfnd"]
 
 [sub_resource type="Resource" id="Resource_ng2ue"]
 script = ExtResource("2_0x0lp")
-objectName = "Blender"
+objectNameId = "Blender"
 objectCategory = "Electronics"
+objectName = "Blender"
 metadata/_custom_type_script = "uid://dgee7q3f12wgw"
 
 [sub_resource type="BoxShape3D" id="BoxShape3D_hf7pf"]
-size = Vector3(1.5073853, 2.6363356, 1.4520041)
+size = Vector3(1.5073853, 2.8063269, 1.4520041)
 
 [node name="Blender" type="RigidBody3D" unique_id=756181801]
-collision_mask = 2
 script = ExtResource("1_hf7pf")
 item_data = SubResource("Resource_ng2ue")
 
-[node name="ObjectName" type="Label3D" parent="." unique_id=723331969]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 2.9953222, 0)
-billboard = 1
-text = "TEST"
-font_size = 96
-
-[node name="ObjectPrice" type="Label3D" parent="." unique_id=888200795]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 3.433322, 0)
-billboard = 1
-outline_modulate = Color(0, 0.45882353, 0, 1)
-text = "TEST"
-font_size = 84
-
 [node name="CollisionShape3D" type="CollisionShape3D" parent="." unique_id=1154180083]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.01102829, 1.1703134, -0.007127762)
+transform = Transform3D(0.7, 0, 0, 0, 0.7, 0, 0, 0, 0.7, 0.01102829, 0.7673138, -0.007127762)
 shape = SubResource("BoxShape3D_hf7pf")
 
-[node name="Blender" parent="." unique_id=392041725 instance=ExtResource("1_u8u8u")]
+[node name="ObjectName" type="Label3D" parent="." unique_id=962464308]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 2.6665018, 0)
+billboard = 1
+text = "TEST
+"
+font = ExtResource("4_ng2ue")
+font_size = 96
+
+[node name="ObjectPrice" type="Label3D" parent="." unique_id=1368257437]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 2.2150164, 0)
+billboard = 1
+outline_modulate = Color(0, 0.6059047, 0, 1)
+text = "TEST
+"
+font = ExtResource("4_ng2ue")
+font_size = 60
+
+[node name="Blender2" parent="." unique_id=1343856800 instance=ExtResource("4_qbfnd")]
+transform = Transform3D(0.7, 0, 0, 0, 0.7, 0, 0, 0, 0.7, 0, 0, 0)

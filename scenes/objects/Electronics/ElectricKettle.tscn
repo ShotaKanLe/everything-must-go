@@ -1,39 +1,44 @@
 [gd_scene format=3 uid="uid://bqh7m8sa3prw1"]
 
-[ext_resource type="PackedScene" uid="uid://cp8ioc5fcqyu0" path="res://assets/objects/Electronics/Electric Kettle/Electric Kettle.glb" id="1_7ulqp"]
 [ext_resource type="Script" uid="uid://dec1flmonurh4" path="res://scripts/interactableObject.gd" id="1_ervkd"]
 [ext_resource type="Script" uid="uid://dgee7q3f12wgw" path="res://autoloads/resources/shoppingItemResources.gd" id="2_y3nm7"]
+[ext_resource type="PackedScene" uid="uid://dni7vept700w6" path="res://scenes/inheritated objects/in_electric_kettle.tscn" id="4_tr7wo"]
+[ext_resource type="FontFile" uid="uid://cxdgfb2dxi44c" path="res://assets/fonts/Malam Poek.ttf" id="4_y3nm7"]
 
 [sub_resource type="Resource" id="Resource_tr7wo"]
 script = ExtResource("2_y3nm7")
-objectName = "Electric Kettle"
+objectNameId = "Electric Kettle"
 objectCategory = "Electrics"
+objectName = "Electric Kettle"
 metadata/_custom_type_script = "uid://dgee7q3f12wgw"
 
 [sub_resource type="BoxShape3D" id="BoxShape3D_ucneh"]
-size = Vector3(2.2143097, 3.1766238, 2.4941268)
+size = Vector3(2.2143097, 3.340265, 2.4941268)
 
 [node name="ElectricKettle" type="RigidBody3D" unique_id=261258412]
-collision_mask = 2
 script = ExtResource("1_ervkd")
 item_data = SubResource("Resource_tr7wo")
 
-[node name="ObjectName" type="Label3D" parent="." unique_id=246497837]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 5.554461, 0)
-billboard = 1
-text = "TEST"
-font_size = 96
-
-[node name="ObjectPrice" type="Label3D" parent="." unique_id=329317810]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 5.9924607, 0)
-billboard = 1
-outline_modulate = Color(0, 0.45882353, 0, 1)
-text = "TEST"
-font_size = 84
-
 [node name="CollisionShape3D" type="CollisionShape3D" parent="." unique_id=295873779]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.0065345764, 3.4222548, 0.044978112)
+transform = Transform3D(0.5, 0, 0, 0, 0.5, 0, 0, 0, 0.5, 0.0065345764, 0.8177952, 0.044978112)
 shape = SubResource("BoxShape3D_ucneh")
 
-[node name="Electric Kettle" parent="." unique_id=1264464343 instance=ExtResource("1_7ulqp")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 2.9953222, 0)
+[node name="ObjectName" type="Label3D" parent="." unique_id=1620336761]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 2.4875703, 0)
+billboard = 1
+text = "TEST
+"
+font = ExtResource("4_y3nm7")
+font_size = 96
+
+[node name="ObjectPrice" type="Label3D" parent="." unique_id=649514040]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 2.0360851, 0)
+billboard = 1
+outline_modulate = Color(0, 0.6059047, 0, 1)
+text = "TEST
+"
+font = ExtResource("4_y3nm7")
+font_size = 60
+
+[node name="Electric Kettle2" parent="." unique_id=791018998 instance=ExtResource("4_tr7wo")]
+transform = Transform3D(0.5, 0, 0, 0, 0.5, 0, 0, 0, 0.5, 0, 0.57197154, 0)

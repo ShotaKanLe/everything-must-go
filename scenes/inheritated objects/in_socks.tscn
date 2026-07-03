@@ -1,0 +1,48 @@
+[gd_scene format=3 uid="uid://c27qryvwedmf"]
+
+[ext_resource type="PackedScene" uid="uid://dgaidnbagaxlg" path="res://assets/objects/Clothes/Socks/Socks.glb" id="1_0vhep"]
+[ext_resource type="Texture2D" uid="uid://dba7lqikjidj4" path="res://assets/objects/Clothes/Socks/Socks_Base Texture.png" id="3_eyn5p"]
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_af86t"]
+render_priority = 1
+transparency = 1
+shading_mode = 0
+albedo_color = Color(0, 0, 0, 1)
+grow = true
+grow_amount = 0.02
+stencil_mode = 3
+stencil_flags = 1
+stencil_compare = 5
+metadata/_stencil_owned = true
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_elupc"]
+next_pass = SubResource("StandardMaterial3D_af86t")
+diffuse_mode = 3
+specular_mode = 1
+albedo_texture = ExtResource("3_eyn5p")
+rim_enabled = true
+rim = 0.11
+rim_tint = 1.0
+stencil_mode = 1
+stencil_flags = 2
+stencil_outline_thickness = 0.02
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_10yxy"]
+next_pass = SubResource("StandardMaterial3D_af86t")
+diffuse_mode = 3
+specular_mode = 1
+albedo_texture = ExtResource("3_eyn5p")
+rim_enabled = true
+rim = 0.11
+rim_tint = 1.0
+stencil_mode = 1
+stencil_flags = 2
+stencil_outline_thickness = 0.02
+
+[node name="Socks" unique_id=673941575 instance=ExtResource("1_0vhep")]
+
+[node name="Plane" parent="." index="0" unique_id=1200474127]
+surface_material_override/0 = SubResource("StandardMaterial3D_elupc")
+
+[node name="Plane_001" parent="." index="1" unique_id=831619445]
+surface_material_override/0 = SubResource("StandardMaterial3D_10yxy")

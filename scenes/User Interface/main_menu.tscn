@@ -1,0 +1,104 @@
+[gd_scene format=3 uid="uid://b7n2um4c7qnek"]
+
+[ext_resource type="VideoStream" uid="uid://dn34ctgjb8ppq" path="res://assets/user_interface/main_menu/MainMenuVideo.ogv" id="1_nygv7"]
+[ext_resource type="Script" uid="uid://vaoc04oy6u0o" path="res://scripts/main_menu.gd" id="1_w8h81"]
+[ext_resource type="Texture2D" uid="uid://csysuw3nu3ihh" path="res://assets/user_interface/main_menu/Example_MainMenu.png" id="2_opehm"]
+[ext_resource type="Texture2D" uid="uid://bygf1283dnsvm" path="res://assets/user_interface/main_menu/Start.png" id="4_6tc4g"]
+[ext_resource type="Texture2D" uid="uid://booe0frhwcknb" path="res://assets/user_interface/main_menu/EverythingMustGo_LOGO.png" id="5_6tc4g"]
+[ext_resource type="Texture2D" uid="uid://dcnkenp1mc4mh" path="res://assets/user_interface/main_menu/Tutorials.png" id="5_q046p"]
+[ext_resource type="Texture2D" uid="uid://dmmnl52dgocdg" path="res://assets/user_interface/main_menu/Exit.png" id="6_fkgeg"]
+[ext_resource type="Texture2D" uid="uid://b1jukipyvo1rr" path="res://assets/user_interface/main_menu/Credits.png" id="7_lvkmq"]
+
+[node name="MainMenu" type="Node2D" unique_id=669907098]
+script = ExtResource("1_w8h81")
+
+[node name="CanvasLayer" type="CanvasLayer" parent="." unique_id=1513648407]
+
+[node name="VideoStreamPlayer" type="VideoStreamPlayer" parent="CanvasLayer" unique_id=1176832687]
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+stream = ExtResource("1_nygv7")
+autoplay = true
+expand = true
+loop = true
+
+[node name="TextureRect" type="TextureRect" parent="CanvasLayer" unique_id=136328335]
+visible = false
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+texture = ExtResource("2_opehm")
+expand_mode = 2
+
+[node name="ListButton" type="Control" parent="CanvasLayer" unique_id=1320871222]
+layout_mode = 3
+anchors_preset = 0
+offset_right = 40.0
+offset_bottom = 40.0
+
+[node name="ButtonStart" type="Button" parent="CanvasLayer/ListButton" unique_id=1671494922]
+layout_mode = 0
+offset_left = 106.0
+offset_top = 576.0
+offset_right = 280.0
+offset_bottom = 653.0
+flat = true
+
+[node name="ButtonStartSprite" type="Sprite2D" parent="CanvasLayer/ListButton" unique_id=1961276554]
+position = Vector2(196, 617)
+scale = Vector2(0.6449579, 0.6449579)
+texture = ExtResource("4_6tc4g")
+
+[node name="TutorialButton" type="Button" parent="CanvasLayer/ListButton" unique_id=1666678778]
+layout_mode = 0
+offset_left = 303.0
+offset_top = 578.0
+offset_right = 514.0
+offset_bottom = 655.0
+flat = true
+
+[node name="TutorialButtonSprite" type="Sprite2D" parent="CanvasLayer/ListButton" unique_id=521353129]
+position = Vector2(411, 619)
+scale = Vector2(0.6449579, 0.6449579)
+texture = ExtResource("5_q046p")
+
+[node name="ExitButton" type="Button" parent="CanvasLayer/ListButton" unique_id=1145094194]
+layout_mode = 0
+offset_left = 546.2584
+offset_top = 575.0
+offset_right = 736.2584
+offset_bottom = 652.0
+flat = true
+
+[node name="ExitButtonSprite" type="Sprite2D" parent="CanvasLayer/ListButton" unique_id=1698420021]
+position = Vector2(633.2584, 616)
+scale = Vector2(0.6449579, 0.6449579)
+texture = ExtResource("6_fkgeg")
+
+[node name="CreditButton" type="Button" parent="CanvasLayer/ListButton" unique_id=118484831]
+layout_mode = 0
+offset_left = 1079.0
+offset_top = 645.0
+offset_right = 1269.0
+offset_bottom = 703.0
+flat = true
+
+[node name="CreditButtonSprite" type="Sprite2D" parent="CanvasLayer/ListButton" unique_id=326688874]
+position = Vector2(1179, 672)
+scale = Vector2(0.6449579, 0.6449579)
+texture = ExtResource("7_lvkmq")
+
+[node name="EverythingMustGoLogo" type="Sprite2D" parent="CanvasLayer" unique_id=1889068913]
+position = Vector2(299, 318)
+scale = Vector2(0.5546296, 0.5546296)
+texture = ExtResource("5_6tc4g")
+
+[connection signal="pressed" from="CanvasLayer/ListButton/ButtonStart" to="." method="_on_button_start_pressed"]
+[connection signal="pressed" from="CanvasLayer/ListButton/TutorialButton" to="." method="_on_tutorial_button_pressed"]
+[connection signal="pressed" from="CanvasLayer/ListButton/ExitButton" to="." method="_on_exit_button_pressed"]
+[connection signal="pressed" from="CanvasLayer/ListButton/CreditButton" to="." method="_on_credit_button_pressed"]

@@ -1,0 +1,58 @@
+[gd_scene format=3 uid="uid://dha2rxooxfk4g"]
+
+[ext_resource type="Script" uid="uid://dec1flmonurh4" path="res://scripts/interactableObject.gd" id="1_xo4c1"]
+[ext_resource type="Script" uid="uid://dgee7q3f12wgw" path="res://autoloads/resources/shoppingItemResources.gd" id="2_8dycf"]
+[ext_resource type="FontFile" uid="uid://cxdgfb2dxi44c" path="res://assets/fonts/Malam Poek.ttf" id="3_fm023"]
+[ext_resource type="PackedScene" uid="uid://lme8w1nkiq3n" path="res://scenes/inheritated objects/in_cashier_table.tscn" id="4_xo4c1"]
+
+[sub_resource type="Resource" id="Resource_lvmxf"]
+script = ExtResource("2_8dycf")
+objectNameId = "Cashier Table"
+metadata/_custom_type_script = "uid://dgee7q3f12wgw"
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_ptxti"]
+size = Vector3(13.236096, 3.3237076, 5.5584106)
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_xo4c1"]
+size = Vector3(3.6190681, 3.468378, 10.963028)
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_8dycf"]
+size = Vector3(4.2240815, 1.1659927, 4.231613)
+
+[node name="Cashier Table" type="RigidBody3D" unique_id=1275525457]
+script = ExtResource("1_xo4c1")
+item_data = SubResource("Resource_lvmxf")
+
+[node name="ObjectName" type="Label3D" parent="." unique_id=335997831]
+transform = Transform3D(1.3, 0, 0, 0, 1.3, 0, 0, 0, 1.3, -0.67449474, 4.9484544, 0)
+billboard = 1
+text = "TEST
+"
+font = ExtResource("3_fm023")
+font_size = 96
+
+[node name="ObjectPrice" type="Label3D" parent="." unique_id=906287399]
+transform = Transform3D(1.3, 0, 0, 0, 1.3, 0, 0, 0, 1.3, -0.67449474, 4.496969, 0)
+billboard = 1
+outline_modulate = Color(0, 0.6059047, 0, 1)
+text = "TEST
+"
+font = ExtResource("3_fm023")
+font_size = 60
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="." unique_id=603273157]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1.8412874, 1.6657203, -5.537688)
+shape = SubResource("BoxShape3D_ptxti")
+
+[node name="CollisionShape3D2" type="CollisionShape3D" parent="." unique_id=46437295]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -2.9802084, 1.7380556, 2.6941543)
+shape = SubResource("BoxShape3D_xo4c1")
+
+[node name="CollisionShape3D3" type="CollisionShape3D" parent="." unique_id=957848551]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -2.2850387, 3.6682825, 4.914903)
+shape = SubResource("BoxShape3D_8dycf")
+
+[node name="Cashier_table2" parent="." unique_id=1314306411 instance=ExtResource("4_xo4c1")]
+transform = Transform3D(0.7, 0, 0, 0, 0.7, 0, 0, 0, 0.7, 2.9526505, 0, 0)
+
+[node name="Node3D" type="Node3D" parent="." unique_id=1668362174]

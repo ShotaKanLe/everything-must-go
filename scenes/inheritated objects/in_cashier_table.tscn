@@ -1,0 +1,47 @@
+[gd_scene format=3 uid="uid://lme8w1nkiq3n"]
+
+[ext_resource type="PackedScene" uid="uid://btdfuukfys7wa" path="res://assets/objects/Absurds/Cashier Table/Cashier_table.glb" id="1_18t8i"]
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_af86t"]
+render_priority = 1
+transparency = 1
+shading_mode = 0
+albedo_color = Color(0, 0, 0, 1)
+grow = true
+grow_amount = 0.02
+stencil_mode = 3
+stencil_flags = 1
+stencil_compare = 5
+metadata/_stencil_owned = true
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_10g63"]
+next_pass = SubResource("StandardMaterial3D_af86t")
+diffuse_mode = 3
+specular_mode = 1
+albedo_color = Color(0.35955527, 0.51787454, 0.7522523, 1)
+rim_enabled = true
+rim = 0.11
+rim_tint = 1.0
+stencil_mode = 1
+stencil_flags = 2
+stencil_outline_thickness = 0.02
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_18t8i"]
+next_pass = SubResource("StandardMaterial3D_af86t")
+diffuse_mode = 3
+specular_mode = 1
+albedo_color = Color(0.48570347, 0.48570353, 0.48570347, 1)
+rim_enabled = true
+rim = 0.11
+rim_tint = 1.0
+stencil_mode = 1
+stencil_flags = 2
+stencil_outline_thickness = 0.02
+
+[node name="Cashier_table" unique_id=1314306411 instance=ExtResource("1_18t8i")]
+
+[node name="Cube_075" parent="." index="0" unique_id=1191446859]
+surface_material_override/0 = SubResource("StandardMaterial3D_10g63")
+
+[node name="Cube_074" parent="." index="1" unique_id=1101208874]
+surface_material_override/0 = SubResource("StandardMaterial3D_18t8i")

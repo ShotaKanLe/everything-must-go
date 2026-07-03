@@ -1,38 +1,44 @@
 [gd_scene format=3 uid="uid://dgs6is42dsko4"]
 
-[ext_resource type="PackedScene" uid="uid://dldc8w5v4s5ck" path="res://assets/objects/Electronics/Toaster/Toaster.glb" id="1_1j8by"]
 [ext_resource type="Script" uid="uid://dec1flmonurh4" path="res://scripts/interactableObject.gd" id="1_yv6v6"]
 [ext_resource type="Script" uid="uid://dgee7q3f12wgw" path="res://autoloads/resources/shoppingItemResources.gd" id="2_utufk"]
+[ext_resource type="PackedScene" uid="uid://csy24scbcx57c" path="res://scenes/inheritated objects/in_toaster.tscn" id="4_utufk"]
+[ext_resource type="FontFile" uid="uid://cxdgfb2dxi44c" path="res://assets/fonts/Malam Poek.ttf" id="5_2jxuj"]
 
 [sub_resource type="Resource" id="Resource_2erkb"]
 script = ExtResource("2_utufk")
-objectName = "Toaster"
+objectNameId = "Toaster"
 objectCategory = "Electrics"
+objectName = "Toaster"
 metadata/_custom_type_script = "uid://dgee7q3f12wgw"
 
 [sub_resource type="BoxShape3D" id="BoxShape3D_v1cqv"]
-size = Vector3(1.1491488, 1.3833476, 2.0072346)
+size = Vector3(1.2805071, 1.4616933, 2.0072346)
 
 [node name="Toaster" type="RigidBody3D" unique_id=1105083520]
-collision_mask = 2
 script = ExtResource("1_yv6v6")
 item_data = SubResource("Resource_2erkb")
 
-[node name="ObjectName" type="Label3D" parent="." unique_id=1501617905]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1.6232581, 0)
-billboard = 1
-text = "TEST"
-font_size = 96
-
-[node name="ObjectPrice" type="Label3D" parent="." unique_id=253725944]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 2.0612578, 0)
-billboard = 1
-outline_modulate = Color(0, 0.45882353, 0, 1)
-text = "TEST"
-font_size = 84
-
 [node name="CollisionShape3D" type="CollisionShape3D" parent="." unique_id=432724310]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.005980164, 0.32246166, 0.004899502)
+transform = Transform3D(0.7, 0, 0, 0, 0.7, 0, 0, 0, 0.7, 0.01721159, 0.22061516, 0.004899502)
 shape = SubResource("BoxShape3D_v1cqv")
 
-[node name="Toaster" parent="." unique_id=1257404177 instance=ExtResource("1_1j8by")]
+[node name="ObjectName" type="Label3D" parent="." unique_id=406924619]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1.623955, 0)
+billboard = 1
+text = "TEST
+"
+font = ExtResource("5_2jxuj")
+font_size = 96
+
+[node name="ObjectPrice" type="Label3D" parent="." unique_id=1835418239]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1.1724697, 0)
+billboard = 1
+outline_modulate = Color(0, 0.6059047, 0, 1)
+text = "TEST
+"
+font = ExtResource("5_2jxuj")
+font_size = 60
+
+[node name="Toaster2" parent="." unique_id=1111471912 instance=ExtResource("4_utufk")]
+transform = Transform3D(0.7, 0, 0, 0, 0.7, 0, 0, 0, 0.7, 0, 0, 0)

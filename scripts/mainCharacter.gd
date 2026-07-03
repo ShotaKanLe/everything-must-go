@@ -43,7 +43,6 @@ extends CharacterBody3D
 @export_group("Rotation Settings")
 @export var rotation_sensitivity : float = 0.3
 
-@export var inventory_ui : Control
 @export var label_to_interact: Label
 
 var mouse_captured : bool = false
@@ -87,7 +86,6 @@ func _ready() -> void:
 	look_rotation.y = rotation.y
 	look_rotation.x = head.rotation.x
 	setup_laser_visual()
-	Inventory.item_drop.connect(drop_from_player)
 	
 	if hp_progress_bar:
 		hp_progress_bar.max_value = max_hp
@@ -162,7 +160,9 @@ func _input(event: InputEvent) -> void:
 
 	if event.is_action_pressed("interact"):
 		if grabbed_object:
-			if grabbed_object.item_data is ToolItem:
+			if grabbed_object.item_data and grabbed_object.item_data.objectName == "Scanner":
+				grabbed_object.execute_scan(label_to_interact)
+			elif grabbed_object.item_data is ToolItem:
 				purchase_grabbed_tool()
 			elif grabbed_object.item_data is UpgradeItem:
 				purchase_and_use_upgrade()
@@ -268,6 +268,10 @@ func _physics_process(delta: float) -> void:
 			drop_object()
 		else:
 			process_grabbed_object_physics(delta)
+			
+			if grabbed_object.item_data and grabbed_object.item_data.objectName == "Scanner":
+				if label_to_interact:
+					grabbed_object.process_scanner_ui(label_to_interact)
 
 	update_laser_transform()
 
@@ -475,12 +479,6 @@ func calculate_movement_penalty(item: BaseItem, player_strength_level_param: int
 	var weight_penalty : float = item_weight / strength_factor
 	var final_speed : float = current_base_speed - (weight_penalty * 0.1)
 	return max(final_speed, current_base_speed * 0.2)
-	
-func hold_item(interactable: InteractableObject):
-	if interactable.item_data and inventory_ui:
-		inventory_ui.add_item_to_active_slot(interactable.item_data)
-		# Menghapus objek dari dunia 3D karena sudah masuk inventori
-		interactable.queue_free()
 
 func check_input_mappings():
 	if can_move and not InputMap.has_action(input_left):

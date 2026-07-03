@@ -1,7 +1,35 @@
 [gd_scene format=3 uid="uid://v1n5vhbvu22w"]
 
+[ext_resource type="Script" uid="uid://dec1flmonurh4" path="res://scripts/interactableObject.gd" id="1_50i2i"]
 [ext_resource type="PackedScene" uid="uid://dwt50bvkylwr8" path="res://assets/objects/Tools/Scanner/Scanner.glb" id="1_iuglt"]
+[ext_resource type="Script" uid="uid://b8auujma8rlyh" path="res://autoloads/resources/toolItemResources.gd" id="2_0tmu0"]
+
+[sub_resource type="Resource" id="Resource_14s0l"]
+script = ExtResource("2_0tmu0")
+objectName = "Scanner"
+metadata/_custom_type_script = "uid://b8auujma8rlyh"
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_50i2i"]
+size = Vector3(1, 1.2247925, 0.82525635)
 
 [node name="Scanner" type="RigidBody3D" unique_id=1107152870]
+script = ExtResource("1_50i2i")
+item_data = SubResource("Resource_14s0l")
 
 [node name="Scanner" parent="." unique_id=41049998 instance=ExtResource("1_iuglt")]
+transform = Transform3D(0.6, 0, 0, 0, 0.6, 0, 0, 0, 0.6, 0, 0, 0)
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="." unique_id=728160985]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.42086792, -0.21670532)
+shape = SubResource("BoxShape3D_50i2i")
+
+[node name="ObjectName" type="Label3D" parent="." unique_id=476052596]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1.4336641, -0.24165344)
+billboard = 1
+text = "TEST
+"
+font_size = 96
+
+[node name="RayCast3D" type="RayCast3D" parent="." unique_id=2140636736]
+transform = Transform3D(1, 0, 0, 0, -4.371139e-08, -1, 0, 1, -4.371139e-08, 0, 0.8632654, -0.67190063)
+debug_shape_custom_color = Color(0.24426618, 0.41005662, 9.62615e-08, 1)

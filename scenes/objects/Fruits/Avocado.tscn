@@ -2,37 +2,43 @@
 
 [ext_resource type="Script" uid="uid://dec1flmonurh4" path="res://scripts/interactableObject.gd" id="1_y037m"]
 [ext_resource type="Script" uid="uid://dgee7q3f12wgw" path="res://autoloads/resources/shoppingItemResources.gd" id="2_2fpfj"]
-[ext_resource type="PackedScene" uid="uid://dmveg18vpci7t" path="res://assets/objects/Fruits/Avocado/Avocado.glb" id="3_2fpfj"]
+[ext_resource type="FontFile" uid="uid://cxdgfb2dxi44c" path="res://assets/fonts/Malam Poek.ttf" id="4_lnoyk"]
+[ext_resource type="PackedScene" uid="uid://b60n7usyrc3dn" path="res://scenes/inheritated objects/in_avocado.tscn" id="5_ldykm"]
 
 [sub_resource type="Resource" id="Resource_lnoyk"]
 script = ExtResource("2_2fpfj")
-objectName = "Avocado"
+objectNameId = "Avocado"
 objectCategory = "Fruits"
+objectName = "Avocado"
 metadata/_custom_type_script = "uid://dgee7q3f12wgw"
 
 [sub_resource type="BoxShape3D" id="BoxShape3D_lnoyk"]
-size = Vector3(2.2585275, 1.6075498, 2.0072346)
+size = Vector3(2.233756, 1.6075498, 1.5174947)
 
 [node name="Avocado" type="RigidBody3D" unique_id=1553926681]
-collision_mask = 2
 script = ExtResource("1_y037m")
 item_data = SubResource("Resource_lnoyk")
 
-[node name="Avocado" parent="." unique_id=2070007729 instance=ExtResource("3_2fpfj")]
+[node name="CollisionShape3D" type="CollisionShape3D" parent="." unique_id=969560389]
+transform = Transform3D(0.6, 0, 0, 0, 0.6, 0, 0, 0, 0.6, 0.0008410099, -0.022200912, 0.010271214)
+shape = SubResource("BoxShape3D_lnoyk")
 
-[node name="ObjectName" type="Label3D" parent="." unique_id=783499033]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1.1439314, 0)
+[node name="ObjectName" type="Label3D" parent="." unique_id=1602679582]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1.3650966, 0)
 billboard = 1
-text = "TEST"
+text = "TEST
+"
+font = ExtResource("4_lnoyk")
 font_size = 96
 
-[node name="ObjectPrice" type="Label3D" parent="." unique_id=901708106]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1.5819311, 0)
+[node name="ObjectPrice" type="Label3D" parent="." unique_id=1561207028]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.9136113, 0)
 billboard = 1
-outline_modulate = Color(0, 0.45882353, 0, 1)
-text = "TEST"
-font_size = 84
+outline_modulate = Color(0, 0.6059047, 0, 1)
+text = "TEST
+"
+font = ExtResource("4_lnoyk")
+font_size = 60
 
-[node name="CollisionShape3D" type="CollisionShape3D" parent="." unique_id=969560389]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.006590426, -0.022200912, 0.004899502)
-shape = SubResource("BoxShape3D_lnoyk")
+[node name="Avocado2" parent="." unique_id=1848678157 instance=ExtResource("5_ldykm")]
+transform = Transform3D(0.6, 0, 0, 0, 0.6, 0, 0, 0, 0.6, 0, 0, 0)

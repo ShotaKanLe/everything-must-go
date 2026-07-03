@@ -1,0 +1,45 @@
+[gd_scene format=3 uid="uid://cqgfalq5rewbi"]
+
+[ext_resource type="PackedScene" uid="uid://unqkicbbc1kf" path="res://assets/objects/Absurds/Fridge/Fridge.glb" id="1_kmeh8"]
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_af86t"]
+render_priority = 1
+transparency = 1
+shading_mode = 0
+albedo_color = Color(0, 0, 0, 1)
+grow = true
+grow_amount = 0.02
+stencil_mode = 3
+stencil_flags = 1
+stencil_compare = 5
+metadata/_stencil_owned = true
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_kmeh8"]
+next_pass = SubResource("StandardMaterial3D_af86t")
+diffuse_mode = 3
+specular_mode = 1
+albedo_color = Color(2.0214916e-06, 0.59246874, 0.5956614, 1)
+rim_enabled = true
+rim = 0.11
+rim_tint = 1.0
+stencil_mode = 1
+stencil_flags = 2
+stencil_outline_thickness = 0.02
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_2ptfi"]
+next_pass = SubResource("StandardMaterial3D_af86t")
+diffuse_mode = 3
+specular_mode = 1
+albedo_color = Color(0.76240367, 0.76240367, 0.76240367, 1)
+rim_enabled = true
+rim = 0.11
+rim_tint = 1.0
+stencil_mode = 1
+stencil_flags = 2
+stencil_outline_thickness = 0.02
+
+[node name="Fridge" unique_id=956491475 instance=ExtResource("1_kmeh8")]
+
+[node name="Cube_022" parent="." index="0" unique_id=2105653655]
+surface_material_override/0 = SubResource("StandardMaterial3D_kmeh8")
+surface_material_override/1 = SubResource("StandardMaterial3D_2ptfi")

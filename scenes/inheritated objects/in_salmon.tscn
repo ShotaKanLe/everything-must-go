@@ -1,0 +1,19 @@
+[gd_scene format=3 uid="uid://dtm413jnx8x5i"]
+
+[ext_resource type="PackedScene" uid="uid://b4u0f4wuc81g7" path="res://assets/objects/Animal Food/Salmon/Salmon.glb" id="1_npe07"]
+[ext_resource type="Material" uid="uid://co4iky8hdm25w" path="res://shader/chicken_breast_outline_texture.tres" id="2_jverr"]
+[ext_resource type="Material" uid="uid://25wtth5s4mqy" path="res://scenes/inheritated objects/in_salmon.tres" id="3_ptf4m"]
+
+[node name="Salmon" unique_id=556500945 instance=ExtResource("1_npe07")]
+
+[node name="Cube" parent="." index="0" unique_id=1705138601]
+surface_material_override/0 = ExtResource("2_jverr")
+
+[node name="Plane" parent="." index="1" unique_id=699153753]
+surface_material_override/0 = ExtResource("3_ptf4m")
+
+[node name="Plane_001" parent="." index="2" unique_id=1903895157]
+surface_material_override/0 = ExtResource("3_ptf4m")
+
+[node name="Plane_002" parent="." index="3" unique_id=1814939430]
+surface_material_override/0 = ExtResource("3_ptf4m")

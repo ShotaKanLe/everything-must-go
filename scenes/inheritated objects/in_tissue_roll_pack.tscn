@@ -1,0 +1,60 @@
+[gd_scene format=3 uid="uid://cfknw74dhp820"]
+
+[ext_resource type="PackedScene" uid="uid://dt2qqijdtek6x" path="res://assets/objects/Personal Care/Tissue Roll Pack/Tissue Roll Pack.glb" id="1_wm3m4"]
+[ext_resource type="Texture2D" uid="uid://ulm2x8plk0jm" path="res://assets/objects/Personal Care/Tissue Roll Pack/Tissue Roll Pack_Wood Texture.png" id="2_dh7rb"]
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_6fwwn"]
+render_priority = 1
+transparency = 1
+shading_mode = 0
+albedo_color = Color(0, 0, 0, 1)
+grow = true
+grow_amount = 0.02
+stencil_mode = 3
+stencil_flags = 1
+stencil_compare = 5
+metadata/_stencil_owned = true
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_wm3m4"]
+next_pass = SubResource("StandardMaterial3D_6fwwn")
+diffuse_mode = 3
+specular_mode = 1
+albedo_color = Color(0.67481464, 0.67481464, 0.6748146, 1)
+rim_enabled = true
+rim = 0.11
+rim_tint = 1.0
+stencil_mode = 1
+stencil_flags = 2
+stencil_outline_thickness = 0.02
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_af86t"]
+render_priority = 1
+transparency = 1
+shading_mode = 0
+albedo_color = Color(0, 0, 0, 1)
+grow = true
+grow_amount = 0.02
+stencil_mode = 3
+stencil_flags = 1
+stencil_compare = 5
+metadata/_stencil_owned = true
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_kedtd"]
+next_pass = SubResource("StandardMaterial3D_af86t")
+diffuse_mode = 3
+specular_mode = 1
+albedo_texture = ExtResource("2_dh7rb")
+rim_enabled = true
+rim = 0.11
+rim_tint = 1.0
+stencil_mode = 1
+stencil_flags = 2
+stencil_outline_thickness = 0.02
+
+[node name="Tissue Roll Pack" unique_id=484132747 instance=ExtResource("1_wm3m4")]
+
+[node name="Cylinder" parent="." index="0" unique_id=1122511561]
+surface_material_override/0 = SubResource("StandardMaterial3D_wm3m4")
+
+[node name="Cylinder_001" parent="." index="1" unique_id=941708282]
+surface_material_override/0 = SubResource("StandardMaterial3D_kedtd")

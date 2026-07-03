@@ -1,0 +1,77 @@
+[gd_scene format=3 uid="uid://24wg0v64curj"]
+
+[ext_resource type="PackedScene" uid="uid://3fep6rfgb0j1" path="res://assets/objects/Vegetables/Spinach/Spinach.glb" id="1_p7316"]
+[ext_resource type="Texture2D" uid="uid://cv7eykepbhnm5" path="res://assets/objects/Vegetables/Spinach/Spinach_Leaf Texture.png" id="2_3m41a"]
+[ext_resource type="Texture2D" uid="uid://c7qhkon40ebs3" path="res://assets/objects/Vegetables/Spinach/Spinach_Rod Texture.png" id="2_xc33u"]
+[ext_resource type="Texture2D" uid="uid://bytkjorbuvs1r" path="res://assets/objects/Vegetables/Spinach/Spinach_Tie Texture.png" id="4_t53q1"]
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_af86t"]
+render_priority = 1
+transparency = 1
+shading_mode = 0
+albedo_color = Color(0, 0, 0, 1)
+grow = true
+grow_amount = 0.02
+stencil_mode = 3
+stencil_flags = 1
+stencil_compare = 5
+metadata/_stencil_owned = true
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_t53q1"]
+next_pass = SubResource("StandardMaterial3D_af86t")
+diffuse_mode = 3
+specular_mode = 1
+albedo_texture = ExtResource("2_xc33u")
+rim_enabled = true
+rim = 0.11
+rim_tint = 1.0
+stencil_mode = 1
+stencil_flags = 2
+stencil_outline_thickness = 0.02
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_mae11"]
+render_priority = 1
+transparency = 1
+shading_mode = 0
+albedo_color = Color(0, 0, 0, 1)
+grow = true
+grow_amount = 0.02
+stencil_mode = 3
+stencil_flags = 1
+stencil_compare = 5
+metadata/_stencil_owned = true
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_xc33u"]
+next_pass = SubResource("StandardMaterial3D_mae11")
+diffuse_mode = 3
+specular_mode = 1
+albedo_texture = ExtResource("2_3m41a")
+rim_enabled = true
+rim = 0.11
+rim_tint = 1.0
+stencil_mode = 1
+stencil_flags = 2
+stencil_outline_thickness = 0.02
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_xt2l4"]
+next_pass = SubResource("StandardMaterial3D_mae11")
+diffuse_mode = 3
+specular_mode = 1
+albedo_texture = ExtResource("4_t53q1")
+rim_enabled = true
+rim = 0.11
+rim_tint = 1.0
+stencil_mode = 1
+stencil_flags = 2
+stencil_outline_thickness = 0.02
+
+[node name="Spinach" unique_id=2057899046 instance=ExtResource("1_p7316")]
+
+[node name="Cube" parent="." index="0" unique_id=782546342]
+surface_material_override/0 = SubResource("StandardMaterial3D_t53q1")
+
+[node name="Cube_001" parent="." index="1" unique_id=788821846]
+surface_material_override/0 = SubResource("StandardMaterial3D_xc33u")
+
+[node name="Cube_002" parent="." index="2" unique_id=308999036]
+surface_material_override/0 = SubResource("StandardMaterial3D_xt2l4")

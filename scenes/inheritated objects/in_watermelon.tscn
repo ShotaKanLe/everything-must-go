@@ -1,0 +1,46 @@
+[gd_scene format=3 uid="uid://b40sepohie3pi"]
+
+[ext_resource type="PackedScene" uid="uid://cvcicwijju2l4" path="res://assets/objects/Fruits/Watermelon/Watermelon.glb" id="1_amm1e"]
+[ext_resource type="Texture2D" uid="uid://dkagap56ocjgu" path="res://assets/objects/Fruits/Watermelon/Watermelon_Base Texture.png" id="2_nrlkf"]
+[ext_resource type="Material" uid="uid://tj1gs5orptd0" path="res://scenes/inheritated objects/in_watermelon.tres" id="3_4n4bq"]
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_af86t"]
+render_priority = 1
+transparency = 1
+shading_mode = 0
+albedo_color = Color(0, 0, 0, 1)
+grow = true
+grow_amount = 0.02
+stencil_mode = 3
+stencil_flags = 1
+stencil_compare = 5
+metadata/_stencil_owned = true
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_4n4bq"]
+next_pass = SubResource("StandardMaterial3D_af86t")
+diffuse_mode = 3
+specular_mode = 1
+albedo_texture = ExtResource("2_nrlkf")
+rim_enabled = true
+rim = 0.11
+rim_tint = 1.0
+stencil_mode = 1
+stencil_flags = 2
+stencil_outline_thickness = 0.02
+
+[node name="Watermelon" unique_id=61996275 instance=ExtResource("1_amm1e")]
+
+[node name="Sphere" parent="." index="0" unique_id=1289375526]
+surface_material_override/0 = SubResource("StandardMaterial3D_4n4bq")
+
+[node name="Sphere_001" parent="." index="1" unique_id=846421362]
+surface_material_override/0 = ExtResource("3_4n4bq")
+
+[node name="Sphere_002" parent="." index="2" unique_id=141299558]
+surface_material_override/0 = ExtResource("3_4n4bq")
+
+[node name="Sphere_003" parent="." index="3" unique_id=424810015]
+surface_material_override/0 = ExtResource("3_4n4bq")
+
+[node name="Sphere_004" parent="." index="4" unique_id=2114100732]
+surface_material_override/0 = ExtResource("3_4n4bq")

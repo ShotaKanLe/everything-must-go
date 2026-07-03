@@ -1,6 +1,9 @@
 [gd_scene format=3 uid="uid://lt2otpo0fuxa"]
 
+[ext_resource type="FontFile" uid="uid://cxdgfb2dxi44c" path="res://assets/fonts/Malam Poek.ttf" id="1_24vv6"]
+
 [node name="Label" type="Label" unique_id=1350703745]
 offset_right = 40.0
 offset_bottom = 23.0
+theme_override_fonts/font = ExtResource("1_24vv6")
 text = "Test"

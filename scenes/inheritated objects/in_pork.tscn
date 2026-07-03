@@ -1,0 +1,13 @@
+[gd_scene format=3 uid="uid://c21gvhv8hq65q"]
+
+[ext_resource type="PackedScene" uid="uid://cae204k6son3f" path="res://assets/objects/Animal Food/Pork/Pork.glb" id="1_vvu5o"]
+[ext_resource type="Material" uid="uid://co4iky8hdm25w" path="res://shader/chicken_breast_outline_texture.tres" id="2_6hjje"]
+[ext_resource type="Material" uid="uid://clqweh6qtcdlb" path="res://scenes/inheritated objects/in_pork.tres" id="3_croe6"]
+
+[node name="Pork" unique_id=333842140 instance=ExtResource("1_vvu5o")]
+
+[node name="Cube" parent="." index="0" unique_id=1366847780]
+surface_material_override/0 = ExtResource("2_6hjje")
+
+[node name="Plane" parent="." index="1" unique_id=1438366473]
+surface_material_override/0 = ExtResource("3_croe6")

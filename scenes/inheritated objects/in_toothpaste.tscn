@@ -1,0 +1,49 @@
+[gd_scene format=3 uid="uid://bmhtd7hf85q8h"]
+
+[ext_resource type="PackedScene" uid="uid://6agj85qo4hj3" path="res://assets/objects/Personal Care/ToothPaste/Toothpaste.glb" id="1_rwxkr"]
+[ext_resource type="Texture2D" uid="uid://v6ce43urkfoh" path="res://assets/objects/Personal Care/ToothPaste/Toothpaste_Base Texture.png" id="2_6v5ku"]
+[ext_resource type="Texture2D" uid="uid://bfnymdi7bf8fp" path="res://assets/objects/Personal Care/ToothPaste/Toothpaste_Cap Texture.png" id="3_ce3ys"]
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_af86t"]
+render_priority = 1
+transparency = 1
+shading_mode = 0
+albedo_color = Color(0, 0, 0, 1)
+grow = true
+grow_amount = 0.02
+stencil_mode = 3
+stencil_flags = 1
+stencil_compare = 5
+metadata/_stencil_owned = true
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_ce3ys"]
+next_pass = SubResource("StandardMaterial3D_af86t")
+diffuse_mode = 3
+specular_mode = 1
+albedo_texture = ExtResource("2_6v5ku")
+rim_enabled = true
+rim = 0.11
+rim_tint = 1.0
+stencil_mode = 1
+stencil_flags = 2
+stencil_outline_thickness = 0.02
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_dxall"]
+next_pass = SubResource("StandardMaterial3D_af86t")
+diffuse_mode = 3
+specular_mode = 1
+albedo_texture = ExtResource("3_ce3ys")
+rim_enabled = true
+rim = 0.11
+rim_tint = 1.0
+stencil_mode = 1
+stencil_flags = 2
+stencil_outline_thickness = 0.02
+
+[node name="Toothpaste" unique_id=1301981252 instance=ExtResource("1_rwxkr")]
+
+[node name="Cylinder" parent="." index="0" unique_id=675321789]
+surface_material_override/0 = SubResource("StandardMaterial3D_ce3ys")
+
+[node name="Cylinder_001" parent="." index="1" unique_id=1917136885]
+surface_material_override/0 = SubResource("StandardMaterial3D_dxall")

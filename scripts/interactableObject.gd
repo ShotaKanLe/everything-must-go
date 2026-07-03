@@ -6,6 +6,7 @@ class_name InteractableObject
 
 var current_price : float = 0.0
 var is_label_active : bool = false
+var is_showing_feedback : bool = false 
 
 var name_label_offset : Vector3 = Vector3.ZERO
 var price_label_offset : Vector3 = Vector3.ZERO
@@ -14,7 +15,12 @@ var price_label_offset : Vector3 = Vector3.ZERO
 @onready var price_label: Label3D = get_node_or_null("ObjectPrice")
 @onready var mesh_instance_3d: MeshInstance3D = $MeshInstance3D
 
+var cardboxScene = preload("res://scenes/objects/Tools/Cardbox.tscn")
+
 func _ready() -> void:
+	if item_data and item_data is ShoppingItem and item_data.objectNameId != "":
+		_auto_fill_item_data()
+
 	if item_data and current_price == 0.0:
 		if item_data.has_method("get_random_price"):
 			current_price = item_data.get_random_price()
@@ -31,6 +37,30 @@ func _ready() -> void:
 	contact_monitor = true
 	max_contacts_reported = 1
 	body_entered.connect(_on_body_entered)
+
+func _auto_fill_item_data() -> void:
+	var db = ShoppingItemArrayList.new()
+	var target_name = item_data.objectNameId
+
+	for type_dict in db.shoppingItemArrayList:
+		for category_dict in type_dict["list"]:
+			for item in category_dict["listItem"]:
+				if item["objectName"] == target_name:
+					item_data.objectName = item["objectName"]
+					item_data.minimumPrice = item["minimumPrice"]
+					item_data.maximumPrice = item["maximumPrice"]
+					item_data.weight = item["weight"]
+					item_data.strengthLevelToLift = item["strenghtLevelToLift"]
+					
+					item_data.objectCategory = category_dict["category"]
+					item_data.isFragile = item["isFragile"]
+					item_data.availableFromDay = item["availableFromDay"]
+					item_data.isIllegalToSteal = item["isIllegalToSteal"]
+					
+					db.queue_free()
+					return
+					
+	db.queue_free()
 
 func _process(_delta: float) -> void:
 	if is_label_active:
@@ -95,3 +125,113 @@ func destroy_and_fracture() -> void:
 		spawn_particles.emitting = true
 		
 		queue_free()
+
+func process_scanner_ui(label: Label) -> void:
+	if is_showing_feedback:
+		return
+		
+	var scanner_raycast: RayCast3D = get_node_or_null("RayCast3D")
+	if not scanner_raycast or not label: return
+
+	if scanner_raycast.is_colliding():
+		var col = scanner_raycast.get_collider()
+		if col is InteractableObject and col.item_data is ShoppingItem:
+			var s_item = col.item_data as ShoppingItem
+			if s_item.isPaid:
+				label.text = "Item already paid"
+			else:
+				label.text = "Press E to pay: $ %.2f" % col.current_price
+			label.visible = true
+			return
+
+	label.text = "Scanner Active"
+	label.visible = true
+
+func execute_scan(label: Label) -> void:
+	if is_showing_feedback:
+		return
+		
+	var scanner_raycast: RayCast3D = get_node_or_null("RayCast3D")
+	if not scanner_raycast or not label: return
+
+	if scanner_raycast.is_colliding():
+		var col = scanner_raycast.get_collider()
+		if col is InteractableObject and col.item_data is ShoppingItem:
+			var s_item = col.item_data as ShoppingItem
+
+			if s_item.isPaid:
+				return
+
+			var in_paying_area = false
+			var paying_areas = get_tree().get_nodes_in_group("paying_area")
+			for area in paying_areas:
+				if area.overlaps_body(col):
+					in_paying_area = true
+					break
+
+			if not in_paying_area:
+				show_temporary_feedback(label, "Must pay in cashier")
+				return
+
+			if LevelData.money >= col.current_price:
+				LevelData.money -= col.current_price
+				LevelData.money = snapped(LevelData.money, 0.01)
+				s_item.isPaid = true
+				print("(item berhasil dibayarkan)")
+				show_temporary_feedback(label, "Paid successfully!")
+				col.create_into_box()
+			else:
+				show_temporary_feedback(label, "Not enough money")
+
+func show_temporary_feedback(label: Label, text: String) -> void:
+	is_showing_feedback = true
+	label.text = text
+	label.visible = true
+	await get_tree().create_timer(1.5).timeout
+	is_showing_feedback = false
+
+func create_into_box() -> void:
+	var cardbox_scene = load("res://scenes/objects/Tools/Cardbox.tscn")
+	if cardbox_scene:
+		var box_instance = cardbox_scene.instantiate()
+		
+		if item_data and item_data is ShoppingItem:
+			box_instance.item_data = item_data.duplicate(true)
+			box_instance.item_data.isPaid = true
+			
+		box_instance.current_price = current_price
+		
+		get_tree().current_scene.add_child(box_instance)
+		box_instance.global_position = global_position
+		box_instance.global_rotation = global_rotation
+		
+		_spawn_box_particles()
+		
+	queue_free()
+
+func _spawn_box_particles() -> void:
+	var particles = GPUParticles3D.new()
+	var material = ParticleProcessMaterial.new()
+	material.emission_shape = ParticleProcessMaterial.EMISSION_SHAPE_SPHERE
+	material.emission_sphere_radius = 0.4
+	material.direction = Vector3.UP
+	material.initial_velocity_min = 2.0
+	material.initial_velocity_max = 4.0
+	material.gravity = Vector3(0, -3, 0)
+	
+	var pass_mesh = BoxMesh.new()
+	pass_mesh.size = Vector3(0.08, 0.08, 0.08)
+	var spatial_mat = StandardMaterial3D.new()
+	spatial_mat.albedo_color = Color(0.6, 0.4, 0.2) 
+	pass_mesh.material = spatial_mat
+	
+	particles.process_material = material
+	particles.draw_pass_1 = pass_mesh
+	particles.emitting = true
+	particles.one_shot = true
+	particles.explosiveness = 0.9
+	
+	get_tree().current_scene.add_child(particles)
+	particles.global_position = global_position
+	
+	get_tree().create_timer(1.5).timeout.connect(particles.queue_free)

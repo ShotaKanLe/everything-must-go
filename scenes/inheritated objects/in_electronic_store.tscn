@@ -1,0 +1,45 @@
+[gd_scene format=3 uid="uid://vm8qb0siilfm"]
+
+[ext_resource type="PackedScene" uid="uid://dem3vna6h5uc8" path="res://assets/area/electronic store/Electronic Store.glb" id="1_wwt4r"]
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_dq4x5"]
+albedo_color = Color(0.47007585, 0.47007585, 0.47007585, 1)
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_030ea"]
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_ku7lk"]
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_no4pt"]
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_wwt4r"]
+albedo_color = Color(0.8598713, 0.46719903, 0.37804478, 1)
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_axpx0"]
+
+[node name="Electronic Store" unique_id=664049868 instance=ExtResource("1_wwt4r")]
+
+[node name="Floor" parent="." index="0" unique_id=1781282780]
+surface_material_override/0 = SubResource("StandardMaterial3D_dq4x5")
+
+[node name="Wall" parent="." index="2" unique_id=1575512814]
+surface_material_override/0 = SubResource("StandardMaterial3D_030ea")
+
+[node name="Wall_001" parent="." index="3" unique_id=1335631574]
+surface_material_override/0 = SubResource("StandardMaterial3D_ku7lk")
+
+[node name="Wall_002" parent="." index="4" unique_id=127662392]
+surface_material_override/0 = SubResource("StandardMaterial3D_no4pt")
+
+[node name="Cube_017" parent="." index="19" unique_id=13135957]
+transform = Transform3D(0.97344667, 0, 0, 0, 0.97344667, 0, 0, 0, 0.97344667, 21.571335, 12.6389065, -42.12524)
+visible = false
+
+[node name="Cylinder_011" parent="." index="21" unique_id=773479083]
+visible = false
+
+[node name="Door" parent="." index="22" unique_id=845661437]
+transform = Transform3D(0.97344667, 0, 0, 0, 0.97344667, 0, 0, 0, 0.97344667, 21.571335, 12.6389065, -35.422752)
+surface_material_override/0 = SubResource("StandardMaterial3D_wwt4r")
+
+[node name="Wall_003" parent="." index="23" unique_id=1736201204]
+surface_material_override/0 = SubResource("StandardMaterial3D_axpx0")

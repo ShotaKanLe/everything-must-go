@@ -1,0 +1,32 @@
+[gd_scene format=3 uid="uid://doc65jhbld4n"]
+
+[ext_resource type="PackedScene" uid="uid://bcner53cfx8in" path="res://assets/objects/Upgrade/Strenght Upgrade/Strenght Upgrade.glb" id="1_yyded"]
+[ext_resource type="Texture2D" uid="uid://blgeaddejbbxh" path="res://assets/objects/Upgrade/Strenght Upgrade/Strenght Upgrade_Base Texture.png" id="2_8rgj2"]
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_af86t"]
+render_priority = 1
+transparency = 1
+shading_mode = 0
+albedo_color = Color(0, 0, 0, 1)
+grow = true
+grow_amount = 0.01
+stencil_mode = 3
+stencil_flags = 1
+stencil_compare = 5
+metadata/_stencil_owned = true
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_ffut1"]
+next_pass = SubResource("StandardMaterial3D_af86t")
+diffuse_mode = 3
+specular_mode = 1
+albedo_texture = ExtResource("2_8rgj2")
+rim_enabled = true
+rim = 0.11
+rim_tint = 1.0
+stencil_mode = 1
+stencil_flags = 2
+
+[node name="Strenght Upgrade" unique_id=1272074436 instance=ExtResource("1_yyded")]
+
+[node name="Cube" parent="." index="0" unique_id=1150450514]
+surface_material_override/0 = SubResource("StandardMaterial3D_ffut1")

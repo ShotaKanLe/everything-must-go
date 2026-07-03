@@ -2,37 +2,42 @@
 
 [ext_resource type="Script" uid="uid://dec1flmonurh4" path="res://scripts/interactableObject.gd" id="1_kjuvq"]
 [ext_resource type="Script" uid="uid://dgee7q3f12wgw" path="res://autoloads/resources/shoppingItemResources.gd" id="2_t0lq4"]
-[ext_resource type="PackedScene" uid="uid://dupgiwxoqupv6" path="res://assets/objects/Personal Care/Soap/Soap.glb" id="3_t0lq4"]
+[ext_resource type="PackedScene" uid="uid://dtaqpjyycue4i" path="res://scenes/inheritated objects/in_soap.tscn" id="4_0417m"]
+[ext_resource type="FontFile" uid="uid://cxdgfb2dxi44c" path="res://assets/fonts/Malam Poek.ttf" id="4_dtbaj"]
 
 [sub_resource type="Resource" id="Resource_dtbaj"]
 script = ExtResource("2_t0lq4")
-objectName = "Soap"
+objectNameId = "Soap"
 objectCategory = "Personal Care"
+objectName = "Soap"
 metadata/_custom_type_script = "uid://dgee7q3f12wgw"
 
 [sub_resource type="BoxShape3D" id="BoxShape3D_kjuvq"]
 size = Vector3(0.7559762, 0.32996777, 1.2601705)
 
 [node name="Soap" type="RigidBody3D" unique_id=1643214250]
-collision_mask = 2
 script = ExtResource("1_kjuvq")
 item_data = SubResource("Resource_dtbaj")
-
-[node name="ObjectName" type="Label3D" parent="." unique_id=250211020]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1.0159259, 0)
-billboard = 1
-text = "TEST"
-font_size = 96
-
-[node name="ObjectPrice" type="Label3D" parent="." unique_id=1383886758]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1.4539256, 0)
-billboard = 1
-outline_modulate = Color(0, 0.45882353, 0, 1)
-text = "TEST"
-font_size = 84
 
 [node name="CollisionShape3D" type="CollisionShape3D" parent="." unique_id=682633281]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.007752806, 0.28578544, 0.015561342)
 shape = SubResource("BoxShape3D_kjuvq")
 
-[node name="Soap" parent="." unique_id=328554167 instance=ExtResource("3_t0lq4")]
+[node name="ObjectName" type="Label3D" parent="." unique_id=2124395606]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1.3357179, 0)
+billboard = 1
+text = "TEST
+"
+font = ExtResource("4_dtbaj")
+font_size = 96
+
+[node name="ObjectPrice" type="Label3D" parent="." unique_id=1698319989]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.88423264, 0)
+billboard = 1
+outline_modulate = Color(0, 0.6059047, 0, 1)
+text = "TEST
+"
+font = ExtResource("4_dtbaj")
+font_size = 60
+
+[node name="Soap2" parent="." unique_id=1269562884 instance=ExtResource("4_0417m")]

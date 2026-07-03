@@ -1,0 +1,46 @@
+[gd_scene format=3 uid="uid://dni7vept700w6"]
+
+[ext_resource type="PackedScene" uid="uid://cp8ioc5fcqyu0" path="res://assets/objects/Electronics/Electric Kettle/Electric Kettle.glb" id="1_71jna"]
+[ext_resource type="Texture2D" uid="uid://bwdr1rbsqnwcr" path="res://assets/objects/Electronics/Electric Kettle/Electric Kettle_Base Kettle Texture.png" id="2_us856"]
+[ext_resource type="Material" uid="uid://c10c4yyc1dx7u" path="res://scenes/inheritated objects/in_metal_kettle.tres" id="3_us856"]
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_af86t"]
+render_priority = 1
+transparency = 1
+shading_mode = 0
+albedo_color = Color(0, 0, 0, 1)
+grow = true
+grow_amount = 0.02
+stencil_mode = 3
+stencil_flags = 1
+stencil_compare = 5
+metadata/_stencil_owned = true
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_2o3f6"]
+next_pass = SubResource("StandardMaterial3D_af86t")
+diffuse_mode = 3
+specular_mode = 1
+albedo_texture = ExtResource("2_us856")
+rim_enabled = true
+rim = 0.11
+rim_tint = 1.0
+stencil_mode = 1
+stencil_flags = 2
+stencil_outline_thickness = 0.02
+
+[node name="Electric Kettle" unique_id=791018998 instance=ExtResource("1_71jna")]
+
+[node name="Cylinder" parent="." index="0" unique_id=1201736678]
+surface_material_override/0 = SubResource("StandardMaterial3D_2o3f6")
+
+[node name="Cylinder_001" parent="." index="1" unique_id=1986486828]
+surface_material_override/0 = ExtResource("3_us856")
+
+[node name="Cylinder_002" parent="." index="2" unique_id=496876304]
+surface_material_override/0 = ExtResource("3_us856")
+
+[node name="Cube" parent="." index="3" unique_id=929626544]
+surface_material_override/0 = ExtResource("3_us856")
+
+[node name="Cone" parent="." index="4" unique_id=1726235504]
+surface_material_override/0 = ExtResource("3_us856")

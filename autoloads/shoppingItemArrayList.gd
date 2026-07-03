@@ -414,227 +414,83 @@ class_name ShoppingItemArrayList
 	"category": "infrastructure",
 	"listItem": [
 		{
+			"objectName": "Cashier Table",
+			"minimumPrice": 0,
+			"maximumPrice": 0,
+			"weight": 200,
+			"strenghtLevelToLift": 7,
+			"isFragile": true,
+			"availableFromDay": 3,
+			"isIllegalToSteal": true
+		},
+		{
+			"objectName": "Wooden Table",
+			"minimumPrice": 0,
+			"maximumPrice": 0,
+			"weight": 100,
+			"strenghtLevelToLift": 5,
+			"isFragile": true,
+			"availableFromDay": 3,
+			"isIllegalToSteal": true
+		},
+		{
+			"objectName": "Fridge",
+			"minimumPrice": 0,
+			"maximumPrice": 0,
+			"weight": 100,
+			"strenghtLevelToLift": 5,
+			"isFragile": true,
+			"availableFromDay": 3,
+			"isIllegalToSteal": true
+		},
+		{
+			"objectName": "Wooden Shelf",
+			"minimumPrice": 0,
+			"maximumPrice": 0,
+			"weight": 100,
+			"strenghtLevelToLift": 5,
+			"isFragile": true,
+			"availableFromDay": 3,
+			"isIllegalToSteal": true
+		},{
+			"objectName": "Showcase",
+			"minimumPrice": 0,
+			"maximumPrice": 0,
+			"weight": 100,
+			"strenghtLevelToLift": 5,
+			"isFragile": true,
+			"availableFromDay": 3,
+			"isIllegalToSteal": true
+		},{
 			"objectName": "Mall Pillar",
 			"minimumPrice": 0,
 			"maximumPrice": 0,
-			"weight": 500,
-			"strenghtLevelToLift": 10,
-			"isFragile": false,
-			"availableFromDay": 3,
-			"isIllegalToSteal": true
-		},
-		{
-			"objectName": "Escalator Step",
-			"minimumPrice": 0,
-			"maximumPrice": 0,
-			"weight": 150,
-			"strenghtLevelToLift": 8,
-			"isFragile": false,
-			"availableFromDay": 3,
-			"isIllegalToSteal": true
-		},
-		{
-			"objectName": "Automatic Glass Door",
-			"minimumPrice": 0,
-			"maximumPrice": 0,
-			"weight": 200,
-			"strenghtLevelToLift": 7,
-			"isFragile": true,
-			"availableFromDay": 3,
-			"isIllegalToSteal": true
-		},
-		{
-			"objectName": "Emergency Exit Sign",
-			"minimumPrice": 0,
-			"maximumPrice": 0,
-			"weight": 5,
-			"strenghtLevelToLift": 0,
-			"isFragile": false,
-			"availableFromDay": 3,
-			"isIllegalToSteal": true
-		},
-		{
-			"objectName": "Central AC Vent",
-			"minimumPrice": 0,
-			"maximumPrice": 0,
-			"weight": 30,
-			"strenghtLevelToLift": 3,
-			"isFragile": false,
-			"availableFromDay": 3,
-			"isIllegalToSteal": true
-		}
-	]
-},
-{
-	"category": "human_staff",
-	"listItem": [
-		{
-			"objectName": "Cashier Man",
-			"minimumPrice": 0,
-			"maximumPrice": 0,
-			"weight": 70,
+			"weight": 100,
 			"strenghtLevelToLift": 5,
 			"isFragile": true,
-			"availableFromDay": 5,
-			"isIllegalToSteal": false
-		},
-		{
-			"objectName": "Cleaning Service",
+			"availableFromDay": 3,
+			"isIllegalToSteal": true
+		},{
+			"objectName": "Escalator",
 			"minimumPrice": 0,
 			"maximumPrice": 0,
-			"weight": 65,
+			"weight": 100,
 			"strenghtLevelToLift": 5,
 			"isFragile": true,
-			"availableFromDay": 5,
-			"isIllegalToSteal": false
-		},
-		{
-			"objectName": "Security Guard",
-			"minimumPrice": 0,
-			"maximumPrice": 0,
-			"weight": 80,
-			"strenghtLevelToLift": 6,
-			"isFragile": true,
-			"availableFromDay": 5,
-			"isIllegalToSteal": false
-		},
-		{
-			"objectName": "Mall Mascot",
-			"minimumPrice": 0,
-			"maximumPrice": 0,
-			"weight": 20,
-			"strenghtLevelToLift": 2,
-			"isFragile": true,
-			"availableFromDay": 4,
-			"isIllegalToSteal": false
-		}
-	]
-},
-{
-	"category": "transportation",
-	"listItem": [
-		{
-			"objectName": "Display Car",
-			"minimumPrice": 15000,
-			"maximumPrice": 80000,
-			"weight": 1500,
-			"strenghtLevelToLift": 10,
-			"isFragile": false,
-			"availableFromDay": 6,
-			"isIllegalToSteal": true
-		},
-		{
-			"objectName": "Forklift Truck",
-			"minimumPrice": 20000,
-			"maximumPrice": 50000,
-			"weight": 4000,
-			"strenghtLevelToLift": 10,
-			"isFragile": false,
-			"availableFromDay": 7,
-			"isIllegalToSteal": true
-		},
-		{
-			"objectName": "Public Bus",
-			"minimumPrice": 0,
-			"maximumPrice": 0,
-			"weight": 12000,
-			"strenghtLevelToLift": 10,
-			"isFragile": false,
-			"availableFromDay": 9,
-			"isIllegalToSteal": true
-		}
-	]
-},
-{
-	"category": "real_estate",
-	"listItem": [
-		{
-			"objectName": "Cashier Counter Office",
-			"minimumPrice": 500,
-			"maximumPrice": 3000,
-			"weight": 300,
-			"strenghtLevelToLift": 8,
-			"isFragile": false,
-			"availableFromDay": 4,
-			"isIllegalToSteal": false
-		},
-		{
-			"objectName": "Public Toilet Cubicle",
-			"minimumPrice": 300,
-			"maximumPrice": 1500,
-			"weight": 150,
-			"strenghtLevelToLift": 7,
-			"isFragile": false,
-			"availableFromDay": 4,
-			"isIllegalToSteal": false
-		},
-		{
-			"objectName": "Security Guard Post",
-			"minimumPrice": 200,
-			"maximumPrice": 800,
-			"weight": 200,
-			"strenghtLevelToLift": 8,
-			"isFragile": false,
-			"availableFromDay": 5,
-			"isIllegalToSteal": false
-		},
-		{
-			"objectName": "Rooftop Helipad",
-			"minimumPrice": 0,
-			"maximumPrice": 0,
-			"weight": 5000,
-			"strenghtLevelToLift": 10,
-			"isFragile": false,
-			"availableFromDay": 9,
-			"isIllegalToSteal": false
-		}
-	]
-},
-{
-	"category": "decoration",
-	"listItem": [
-		{
-			"objectName": "Giant Fountain",
-			"minimumPrice": 2000,
-			"maximumPrice": 15000,
-			"weight": 800,
-			"strenghtLevelToLift": 10,
-			"isFragile": true,
-			"availableFromDay": 4,
-			"isIllegalToSteal": false
-		},
-		{
-			"objectName": "Indoor Palm Tree",
-			"minimumPrice": 100,
-			"maximumPrice": 800,
-			"weight": 50,
-			"strenghtLevelToLift": 4,
-			"isFragile": false,
 			"availableFromDay": 3,
-			"isIllegalToSteal": false
-		},
-		{
-			"objectName": "Food Court Dining Table",
-			"minimumPrice": 80,
-			"maximumPrice": 400,
-			"weight": 40,
-			"strenghtLevelToLift": 3,
-			"isFragile": false,
-			"availableFromDay": 3,
-			"isIllegalToSteal": false
-		},
-		{
-			"objectName": "Statue",
-			"minimumPrice": 500,
-			"maximumPrice": 8000,
-			"weight": 300,
-			"strenghtLevelToLift": 9,
+			"isIllegalToSteal": true
+		},{
+			"objectName": "Trash Can",
+			"minimumPrice": 0,
+			"maximumPrice": 0,
+			"weight": 100,
+			"strenghtLevelToLift": 5,
 			"isFragile": true,
-			"availableFromDay": 4,
-			"isIllegalToSteal": false
+			"availableFromDay": 3,
+			"isIllegalToSteal": true
 		}
 	]
-}
+},
 		]
 	}
 ]

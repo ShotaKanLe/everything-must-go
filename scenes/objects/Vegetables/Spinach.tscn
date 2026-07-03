@@ -2,36 +2,43 @@
 
 [ext_resource type="Script" uid="uid://dec1flmonurh4" path="res://scripts/interactableObject.gd" id="1_5hfri"]
 [ext_resource type="Script" uid="uid://dgee7q3f12wgw" path="res://autoloads/resources/shoppingItemResources.gd" id="2_w6n2s"]
-[ext_resource type="PackedScene" uid="uid://3fep6rfgb0j1" path="res://assets/objects/Vegetables/Spinach/Spinach.glb" id="3_mirnq"]
+[ext_resource type="FontFile" uid="uid://cxdgfb2dxi44c" path="res://assets/fonts/Malam Poek.ttf" id="4_e00ax"]
+[ext_resource type="PackedScene" uid="uid://24wg0v64curj" path="res://scenes/inheritated objects/in_spinach.tscn" id="4_e48q6"]
 
 [sub_resource type="Resource" id="Resource_mirnq"]
 script = ExtResource("2_w6n2s")
-objectName = "Spinach"
+objectNameId = "Spinach"
 objectCategory = "Vegetables"
+objectName = "Spinach"
 metadata/_custom_type_script = "uid://dgee7q3f12wgw"
 
 [sub_resource type="BoxShape3D" id="BoxShape3D_mirnq"]
-size = Vector3(1.0866836, 2.2465687, 2.8254547)
+size = Vector3(1.1844552, 2.2465687, 3.0360146)
 
 [node name="Spinach" type="RigidBody3D" unique_id=226227741]
 script = ExtResource("1_5hfri")
 item_data = SubResource("Resource_mirnq")
 
-[node name="Spinach" parent="." unique_id=1621135762 instance=ExtResource("3_mirnq")]
+[node name="CollisionShape3D" type="CollisionShape3D" parent="." unique_id=1931664313]
+transform = Transform3D(0.5, 0, 0, 0, 0.5, 0, 0, 0, 0.5, 0.041390568, 0.12762797, -0.06174481)
+shape = SubResource("BoxShape3D_mirnq")
 
-[node name="ObjectName" type="Label3D" parent="." unique_id=1045450076]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1.8785491, 0)
+[node name="Spinach2" parent="." unique_id=2057899046 instance=ExtResource("4_e48q6")]
+transform = Transform3D(0.5, 0, 0, 0, 0.5, 0, 0, 0, 0.5, 0, 0, 0)
+
+[node name="ObjectName" type="Label3D" parent="." unique_id=2081625227]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1.5445282, 0)
 billboard = 1
-text = "TEST"
+text = "TEST
+"
+font = ExtResource("4_e00ax")
 font_size = 96
 
-[node name="ObjectPrice" type="Label3D" parent="." unique_id=1535405921]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 2.3165488, 0)
+[node name="ObjectPrice" type="Label3D" parent="." unique_id=1045177046]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1.093043, 0)
 billboard = 1
-outline_modulate = Color(0, 0.45882353, 0, 1)
-text = "TEST"
-font_size = 84
-
-[node name="CollisionShape3D" type="CollisionShape3D" parent="." unique_id=1931664313]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.06583345, 0.12762797, -0.19586861)
-shape = SubResource("BoxShape3D_mirnq")
+outline_modulate = Color(0, 0.6059047, 0, 1)
+text = "TEST
+"
+font = ExtResource("4_e00ax")
+font_size = 60

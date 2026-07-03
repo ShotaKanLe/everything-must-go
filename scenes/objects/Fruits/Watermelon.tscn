@@ -2,37 +2,43 @@
 
 [ext_resource type="Script" uid="uid://dec1flmonurh4" path="res://scripts/interactableObject.gd" id="1_27f2w"]
 [ext_resource type="Script" uid="uid://dgee7q3f12wgw" path="res://autoloads/resources/shoppingItemResources.gd" id="2_kps18"]
-[ext_resource type="PackedScene" uid="uid://cvcicwijju2l4" path="res://assets/objects/Fruits/Watermelon/Watermelon.glb" id="3_kps18"]
+[ext_resource type="FontFile" uid="uid://cxdgfb2dxi44c" path="res://assets/fonts/Malam Poek.ttf" id="4_nyjrr"]
+[ext_resource type="PackedScene" uid="uid://b40sepohie3pi" path="res://scenes/inheritated objects/in_watermelon.tscn" id="5_bld6h"]
 
 [sub_resource type="Resource" id="Resource_nyjrr"]
 script = ExtResource("2_kps18")
-objectName = "Watermelon"
+objectNameId = "Watermelon"
 objectCategory = "Fruits"
+objectName = "Watermelon"
 metadata/_custom_type_script = "uid://dgee7q3f12wgw"
 
 [sub_resource type="BoxShape3D" id="BoxShape3D_nyjrr"]
 size = Vector3(2, 2.5196714, 2.0072346)
 
 [node name="Watermelon" type="RigidBody3D" unique_id=1970436593]
-collision_mask = 2
 script = ExtResource("1_27f2w")
 item_data = SubResource("Resource_nyjrr")
 
-[node name="Watermelon" parent="." unique_id=1369999888 instance=ExtResource("3_kps18")]
+[node name="CollisionShape3D" type="CollisionShape3D" parent="." unique_id=2009502393]
+transform = Transform3D(0.8, 0, 0, 0, 0.8, 0, 0, 0, 0.8, -0.07446149, 0.0019569397, 0.004899502)
+shape = SubResource("BoxShape3D_nyjrr")
 
-[node name="ObjectName" type="Label3D" parent="." unique_id=183677736]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1.7507725, 0)
+[node name="ObjectName" type="Label3D" parent="." unique_id=293017946]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1.8731561, 0)
 billboard = 1
-text = "TEST"
+text = "TEST
+"
+font = ExtResource("4_nyjrr")
 font_size = 96
 
-[node name="ObjectPrice" type="Label3D" parent="." unique_id=1673442891]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 2.1887722, 0)
+[node name="ObjectPrice" type="Label3D" parent="." unique_id=1063676367]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1.4216708, 0)
 billboard = 1
-outline_modulate = Color(0, 0.45882353, 0, 1)
-text = "TEST"
-font_size = 84
+outline_modulate = Color(0, 0.6059047, 0, 1)
+text = "TEST
+"
+font = ExtResource("4_nyjrr")
+font_size = 60
 
-[node name="CollisionShape3D" type="CollisionShape3D" parent="." unique_id=2009502393]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.07446149, 0.0019569397, 0.004899502)
-shape = SubResource("BoxShape3D_nyjrr")
+[node name="Watermelon2" parent="." unique_id=61996275 instance=ExtResource("5_bld6h")]
+transform = Transform3D(0.8, 0, 0, 0, 0.8, 0, 0, 0, 0.8, 0, 0, 0)

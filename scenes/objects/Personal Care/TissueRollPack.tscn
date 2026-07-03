@@ -2,37 +2,43 @@
 
 [ext_resource type="Script" uid="uid://dec1flmonurh4" path="res://scripts/interactableObject.gd" id="1_otvpj"]
 [ext_resource type="Script" uid="uid://dgee7q3f12wgw" path="res://autoloads/resources/shoppingItemResources.gd" id="2_y7fde"]
-[ext_resource type="PackedScene" uid="uid://dt2qqijdtek6x" path="res://assets/objects/Personal Care/Tissue Roll Pack/Tissue Roll Pack.glb" id="3_y7fde"]
+[ext_resource type="PackedScene" uid="uid://cfknw74dhp820" path="res://scenes/inheritated objects/in_tissue_roll_pack.tscn" id="4_tlovh"]
+[ext_resource type="FontFile" uid="uid://cxdgfb2dxi44c" path="res://assets/fonts/Malam Poek.ttf" id="4_u5xdk"]
 
 [sub_resource type="Resource" id="Resource_u5xdk"]
 script = ExtResource("2_y7fde")
-objectName = "Tissue Roll Pack"
+objectNameId = "Tissue Roll Pack"
 objectCategory = "Personal Care"
+objectName = "Tissue Roll Pack"
 metadata/_custom_type_script = "uid://dgee7q3f12wgw"
 
 [sub_resource type="BoxShape3D" id="BoxShape3D_otvpj"]
 size = Vector3(1.9545275, 2.1520019, 2.0072346)
 
 [node name="TissueRollPack" type="RigidBody3D" unique_id=893318410]
-collision_mask = 2
 script = ExtResource("1_otvpj")
 item_data = SubResource("Resource_u5xdk")
 
-[node name="ObjectName" type="Label3D" parent="." unique_id=361907696]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1.6232581, 0)
+[node name="CollisionShape3D" type="CollisionShape3D" parent="." unique_id=713384886]
+transform = Transform3D(0.4, 0, 0, 0, 0.4, 0, 0, 0, 0.4, -0.024321765, 0.005371809, 0.004899502)
+shape = SubResource("BoxShape3D_otvpj")
+
+[node name="ObjectName" type="Label3D" parent="." unique_id=412984412]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1.3364561, 0)
 billboard = 1
-text = "TEST"
+text = "TEST
+"
+font = ExtResource("4_u5xdk")
 font_size = 96
 
-[node name="ObjectPrice" type="Label3D" parent="." unique_id=1182611399]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 2.0612578, 0)
+[node name="ObjectPrice" type="Label3D" parent="." unique_id=432694133]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.8849708, 0)
 billboard = 1
-outline_modulate = Color(0, 0.45882353, 0, 1)
-text = "TEST"
-font_size = 84
+outline_modulate = Color(0, 0.6059047, 0, 1)
+text = "TEST
+"
+font = ExtResource("4_u5xdk")
+font_size = 60
 
-[node name="Tissue Roll Pack" parent="." unique_id=634866902 instance=ExtResource("3_y7fde")]
-
-[node name="CollisionShape3D" type="CollisionShape3D" parent="." unique_id=713384886]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.024321765, 0.005371809, 0.004899502)
-shape = SubResource("BoxShape3D_otvpj")
+[node name="Tissue Roll Pack2" parent="." unique_id=484132747 instance=ExtResource("4_tlovh")]
+transform = Transform3D(0.4, 0, 0, 0, 0.4, 0, 0, 0, 0.4, 0, 0, 0)

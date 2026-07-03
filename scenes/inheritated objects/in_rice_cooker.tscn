@@ -1,0 +1,22 @@
+[gd_scene format=3 uid="uid://x3oifd7g42h7"]
+
+[ext_resource type="PackedScene" uid="uid://dtjmub24g1ub7" path="res://assets/objects/Electronics/Rice Cooker/Rice Cooker.glb" id="1_jim70"]
+[ext_resource type="Material" uid="uid://bxhm2umyx2nbf" path="res://scenes/inheritated objects/in_base_microwave.tres" id="2_1etq8"]
+[ext_resource type="Material" uid="uid://2gqxb5p0m7a1" path="res://scenes/inheritated objects/in_metal_microwave.tres" id="3_i252q"]
+
+[node name="Rice Cooker" unique_id=255877990 instance=ExtResource("1_jim70")]
+
+[node name="Cube" parent="." index="0" unique_id=1137862211]
+surface_material_override/0 = ExtResource("2_1etq8")
+
+[node name="Cube_002" parent="." index="2" unique_id=536115687]
+surface_material_override/0 = ExtResource("3_i252q")
+
+[node name="Cube_003" parent="." index="3" unique_id=2509602]
+surface_material_override/0 = ExtResource("3_i252q")
+
+[node name="Cube_004" parent="." index="4" unique_id=54176679]
+surface_material_override/0 = ExtResource("3_i252q")
+
+[node name="Cube_005" parent="." index="5" unique_id=99747650]
+surface_material_override/0 = ExtResource("2_1etq8")

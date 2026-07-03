@@ -1,0 +1,87 @@
+[gd_scene format=3 uid="uid://dh1n6p4w08l33"]
+
+[ext_resource type="PackedScene" uid="uid://bsp7mrsdmuxej" path="res://assets/stall/personal care/Personal Care Stall.glb" id="2_4i3b4"]
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_3oo2w"]
+size = Vector3(2.124794, 38.29431, 60.333374)
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_olobb"]
+size = Vector3(2.124794, 38.29431, 52.914948)
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_tj5lc"]
+size = Vector3(2.124794, 38.29431, 12.935989)
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_41ojf"]
+size = Vector3(5.2840695, 12.743353, 52.40152)
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_4j2nf"]
+size = Vector3(7, 4.60256, 36.524654)
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_q81hn"]
+size = Vector3(6, 4.60256, 15.285765)
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_wnq0o"]
+size = Vector3(6.494371, 4.60256, 34.314148)
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_alk2i"]
+size = Vector3(1.6115654, 4.60256, 18.354828)
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_s0c2i"]
+size = Vector3(6.4234586, 25.50526, 3.2375693)
+
+[node name="Personal Care Stall" type="Node3D" unique_id=181078633]
+
+[node name="Collision" type="StaticBody3D" parent="." unique_id=1558073572]
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Collision" unique_id=1511607549]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -25.688702, 18.647156, 3.6969604)
+shape = SubResource("BoxShape3D_3oo2w")
+debug_color = Color(0, 0, 0, 1)
+
+[node name="CollisionShape3D2" type="CollisionShape3D" parent="Collision" unique_id=452376699]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 25.219753, 18.647156, 3.6969604)
+shape = SubResource("BoxShape3D_3oo2w")
+debug_color = Color(0, 0, 0, 1)
+
+[node name="CollisionShape3D3" type="CollisionShape3D" parent="Collision" unique_id=1280185424]
+transform = Transform3D(-4.371139e-08, 0, 1, 0, 1, 0, -1, 0, -4.371139e-08, -0.15442467, 18.647156, 32.715027)
+shape = SubResource("BoxShape3D_olobb")
+debug_color = Color(0, 0, 0, 1)
+
+[node name="CollisionShape3D4" type="CollisionShape3D" parent="Collision" unique_id=1372429652]
+transform = Transform3D(-4.371139e-08, 0, 1, 0, 1, 0, -1, 0, -4.371139e-08, 19.835054, 18.647156, 30.713444)
+shape = SubResource("BoxShape3D_tj5lc")
+debug_color = Color(0, 0, 0, 1)
+
+[node name="CollisionShape3D5" type="CollisionShape3D" parent="Collision" unique_id=510749651]
+transform = Transform3D(-4.371139e-08, 0, 1, 0, 1, 0, -1, 0, -4.371139e-08, -0.2632923, 31.056135, -26.732862)
+shape = SubResource("BoxShape3D_41ojf")
+debug_color = Color(0, 0, 0, 1)
+
+[node name="CollisionShape3D6" type="CollisionShape3D" parent="Collision" unique_id=1576254138]
+transform = Transform3D(-4.371139e-08, 0, 1, 0, 1, 0, -1, 0, -4.371139e-08, -8.046421, 4.5462084, -24.012487)
+shape = SubResource("BoxShape3D_4j2nf")
+debug_color = Color(0, 0, 0, 1)
+
+[node name="CollisionShape3D7" type="CollisionShape3D" parent="Collision" unique_id=1585330862]
+transform = Transform3D(-4.371139e-08, 0, 1, 0, 1, 0, -1, 0, -4.371139e-08, 2.5730238, 8.892701, -24.046234)
+shape = SubResource("BoxShape3D_q81hn")
+debug_color = Color(0, 0, 0, 1)
+
+[node name="CollisionShape3D8" type="CollisionShape3D" parent="Collision" unique_id=1727535726]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 6.983612, 4.5462084, -7.662182)
+shape = SubResource("BoxShape3D_wnq0o")
+debug_color = Color(0, 0, 0, 1)
+
+[node name="CollisionShape3D9" type="CollisionShape3D" parent="Collision" unique_id=933521072]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 9.4250145, 9.263516, -15.641842)
+shape = SubResource("BoxShape3D_alk2i")
+debug_color = Color(0, 0, 0, 1)
+
+[node name="CollisionShape3D10" type="CollisionShape3D" parent="Collision" unique_id=1937809322]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 7.019068, 19.714867, -23.939198)
+shape = SubResource("BoxShape3D_s0c2i")
+debug_color = Color(0, 0, 0, 1)
+
+[node name="Personal Care Stall" parent="." unique_id=891814846 instance=ExtResource("2_4i3b4")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 62)

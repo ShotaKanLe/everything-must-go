@@ -1,0 +1,33 @@
+[gd_scene format=3 uid="uid://cht63bn55cjxl"]
+
+[ext_resource type="PackedScene" uid="uid://dc8kyvurnowoj" path="res://assets/objects/Clothes/Jeans/Jeans.glb" id="1_18jeb"]
+[ext_resource type="Texture2D" uid="uid://8va4p3o6hwcr" path="res://assets/objects/Clothes/Jeans/Jeans_Jeans Base Texture.png" id="2_vo7os"]
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_af86t"]
+render_priority = 1
+transparency = 1
+shading_mode = 0
+albedo_color = Color(0, 0, 0, 1)
+grow = true
+grow_amount = 0.02
+stencil_mode = 3
+stencil_flags = 1
+stencil_compare = 5
+metadata/_stencil_owned = true
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_ot20g"]
+next_pass = SubResource("StandardMaterial3D_af86t")
+diffuse_mode = 3
+specular_mode = 1
+albedo_texture = ExtResource("2_vo7os")
+rim_enabled = true
+rim = 0.11
+rim_tint = 1.0
+stencil_mode = 1
+stencil_flags = 2
+stencil_outline_thickness = 0.02
+
+[node name="Jeans" unique_id=1098324811 instance=ExtResource("1_18jeb")]
+
+[node name="Plane" parent="." index="0" unique_id=1174877679]
+surface_material_override/0 = SubResource("StandardMaterial3D_ot20g")

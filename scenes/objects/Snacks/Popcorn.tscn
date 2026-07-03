@@ -2,37 +2,44 @@
 
 [ext_resource type="Script" uid="uid://dec1flmonurh4" path="res://scripts/interactableObject.gd" id="1_6rcwh"]
 [ext_resource type="Script" uid="uid://dgee7q3f12wgw" path="res://autoloads/resources/shoppingItemResources.gd" id="2_lhbmk"]
-[ext_resource type="PackedScene" uid="uid://cxqrcg4r3ctjw" path="res://assets/objects/Snacks/Popcorn/Popcorn.glb" id="3_lhbmk"]
+[ext_resource type="FontFile" uid="uid://cxdgfb2dxi44c" path="res://assets/fonts/Malam Poek.ttf" id="4_r2knc"]
+[ext_resource type="PackedScene" uid="uid://chply6ew2s78i" path="res://scenes/inheritated objects/in_popcorn.tscn" id="5_sk1ft"]
 
 [sub_resource type="Resource" id="Resource_r2knc"]
 script = ExtResource("2_lhbmk")
-objectName = "Popcorn"
+objectNameId = "Popcorn"
 objectCategory = "Snacks"
+objectName = "Popcorn"
 metadata/_custom_type_script = "uid://dgee7q3f12wgw"
 
 [sub_resource type="BoxShape3D" id="BoxShape3D_r2knc"]
 size = Vector3(1.9628283, 2.4177728, 2.0072346)
 
 [node name="Popcorn" type="RigidBody3D" unique_id=2109557233]
-collision_mask = 2
+collision_mask = 3
 script = ExtResource("1_6rcwh")
 item_data = SubResource("Resource_r2knc")
 
-[node name="Popcorn" parent="." unique_id=2120984555 instance=ExtResource("3_lhbmk")]
+[node name="CollisionShape3D" type="CollisionShape3D" parent="." unique_id=1167671140]
+transform = Transform3D(0.6, 0, 0, 0, 0.6, 0, 0, 0, 0.6, 0.015204936, 0.18202257, 0.0039429665)
+shape = SubResource("BoxShape3D_r2knc")
 
-[node name="ObjectName" type="Label3D" parent="." unique_id=185789135]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1.9196277, 0)
+[node name="ObjectName" type="Label3D" parent="." unique_id=1796663751]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1.7419884, 0)
 billboard = 1
-text = "TEST"
+text = "TEST
+"
+font = ExtResource("4_r2knc")
 font_size = 96
 
-[node name="ObjectPrice" type="Label3D" parent="." unique_id=468547924]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 2.3576274, 0)
+[node name="ObjectPrice" type="Label3D" parent="." unique_id=1779744617]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1.2905031, 0)
 billboard = 1
-outline_modulate = Color(0, 0.45882353, 0, 1)
-text = "TEST"
-font_size = 84
+outline_modulate = Color(0, 0.6059047, 0, 1)
+text = "TEST
+"
+font = ExtResource("4_r2knc")
+font_size = 60
 
-[node name="CollisionShape3D" type="CollisionShape3D" parent="." unique_id=1167671140]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.015204936, 0.18202257, 0.0039429665)
-shape = SubResource("BoxShape3D_r2knc")
+[node name="Popcorn2" parent="." unique_id=654569821 instance=ExtResource("5_sk1ft")]
+transform = Transform3D(0.6, 0, 0, 0, 0.6, 0, 0, 0, 0.6, 0, 0, 0)

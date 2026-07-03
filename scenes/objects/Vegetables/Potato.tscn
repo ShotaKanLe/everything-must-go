@@ -2,12 +2,14 @@
 
 [ext_resource type="Script" uid="uid://dec1flmonurh4" path="res://scripts/interactableObject.gd" id="1_lno46"]
 [ext_resource type="Script" uid="uid://dgee7q3f12wgw" path="res://autoloads/resources/shoppingItemResources.gd" id="2_rr3rw"]
-[ext_resource type="PackedScene" uid="uid://cd4me1j5dqn7a" path="res://assets/objects/Vegetables/Potato/Potato.glb" id="3_fir4m"]
+[ext_resource type="FontFile" uid="uid://cxdgfb2dxi44c" path="res://assets/fonts/Malam Poek.ttf" id="4_8nm0m"]
+[ext_resource type="PackedScene" uid="uid://ltlkj6vgxfg1" path="res://scenes/inheritated objects/in_potato.tscn" id="4_kw0b0"]
 
 [sub_resource type="Resource" id="Resource_fir4m"]
 script = ExtResource("2_rr3rw")
-objectName = "Potato"
+objectNameId = "Potato"
 objectCategory = "Vegetables"
+objectName = "Potato"
 metadata/_custom_type_script = "uid://dgee7q3f12wgw"
 
 [sub_resource type="BoxShape3D" id="BoxShape3D_rr3rw"]
@@ -17,22 +19,26 @@ size = Vector3(2.045141, 1.5216763, 0.9458008)
 script = ExtResource("1_lno46")
 item_data = SubResource("Resource_fir4m")
 
-[node name="Potato" parent="." unique_id=510448441 instance=ExtResource("3_fir4m")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1.943994, 0)
+[node name="CollisionShape3D" type="CollisionShape3D" parent="." unique_id=1591889429]
+transform = Transform3D(0.4, 0, 0, 0, 0.4, 0, 0, 0, 0.4, -0.050520122, 0.45249653, -0.07794106)
+shape = SubResource("BoxShape3D_rr3rw")
 
-[node name="ObjectName" type="Label3D" parent="." unique_id=864864101]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 3.4012246, 0)
+[node name="ObjectName" type="Label3D" parent="." unique_id=1373681693]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1.6297958, 0)
 billboard = 1
-text = "TEST"
+text = "TEST
+"
+font = ExtResource("4_8nm0m")
 font_size = 96
 
-[node name="ObjectPrice" type="Label3D" parent="." unique_id=874802938]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 3.8392243, 0)
+[node name="ObjectPrice" type="Label3D" parent="." unique_id=1808091644]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1.1783104, 0)
 billboard = 1
-outline_modulate = Color(0, 0.45882353, 0, 1)
-text = "TEST"
-font_size = 84
+outline_modulate = Color(0, 0.6059047, 0, 1)
+text = "TEST
+"
+font = ExtResource("4_8nm0m")
+font_size = 60
 
-[node name="CollisionShape3D" type="CollisionShape3D" parent="." unique_id=1591889429]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.050520122, 2.0391393, -0.07794106)
-shape = SubResource("BoxShape3D_rr3rw")
+[node name="Potato2" parent="." unique_id=1241994436 instance=ExtResource("4_kw0b0")]
+transform = Transform3D(0.4, 0, 0, 0, 0.4, 0, 0, 0, 0.4, 0, 0.3617034, 0)

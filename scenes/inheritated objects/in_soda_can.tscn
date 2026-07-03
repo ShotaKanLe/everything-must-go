@@ -1,0 +1,55 @@
+[gd_scene format=3 uid="uid://bq4rtt8o85lbq"]
+
+[ext_resource type="PackedScene" uid="uid://os8myr8vsya2" path="res://assets/objects/Beverages/Soda Can/Soda Can.glb" id="1_j60ep"]
+[ext_resource type="Texture2D" uid="uid://dtitc6ahol04i" path="res://assets/objects/Beverages/Soda Can/Soda Can_Base Texture.png" id="2_j0taf"]
+[ext_resource type="Texture2D" uid="uid://bs07rw44jx3f4" path="res://assets/objects/Beverages/Soda Can/Soda Can_Metal Texture.png" id="3_x3ubg"]
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_af86t"]
+render_priority = 1
+transparency = 1
+shading_mode = 0
+albedo_color = Color(0, 0, 0, 1)
+grow = true
+grow_amount = 0.02
+stencil_mode = 3
+stencil_flags = 1
+stencil_compare = 5
+metadata/_stencil_owned = true
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_x3ubg"]
+next_pass = SubResource("StandardMaterial3D_af86t")
+diffuse_mode = 3
+specular_mode = 1
+albedo_texture = ExtResource("2_j0taf")
+rim_enabled = true
+rim = 0.11
+rim_tint = 1.0
+stencil_mode = 1
+stencil_flags = 2
+stencil_outline_thickness = 0.02
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_jp14c"]
+next_pass = SubResource("StandardMaterial3D_af86t")
+diffuse_mode = 3
+specular_mode = 1
+albedo_texture = ExtResource("3_x3ubg")
+rim_enabled = true
+rim = 0.11
+rim_tint = 1.0
+stencil_mode = 1
+stencil_flags = 2
+stencil_outline_thickness = 0.02
+
+[node name="Soda Can" unique_id=1769193024 instance=ExtResource("1_j60ep")]
+
+[node name="Cylinder" parent="." index="0" unique_id=1375195167]
+surface_material_override/0 = SubResource("StandardMaterial3D_x3ubg")
+
+[node name="Cylinder_001" parent="." index="1" unique_id=749649288]
+surface_material_override/0 = SubResource("StandardMaterial3D_jp14c")
+
+[node name="Cylinder_002" parent="." index="2" unique_id=560078178]
+surface_material_override/0 = SubResource("StandardMaterial3D_jp14c")
+
+[node name="Plane" parent="." index="3" unique_id=1519889196]
+surface_material_override/0 = SubResource("StandardMaterial3D_jp14c")

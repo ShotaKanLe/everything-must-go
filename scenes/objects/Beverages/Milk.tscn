@@ -2,38 +2,44 @@
 
 [ext_resource type="Script" uid="uid://dec1flmonurh4" path="res://scripts/interactableObject.gd" id="1_vk1yq"]
 [ext_resource type="Script" uid="uid://dgee7q3f12wgw" path="res://autoloads/resources/shoppingItemResources.gd" id="2_juubu"]
-[ext_resource type="PackedScene" uid="uid://qvevcekfpc3" path="res://assets/objects/Beverages/Milk/Milk.glb" id="3_8qitn"]
+[ext_resource type="FontFile" uid="uid://cxdgfb2dxi44c" path="res://assets/fonts/Malam Poek.ttf" id="4_juubu"]
+[ext_resource type="PackedScene" uid="uid://c41xiwoit38t3" path="res://scenes/inheritated objects/in_milk.tscn" id="5_8qitn"]
 
 [sub_resource type="Resource" id="Resource_q4b84"]
 script = ExtResource("2_juubu")
-objectName = "Milk"
+objectNameId = "Milk"
 objectCategory = "Beverages"
 isFragile = true
+objectName = "Milk"
 metadata/_custom_type_script = "uid://dgee7q3f12wgw"
 
 [sub_resource type="BoxShape3D" id="BoxShape3D_jsntp"]
-size = Vector3(1.5073853, 3.1358795, 1.4217072)
+size = Vector3(1.5073853, 2.6485062, 1.4217072)
 
 [node name="Milk" type="RigidBody3D" unique_id=1287408789]
-collision_mask = 2
 script = ExtResource("1_vk1yq")
 item_data = SubResource("Resource_q4b84")
 
-[node name="Milk" parent="." unique_id=1675080921 instance=ExtResource("3_8qitn")]
+[node name="CollisionShape3D" type="CollisionShape3D" parent="." unique_id=1217009089]
+transform = Transform3D(0.5, 0, 0, 0, 0.5, 0, 0, 0, 0.5, -0.012359619, 0.43771935, -0.015073001)
+shape = SubResource("BoxShape3D_jsntp")
 
-[node name="ObjectName" type="Label3D" parent="." unique_id=898495836]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 2.5100636, 0)
+[node name="ObjectName" type="Label3D" parent="." unique_id=486379801]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1.9791746, 0)
 billboard = 1
-text = "TEST"
+text = "TEST
+"
+font = ExtResource("4_juubu")
 font_size = 96
 
-[node name="ObjectPrice" type="Label3D" parent="." unique_id=1199766030]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 2.9480636, 0)
+[node name="ObjectPrice" type="Label3D" parent="." unique_id=871053275]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1.5276893, 0)
 billboard = 1
-outline_modulate = Color(0, 0.45882353, 0, 1)
-text = "TEST"
-font_size = 84
+outline_modulate = Color(0, 0.6059047, 0, 1)
+text = "TEST
+"
+font = ExtResource("4_juubu")
+font_size = 60
 
-[node name="CollisionShape3D" type="CollisionShape3D" parent="." unique_id=1217009089]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.012359619, 0.5595627, -0.015073001)
-shape = SubResource("BoxShape3D_jsntp")
+[node name="Milk2" parent="." unique_id=1827804283 instance=ExtResource("5_8qitn")]
+transform = Transform3D(0.6, 0, 0, 0, 0.6, 0, 0, 0, 0.6, 0, 0, 0)

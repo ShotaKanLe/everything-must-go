@@ -1,0 +1,56 @@
+[gd_scene format=3 uid="uid://20e0kwtksrx7"]
+
+[ext_resource type="PackedScene" uid="uid://bqduku17ylyqj" path="res://scenes/objects/Absurds/ceramic.tscn" id="1_300vk"]
+
+[node name="Ceramic List" type="Node3D" unique_id=1798959873]
+
+[node name="Ceramic" parent="." unique_id=1275525457 instance=ExtResource("1_300vk")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.21334887, 0)
+
+[node name="Ceramic2" parent="." unique_id=2135067345 instance=ExtResource("1_300vk")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 3.8614802, 0.21334887, 0)
+
+[node name="Ceramic3" parent="." unique_id=1495489321 instance=ExtResource("1_300vk")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 7.5578604, 0.21334887, 0)
+
+[node name="Ceramic4" parent="." unique_id=1806404567 instance=ExtResource("1_300vk")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 11.134804, 0.21334887, 0)
+
+[node name="Ceramic5" parent="." unique_id=591971174 instance=ExtResource("1_300vk")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 14.516579, 0.21334887, 0)
+
+[node name="Ceramic6" parent="." unique_id=972566276 instance=ExtResource("1_300vk")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 18.00753, 0.21334887, 0)
+
+[node name="Ceramic7" parent="." unique_id=847666886 instance=ExtResource("1_300vk")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 21.502785, 0.21334887, 0)
+
+[node name="Ceramic8" parent="." unique_id=772619054 instance=ExtResource("1_300vk")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 24.905165, 0.21334887, 0)
+
+[node name="Ceramic9" parent="." unique_id=501935308 instance=ExtResource("1_300vk")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 28.462368, 0.21334887, 0)
+
+[node name="Ceramic10" parent="." unique_id=825600979 instance=ExtResource("1_300vk")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -3.6225824, 0.21334887, 0)
+
+[node name="Ceramic11" parent="." unique_id=1699139882 instance=ExtResource("1_300vk")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -7.153675, 0.21334887, 0)
+
+[node name="Ceramic12" parent="." unique_id=663940863 instance=ExtResource("1_300vk")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -10.690309, 0.21334887, 0)
+
+[node name="Ceramic13" parent="." unique_id=1674178427 instance=ExtResource("1_300vk")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -14.236144, 0.21334887, 0)
+
+[node name="Ceramic14" parent="." unique_id=987976462 instance=ExtResource("1_300vk")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -17.790958, 0.21334887, 0)
+
+[node name="Ceramic15" parent="." unique_id=635821698 instance=ExtResource("1_300vk")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -21.26307, 0.21334887, 0)
+
+[node name="Ceramic16" parent="." unique_id=731810354 instance=ExtResource("1_300vk")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -24.747393, 0.21334887, 0)
+
+[node name="Ceramic17" parent="." unique_id=863321589 instance=ExtResource("1_300vk")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -28.254211, 0.21334887, 0)

@@ -2,36 +2,43 @@
 
 [ext_resource type="Script" uid="uid://dec1flmonurh4" path="res://scripts/interactableObject.gd" id="1_argui"]
 [ext_resource type="Script" uid="uid://dgee7q3f12wgw" path="res://autoloads/resources/shoppingItemResources.gd" id="2_qxhth"]
-[ext_resource type="PackedScene" uid="uid://dc8kyvurnowoj" path="res://assets/objects/Clothes/Jeans/Jeans.glb" id="3_qxhth"]
+[ext_resource type="FontFile" uid="uid://cxdgfb2dxi44c" path="res://assets/fonts/Malam Poek.ttf" id="4_we6jn"]
+[ext_resource type="PackedScene" uid="uid://cht63bn55cjxl" path="res://scenes/inheritated objects/in_jeans.tscn" id="5_qr3oq"]
 
 [sub_resource type="Resource" id="Resource_we6jn"]
 script = ExtResource("2_qxhth")
-objectName = "Jeans"
+objectNameId = "Jeans"
 objectCategory = "Clothes"
+objectName = "Jeans"
 metadata/_custom_type_script = "uid://dgee7q3f12wgw"
 
 [sub_resource type="BoxShape3D" id="BoxShape3D_qxhth"]
-size = Vector3(2.5286984, 3.8577685, 0.79854786)
+size = Vector3(2.5286984, 3.9938178, 1.1834536)
 
 [node name="Jeans" type="RigidBody3D" unique_id=2076985788]
 script = ExtResource("1_argui")
 item_data = SubResource("Resource_we6jn")
 
-[node name="Jeans" parent="." unique_id=2146654024 instance=ExtResource("3_qxhth")]
+[node name="CollisionShape3D" type="CollisionShape3D" parent="." unique_id=947306967]
+transform = Transform3D(0.6, 0, 0, 0, 0.6, 0, 0, 0, 0.6, 0.011696577, 0.36763495, -0.1600706)
+shape = SubResource("BoxShape3D_qxhth")
 
-[node name="ObjectName" type="Label3D" parent="." unique_id=1571602047]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 2.9953222, 0)
+[node name="ObjectName" type="Label3D" parent="." unique_id=759710360]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 2.3914258, -0.13008773)
 billboard = 1
-text = "TEST"
+text = "TEST
+"
+font = ExtResource("4_we6jn")
 font_size = 96
 
-[node name="ObjectPrice" type="Label3D" parent="." unique_id=1841188986]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 3.433322, 0)
+[node name="ObjectPrice" type="Label3D" parent="." unique_id=42795620]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1.9399406, -0.13008773)
 billboard = 1
-outline_modulate = Color(0, 0.45882353, 0, 1)
-text = "TEST"
-font_size = 84
+outline_modulate = Color(0, 0.6059047, 0, 1)
+text = "TEST
+"
+font = ExtResource("4_we6jn")
+font_size = 60
 
-[node name="CollisionShape3D" type="CollisionShape3D" parent="." unique_id=947306967]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.011696577, 0.51490134, -0.27554232)
-shape = SubResource("BoxShape3D_qxhth")
+[node name="Jeans2" parent="." unique_id=1098324811 instance=ExtResource("5_qr3oq")]
+transform = Transform3D(0.6, 0, 0, 0, 0.6, 0, 0, 0, 0.6, 0, 0, 0)
