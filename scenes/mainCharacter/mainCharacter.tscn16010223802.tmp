@@ -32,5 +32,3 @@ script = SubResource("GDScript_m723l")
 
 [node name="Char" parent="." unique_id=961960044 instance=ExtResource("2_m723l")]
 transform = Transform3D(-4.371139e-08, 0, 1, 0, 1, 0, -1, 0, -4.371139e-08, 0, 0, 0.3784753)
-
-[node name="SfxStreamPlayer" type="AudioStreamPlayer" parent="." unique_id=1875583671]

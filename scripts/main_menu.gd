@@ -14,6 +14,9 @@ extends Node2D
 @onready var btn_credit = $CanvasLayer/ListButton/CreditButton
 @onready var sprite_credit = $CanvasLayer/ListButton/CreditButtonSprite
 
+@onready var sfx_player = $SfxStreamPlayer
+var sfx_click = preload("res://assets/sfx/button_click.wav")
+
 func _ready() -> void:
 	logo.position = Vector2(299.0, 318.0)
 	logo.scale = Vector2(0.555, 0.555)
@@ -34,6 +37,11 @@ func _ready() -> void:
 	btn_credit.mouse_entered.connect(_on_hover_entered.bind(sprite_credit))
 	btn_credit.mouse_exited.connect(_on_hover_exited.bind(sprite_credit))
 
+func play_click_sfx() -> void:
+	if sfx_player:
+		sfx_player.stream = sfx_click
+		sfx_player.play()
+
 func _on_hover_entered(sprite: Node) -> void:
 	var tween = create_tween()
 	tween.tween_property(sprite, "scale", Vector2(0.68, 0.68), 0.1)
@@ -48,17 +56,21 @@ func animate_button(sprite: Node) -> void:
 	tween.tween_property(sprite, "scale", Vector2(0.645, 0.645), 0.1)
 
 func _on_button_start_pressed() -> void:
+	play_click_sfx()
 	animate_button(sprite_start)
 	await get_tree().create_timer(1.0).timeout
-	get_tree().change_scene_to_file("res://scenes/loadingScreen.tscn")
+	get_tree().change_scene_to_file("res://scenes/User Interface/loadingScreen.tscn")
 
 func _on_tutorial_button_pressed() -> void:
+	play_click_sfx()
 	animate_button(sprite_tutorial)
 
 func _on_exit_button_pressed() -> void:
+	play_click_sfx()
 	animate_button(sprite_exit)
 	await get_tree().create_timer(1.0).timeout
 	get_tree().quit()
 
 func _on_credit_button_pressed() -> void:
+	play_click_sfx()
 	animate_button(sprite_credit)

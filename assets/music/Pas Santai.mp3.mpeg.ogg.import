@@ -1,0 +1,19 @@
+[remap]
+
+importer="oggvorbisstr"
+type="AudioStreamOggVorbis"
+uid="uid://bsoue2o232bfk"
+path="res://.godot/imported/Pas Santai.mp3.mpeg.ogg-3ca8de7979694b67de280e2988efbc76.oggvorbisstr"
+
+[deps]
+
+source_file="res://assets/music/Pas Santai.mp3.mpeg.ogg"
+dest_files=["res://.godot/imported/Pas Santai.mp3.mpeg.ogg-3ca8de7979694b67de280e2988efbc76.oggvorbisstr"]
+
+[params]
+
+loop=false
+loop_offset=0
+bpm=0
+beat_count=0
+bar_beats=4

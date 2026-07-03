@@ -40,7 +40,6 @@ extends CharacterBody3D
 @export var laser_thickness : float = 0.04
 
 @export_group("Rotation Settings")
-@export_group("Rotation Settings")
 @export var rotation_sensitivity : float = 0.3
 
 @export var label_to_interact: Label
@@ -52,6 +51,7 @@ var freeflying : bool = false
 var current_stamina : float = 100.0
 var current_hp : float = 100.0
 var player_strength_level : int = 0
+var is_paused : bool = false
 
 var hovered_object : InteractableObject = null
 var grabbed_object : InteractableObject = null
@@ -71,6 +71,13 @@ const LASER_COLOR_ROTATE := Color(0.6, 0.0, 1.0, 0.6)
 @onready var collider: CollisionShape3D = $Collider
 var current_item_instance: Node3D = null
 @onready var ray = $Head/Camera3D/RayCast3D
+
+@onready var sfx_player = $SfxStreamPlayer
+var sfx_purchase = preload("res://assets/sfx/purchase_successfully.wav")
+var sfx_scan = preload("res://assets/sfx/scan_successfully.wav")
+var sfx_footstep = preload("res://assets/sfx/footStep.wav")
+
+var footstep_timer: float = 0.0
 
 func _ready() -> void:
 	max_stamina = LevelData.get_max_stamina()
@@ -117,6 +124,9 @@ func setup_laser_visual() -> void:
 	laser_mesh.visible = false
 
 func _input(event: InputEvent) -> void:
+	if is_paused: 
+		return
+
 	if Input.is_mouse_button_pressed(MOUSE_BUTTON_LEFT):
 		capture_mouse()
 	if Input.is_key_pressed(KEY_ESCAPE):
@@ -162,6 +172,9 @@ func _input(event: InputEvent) -> void:
 		if grabbed_object:
 			if grabbed_object.item_data and grabbed_object.item_data.objectName == "Scanner":
 				grabbed_object.execute_scan(label_to_interact)
+				if sfx_player:
+					sfx_player.stream = sfx_scan
+					sfx_player.play()
 			elif grabbed_object.item_data is ToolItem:
 				purchase_grabbed_tool()
 			elif grabbed_object.item_data is UpgradeItem:
@@ -177,6 +190,10 @@ func purchase_grabbed_tool() -> void:
 		LevelData.money = snapped(LevelData.money, 0.01)
 		LevelData.owned_tools_list.append(grabbed_object.item_data)
 		
+		if sfx_player:
+			sfx_player.stream = sfx_purchase
+			sfx_player.play()
+			
 		var tool_to_delete = grabbed_object
 		drop_object()
 		tool_to_delete.queue_free()
@@ -194,6 +211,10 @@ func purchase_and_use_upgrade() -> void:
 		grabbed_object.item_data.apply_upgrade()
 		sync_player_stats()
 		
+		if sfx_player:
+			sfx_player.stream = sfx_purchase
+			sfx_player.play()
+			
 		var upgrade_to_delete = grabbed_object
 		drop_object()
 		upgrade_to_delete.queue_free()
@@ -261,6 +282,9 @@ func _apply_object_rotation(mouse_delta: Vector2) -> void:
 	_pending_angular_velocity += Vector3.UP * (-mouse_delta.x * rad_per_px)
 
 func _physics_process(delta: float) -> void:
+	if is_paused: 
+		return
+
 	if not grabbed_object:
 		process_raycast_detection()
 	else:
@@ -291,6 +315,20 @@ func _physics_process(delta: float) -> void:
 			velocity.y = jump_velocity
 
 	var is_moving := Input.get_vector(input_left, input_right, input_forward, input_back) != Vector2.ZERO
+	
+	if is_moving and is_on_floor():
+		if footstep_timer <= 0.0:
+			if sfx_player:
+				sfx_player.stream = sfx_footstep
+				sfx_player.play()
+			footstep_timer = 1.0
+		else:
+			footstep_timer -= delta
+	else:
+		if sfx_player and sfx_player.stream == sfx_footstep and sfx_player.playing:
+			sfx_player.stop()
+		footstep_timer = 0.0
+		
 	var speed_modifier : float = 1.0
 
 	if grabbed_object and grabbed_object.item_data:

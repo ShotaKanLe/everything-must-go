@@ -24,6 +24,7 @@ LevelData="*uid://ljbsj4xrpk87"
 
 window/size/viewport_width=1280
 window/size/viewport_height=720
+mouse_cursor/custom_image="uid://dd26c4ce6foke"
 
 [global_group]
 

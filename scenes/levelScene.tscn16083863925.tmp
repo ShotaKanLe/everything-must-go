@@ -64,10 +64,8 @@
 [ext_resource type="PackedScene" uid="uid://du6pteann1axg" path="res://scenes/objects/Fruits/Melon.tscn" id="49_ygf0f"]
 [ext_resource type="PackedScene" uid="uid://bmqw01jalf4ds" path="res://scenes/objects/Fruits/Watermelon.tscn" id="50_2s51j"]
 [ext_resource type="PackedScene" uid="uid://c528eyx5ttvv7" path="res://scenes/objects/Fruits/Avocado.tscn" id="51_44yug"]
-[ext_resource type="Script" uid="uid://4nc6jecfk0c" path="res://scripts/exit_area.gd" id="58_7rpch"]
 [ext_resource type="Texture2D" uid="uid://df5quwogrmven" path="res://assets/user_interface/in_game/Sidebar.png" id="58_o747o"]
 [ext_resource type="Texture2D" uid="uid://c3wc3qalx8t7k" path="res://assets/user_interface/in_game/Resume_BG.png" id="67_7rpch"]
-[ext_resource type="AudioStream" uid="uid://bsoue2o232bfk" path="res://assets/music/Pas Santai.mp3.mpeg.ogg" id="68_djra2"]
 
 [sub_resource type="ProceduralSkyMaterial" id="ProceduralSkyMaterial_ki6c0"]
 
@@ -171,9 +169,6 @@ size = Vector3(45.750732, 39.804077, 40.67383)
 
 [sub_resource type="BoxShape3D" id="BoxShape3D_ohcpa"]
 size = Vector3(45.750732, 39.804077, 40.67383)
-
-[sub_resource type="BoxShape3D" id="BoxShape3D_h0q30"]
-size = Vector3(17.876099, 21.612305, 37.830566)
 
 [node name="MainScene" type="Node3D" unique_id=279125458 node_paths=PackedStringArray("invoice_list_container", "debug_list_menu", "stamina_progress_bar")]
 script = ExtResource("1_bdbnr")
@@ -666,15 +661,6 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -16.567406, 20.901844, 48.102
 shape = SubResource("BoxShape3D_ohcpa")
 debug_color = Color(0.10602752, 0.84534997, 0, 0.41960785)
 
-[node name="ExitArea" type="Area3D" parent="AreaList" unique_id=304221248 node_paths=PackedStringArray("nota_counting_area")]
-script = ExtResource("58_7rpch")
-nota_counting_area = NodePath("../NotaCountingArea")
-
-[node name="CollisionShape3D" type="CollisionShape3D" parent="AreaList/ExitArea" unique_id=1400512726]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -66.3179, 10.306152, -0.22143555)
-shape = SubResource("BoxShape3D_h0q30")
-debug_color = Color(0.91753083, 0.26288626, 0.3005452, 0.41960785)
-
 [node name="CanvasLayer" type="CanvasLayer" parent="." unique_id=1093344464]
 
 [node name="LabelList" type="Control" parent="CanvasLayer" unique_id=456823621]
@@ -701,20 +687,8 @@ offset_right = 218.0
 offset_bottom = 366.1
 flat = true
 
-[node name="Label" type="Label" parent="CanvasLayer/LabelList/ModalNotaIsOpen" unique_id=734870796]
-layout_mode = 0
-offset_left = 191.0
-offset_top = 337.0
-offset_right = 226.0
-offset_bottom = 371.0
-theme_override_colors/font_shadow_color = Color(0.6627451, 0.078431375, 0.3137255, 1)
-theme_override_fonts/font = ExtResource("31_4tqdv")
-theme_override_font_sizes/font_size = 24
-text = "q"
-horizontal_alignment = 1
-vertical_alignment = 1
-
 [node name="ModalNotaIsClose" type="Control" parent="CanvasLayer/LabelList" unique_id=1774038125]
+visible = false
 anchors_preset = 0
 offset_left = -194.0
 offset_top = 2.0
@@ -733,19 +707,6 @@ offset_top = 315.1
 offset_right = 268.0
 offset_bottom = 366.1
 flat = true
-
-[node name="Label" type="Label" parent="CanvasLayer/LabelList/ModalNotaIsClose" unique_id=1865214858]
-layout_mode = 0
-offset_left = 237.0
-offset_top = 340.0
-offset_right = 272.0
-offset_bottom = 374.0
-theme_override_colors/font_shadow_color = Color(0.6627451, 0.078431375, 0.3137255, 1)
-theme_override_fonts/font = ExtResource("31_4tqdv")
-theme_override_font_sizes/font_size = 24
-text = "q"
-horizontal_alignment = 1
-vertical_alignment = 1
 
 [node name="NotaListLabel" parent="CanvasLayer/LabelList" unique_id=1350703745 instance=ExtResource("5_hjddb")]
 layout_mode = 0
@@ -876,8 +837,8 @@ text = "100"
 
 [node name="MenuButton" type="Button" parent="CanvasLayer" unique_id=372628777]
 offset_left = 7.2478943
-offset_top = 5.0
-offset_right = 69.0
+offset_top = 12.247894
+offset_right = 77.247894
 offset_bottom = 70.247894
 flat = true
 
@@ -885,43 +846,6 @@ flat = true
 position = Vector2(38.247894, 39.247894)
 scale = Vector2(0.6449579, 0.6449579)
 texture = ExtResource("36_sd3h5")
-
-[node name="instruction1" type="Label" parent="CanvasLayer" unique_id=1396740128]
-offset_left = -2.0
-offset_top = 36.0
-offset_right = 80.0
-offset_bottom = 84.0
-theme_override_colors/font_shadow_color = Color(0.6627451, 0.078431375, 0.3137255, 1)
-theme_override_fonts/font = ExtResource("31_4tqdv")
-theme_override_font_sizes/font_size = 14
-text = "escape"
-horizontal_alignment = 1
-vertical_alignment = 1
-
-[node name="DayLabel" type="Label" parent="CanvasLayer" unique_id=1345061053]
-offset_left = 2.0
-offset_top = 69.0
-offset_right = 1280.0
-offset_bottom = 126.0
-theme_override_colors/font_shadow_color = Color(0.6627451, 0.078431375, 0.3137255, 1)
-theme_override_fonts/font = ExtResource("31_4tqdv")
-theme_override_font_sizes/font_size = 24
-text = "- Day 1 -"
-horizontal_alignment = 1
-vertical_alignment = 1
-
-[node name="TimerLabel" type="Label" parent="CanvasLayer" unique_id=2131287260]
-offset_left = 2.0
-offset_top = 99.0
-offset_right = 1280.0
-offset_bottom = 152.0
-theme_override_fonts/font = ExtResource("31_4tqdv")
-theme_override_font_sizes/font_size = 14
-text = "10:00"
-horizontal_alignment = 1
-vertical_alignment = 1
-
-[node name="DayTimer" type="Timer" parent="CanvasLayer" unique_id=1030495032]
 
 [node name="PauseMenu" type="Control" parent="CanvasLayer" unique_id=838047790]
 visible = false
@@ -933,13 +857,14 @@ grow_horizontal = 2
 grow_vertical = 2
 
 [node name="PauseBlackScreen" type="ColorRect" parent="CanvasLayer/PauseMenu" unique_id=1600571893]
+visible = false
 layout_mode = 1
 anchors_preset = 15
 anchor_right = 1.0
 anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
-color = Color(0.24705882, 0.24705882, 0.24705882, 0.70980394)
+color = Color(0.24840015, 0.24840018, 0.24840015, 1)
 
 [node name="PauseMenuSprite" type="Sprite2D" parent="CanvasLayer/PauseMenu" unique_id=1232164361]
 position = Vector2(632.7521, 305.7521)
@@ -965,62 +890,19 @@ text = "exit"
 
 [node name="resumeButton" type="Button" parent="CanvasLayer/PauseMenu" unique_id=1232726827]
 layout_mode = 0
-offset_left = 493.0
-offset_top = 289.0
-offset_right = 782.0
-offset_bottom = 392.0
+offset_left = 511.0
+offset_top = 310.0
+offset_right = 760.0
+offset_bottom = 372.0
 flat = true
 
 [node name="exitButton" type="Button" parent="CanvasLayer/PauseMenu" unique_id=667132545]
 layout_mode = 0
-offset_left = 502.0
-offset_top = 394.0
-offset_right = 768.0
-offset_bottom = 492.0
+offset_left = 511.0
+offset_top = 410.0
+offset_right = 760.0
+offset_bottom = 473.0
 flat = true
-
-[node name="GameOverMenu" type="Control" parent="CanvasLayer" unique_id=1596112321]
-layout_mode = 3
-anchors_preset = 15
-anchor_right = 1.0
-anchor_bottom = 1.0
-grow_horizontal = 2
-grow_vertical = 2
-
-[node name="PauseBlackScreen" type="ColorRect" parent="CanvasLayer/GameOverMenu" unique_id=62981942]
-layout_mode = 1
-anchors_preset = 15
-anchor_right = 1.0
-anchor_bottom = 1.0
-grow_horizontal = 2
-grow_vertical = 2
-color = Color(0.13333334, 0.13333334, 0.13333334, 1)
-
-[node name="gameOverText" parent="CanvasLayer/GameOverMenu" unique_id=1764457482 instance=ExtResource("5_hjddb")]
-layout_mode = 0
-offset_left = 7.0
-offset_top = 305.7521
-offset_right = 1280.0
-offset_bottom = 367.7521
-theme_override_font_sizes/font_size = 56
-text = "GAME OVER"
-
-[node name="exitToMainMenu" parent="CanvasLayer/GameOverMenu" unique_id=294746224 instance=ExtResource("5_hjddb")]
-layout_mode = 0
-offset_left = 5.0
-offset_top = 389.0
-offset_right = 1278.0
-offset_bottom = 451.0
-theme_override_font_sizes/font_size = 32
-text = "press Escape to back"
-
-[node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="." unique_id=1202201334]
-stream = ExtResource("68_djra2")
-volume_db = -13.012
-autoplay = true
-parameters/looping = true
-
-[node name="SfxStreamPlayer" type="AudioStreamPlayer" parent="." unique_id=985500726]
 
 [connection signal="pressed" from="CanvasLayer/LabelList/ModalNotaIsOpen/SidebarOpenButton" to="." method="_on_sidebar_open_button_pressed"]
 [connection signal="pressed" from="CanvasLayer/LabelList/ModalNotaIsClose/SidebarCloseButton" to="." method="_on_sidebar_close_button_pressed"]

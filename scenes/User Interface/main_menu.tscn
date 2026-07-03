@@ -8,6 +8,7 @@
 [ext_resource type="Texture2D" uid="uid://dcnkenp1mc4mh" path="res://assets/user_interface/main_menu/Tutorials.png" id="5_q046p"]
 [ext_resource type="Texture2D" uid="uid://dmmnl52dgocdg" path="res://assets/user_interface/main_menu/Exit.png" id="6_fkgeg"]
 [ext_resource type="Texture2D" uid="uid://b1jukipyvo1rr" path="res://assets/user_interface/main_menu/Credits.png" id="7_lvkmq"]
+[ext_resource type="AudioStream" uid="uid://bsoue2o232bfk" path="res://assets/music/Pas Santai.mp3.mpeg.ogg" id="9_0aqp8"]
 
 [node name="MainMenu" type="Node2D" unique_id=669907098]
 script = ExtResource("1_w8h81")
@@ -97,6 +98,13 @@ texture = ExtResource("7_lvkmq")
 position = Vector2(299, 318)
 scale = Vector2(0.5546296, 0.5546296)
 texture = ExtResource("5_6tc4g")
+
+[node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="." unique_id=301994871]
+stream = ExtResource("9_0aqp8")
+autoplay = true
+parameters/looping = true
+
+[node name="SfxStreamPlayer" type="AudioStreamPlayer" parent="." unique_id=103738170]
 
 [connection signal="pressed" from="CanvasLayer/ListButton/ButtonStart" to="." method="_on_button_start_pressed"]
 [connection signal="pressed" from="CanvasLayer/ListButton/TutorialButton" to="." method="_on_tutorial_button_pressed"]
