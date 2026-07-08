@@ -46,15 +46,26 @@ func generate_nota_list() -> void:
 	else:
 		max_unique_items = 3
 
+	var expected_strength := current_day - 1
+	if current_day >= 4:
+		expected_strength = 99
+
 	var pool_items := []
+	var item_absurd_status := {}
+	
 	for group in item_list_data.shoppingItemArrayList:
-		if group["isAbsurd"] and current_day <= 3:
+		var is_absurd : bool = group.get("isAbsurd", false)
+		
+		if is_absurd and current_day < 2:
 			continue
 			
 		for cat_data in group["list"]:
 			for item in cat_data["listItem"]:
-				if item["availableFromDay"] <= current_day:
+				var item_strength : int = item.get("strenghtLevelToLift", 0)
+				
+				if item.get("availableFromDay", 0) <= current_day and item_strength <= expected_strength:
 					pool_items.append(item)
+					item_absurd_status[item["objectName"]] = is_absurd
 
 	if pool_items.is_empty():
 		push_error("Pool item kosong! Periksa data ketersediaan item.")
@@ -65,13 +76,35 @@ func generate_nota_list() -> void:
 	
 	for i in range(selected_count):
 		var target_item = pool_items[i]
+		var item_name: String = target_item["objectName"]
+		var is_absurd: bool = item_absurd_status[item_name]
+		var item_strength: int = target_item.get("strenghtLevelToLift", 0)
 		
 		var amount := 1
-		if current_day > 3:
-			amount = randi_range(1, 3)
+		
+		if is_absurd:
+			if current_day >= 9:
+				amount = randi_range(1, 3)
+			elif current_day >= 5:
+				amount = randi_range(1, 2)
+			else:
+				amount = 1
+		else:
+			var max_amount := 1
+			if current_day >= 7:
+				max_amount = 3
+			elif current_day >= 4:
+				max_amount = 2
+				
+			if item_strength >= 5:
+				max_amount = 1
+			elif item_strength >= 2:
+				max_amount = min(max_amount, 2)
+				
+			amount = randi_range(1, max_amount)
 			
 		nota_list.append({
-			"objectName": target_item["objectName"],
+			"objectName": item_name,
 			"amount": amount,
 			"maximumPrice": target_item["maximumPrice"]
 		})

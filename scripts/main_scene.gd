@@ -96,7 +96,7 @@ func setup_day_and_timer() -> void:
 		day_label.text = "- Day %d -" % LevelData.current_day
 		
 	if day_timer:
-		day_timer.wait_time = 150
+		day_timer.wait_time = 300
 		if not day_timer.timeout.is_connected(_on_day_timer_timeout):
 			day_timer.timeout.connect(_on_day_timer_timeout)
 		day_timer.start()

@@ -387,16 +387,30 @@ func process_raycast_detection() -> void:
 	var ray_end := ray_origin + camera_3d.project_ray_normal(mouse_position) * max_interaction_distance
 	var query := PhysicsRayQueryParameters3D.create(ray_origin, ray_end)
 	var result := space_state.intersect_ray(query)
+	
 	if result and result.collider is InteractableObject:
 		if hovered_object != result.collider:
 			if hovered_object:
 				hovered_object.set_label_visibility(false)
 			hovered_object = result.collider
 			hovered_object.set_label_visibility(true)
+			
+		if label_to_interact and hovered_object.item_data:
+			if "strengthLevelToLift" in hovered_object.item_data:
+				if player_strength_level < hovered_object.item_data.strengthLevelToLift:
+					label_to_interact.text = "This item is too heavy to carry on"
+					label_to_interact.visible = true
+				else:
+					label_to_interact.visible = false
 	else:
+		var was_hovering_object = hovered_object != null
+		
 		if hovered_object:
 			hovered_object.set_label_visibility(false)
 			hovered_object = null
+			
+		if label_to_interact and not grabbed_object and was_hovering_object:
+			label_to_interact.visible = false
 
 func drop_from_player(item):
 	var forward = -transform.basis.z.normalized()

@@ -15,8 +15,8 @@ class_name ShoppingItemArrayList
 						"weight" : 1,
 						"strenghtLevelToLift" : 0,
 						"isFragile" : false,
-						"availableFromDay" : 1,
-						"isIllegalToSteal" : true
+						"availableFromDay" : 0,
+						"isIllegalToSteal" : false
 					},
 					{
 						"objectName" : "Avocado",
@@ -24,9 +24,9 @@ class_name ShoppingItemArrayList
 						"maximumPrice" : 5,
 						"weight" : 1,
 						"strenghtLevelToLift" : 0,
-						"isFragile" : true,
-						"availableFromDay" : 1,
-						"isIllegalToSteal" : true
+						"isFragile" : false,
+						"availableFromDay" : 0,
+						"isIllegalToSteal" : false
 					},
 					{
 						"objectName" : "Banana",
@@ -34,29 +34,29 @@ class_name ShoppingItemArrayList
 						"maximumPrice" : 4,
 						"weight" : 1,
 						"strenghtLevelToLift" : 0,
-						"isFragile" : true,
-						"availableFromDay" : 1,
-						"isIllegalToSteal" : true
+						"isFragile" : false,
+						"availableFromDay" : 0,
+						"isIllegalToSteal" : false
 					},
 					{
 						"objectName" : "Melon",
 						"minimumPrice" : 4,
 						"maximumPrice" : 8,
 						"weight" : 3,
-						"strenghtLevelToLift" : 1,
+						"strenghtLevelToLift" : 0,
 						"isFragile" : false,
-						"availableFromDay" : 2,
-						"isIllegalToSteal" : true
+						"availableFromDay" : 0,
+						"isIllegalToSteal" : false
 					},
 					{
 						"objectName" : "Watermelon",
 						"minimumPrice" : 5,
 						"maximumPrice" : 12,
-						"weight" : 8,
-						"strenghtLevelToLift" : 2,
+						"weight" : 6,
+						"strenghtLevelToLift" : 1,
 						"isFragile" : false,
-						"availableFromDay" : 2,
-						"isIllegalToSteal" : true
+						"availableFromDay" : 0,
+						"isIllegalToSteal" : false
 					}
 				],
 			},
@@ -70,18 +70,18 @@ class_name ShoppingItemArrayList
 						"weight" : 1,
 						"strenghtLevelToLift" : 0,
 						"isFragile" : false,
-						"availableFromDay" : 1,
-						"isIllegalToSteal" : true
+						"availableFromDay" : 0,
+						"isIllegalToSteal" : false
 					},
 					{
 						"objectName" : "Cabbage",
 						"minimumPrice" : 1,
 						"maximumPrice" : 3,
-						"weight" : 2,
+						"weight" : 1,
 						"strenghtLevelToLift" : 0,
 						"isFragile" : false,
-						"availableFromDay" : 1,
-						"isIllegalToSteal" : true
+						"availableFromDay" : 0,
+						"isIllegalToSteal" : false
 					},
 					{
 						"objectName" : "Carrot",
@@ -90,18 +90,18 @@ class_name ShoppingItemArrayList
 						"weight" : 1,
 						"strenghtLevelToLift" : 0,
 						"isFragile" : false,
-						"availableFromDay" : 1,
-						"isIllegalToSteal" : true
+						"availableFromDay" : 0,
+						"isIllegalToSteal" : false
 					},
 					{
 						"objectName" : "Potato",
 						"minimumPrice" : 2,
 						"maximumPrice" : 5,
-						"weight" : 3,
-						"strenghtLevelToLift" : 1,
+						"weight" : 1,
+						"strenghtLevelToLift" : 0,
 						"isFragile" : false,
-						"availableFromDay" : 1,
-						"isIllegalToSteal" : true
+						"availableFromDay" : 0,
+						"isIllegalToSteal" : false
 					},
 					{
 						"objectName" : "Spinach",
@@ -109,9 +109,9 @@ class_name ShoppingItemArrayList
 						"maximumPrice" : 3,
 						"weight" : 1,
 						"strenghtLevelToLift" : 0,
-						"isFragile" : true,
-						"availableFromDay" : 1,
-						"isIllegalToSteal" : true
+						"isFragile" : false,
+						"availableFromDay" : 0,
+						"isIllegalToSteal" : false
 					}
 				],
 			},
@@ -122,21 +122,21 @@ class_name ShoppingItemArrayList
 						"objectName" : "Chicken Breast",
 						"minimumPrice" : 5,
 						"maximumPrice" : 9,
-						"weight" : 2,
+						"weight" : 1,
 						"strenghtLevelToLift" : 0,
 						"isFragile" : false,
-						"availableFromDay" : 1,
-						"isIllegalToSteal" : true
+						"availableFromDay" : 0,
+						"isIllegalToSteal" : false
 					},
 					{
 						"objectName" : "Lobster",
 						"minimumPrice" : 20,
 						"maximumPrice" : 45,
 						"weight" : 2,
-						"strenghtLevelToLift" : 1,
-						"isFragile" : true,
-						"availableFromDay" : 3,
-						"isIllegalToSteal" : true
+						"strenghtLevelToLift" : 0,
+						"isFragile" : false,
+						"availableFromDay" : 0,
+						"isIllegalToSteal" : false
 					},
 					{
 						"objectName" : "Pork",
@@ -145,8 +145,8 @@ class_name ShoppingItemArrayList
 						"weight" : 2,
 						"strenghtLevelToLift" : 0,
 						"isFragile" : false,
-						"availableFromDay" : 1,
-						"isIllegalToSteal" : true
+						"availableFromDay" : 0,
+						"isIllegalToSteal" : false
 					},
 					{
 						"objectName" : "Salmon",
@@ -154,9 +154,9 @@ class_name ShoppingItemArrayList
 						"maximumPrice" : 25,
 						"weight" : 2,
 						"strenghtLevelToLift" : 0,
-						"isFragile" : true,
-						"availableFromDay" : 2,
-						"isIllegalToSteal" : true
+						"isFragile" : false,
+						"availableFromDay" : 0,
+						"isIllegalToSteal" : false
 					},
 					{
 						"objectName" : "Wagyu",
@@ -165,8 +165,8 @@ class_name ShoppingItemArrayList
 						"weight" : 1,
 						"strenghtLevelToLift" : 0,
 						"isFragile" : false,
-						"availableFromDay" : 4,
-						"isIllegalToSteal" : true
+						"availableFromDay" : 0,
+						"isIllegalToSteal" : false
 					}
 				],
 			},
@@ -177,11 +177,11 @@ class_name ShoppingItemArrayList
 						"objectName" : "Blender",
 						"minimumPrice" : 25,
 						"maximumPrice" : 60,
-						"weight" : 4,
-						"strenghtLevelToLift" : 1,
-						"isFragile" : true,
-						"availableFromDay" : 2,
-						"isIllegalToSteal" : true
+						"weight" : 3,
+						"strenghtLevelToLift" : 0,
+						"isFragile" : false,
+						"availableFromDay" : 0,
+						"isIllegalToSteal" : false
 					},
 					{
 						"objectName" : "Electric Kettle",
@@ -189,39 +189,39 @@ class_name ShoppingItemArrayList
 						"maximumPrice" : 40,
 						"weight" : 2,
 						"strenghtLevelToLift" : 0,
-						"isFragile" : true,
-						"availableFromDay" : 1,
-						"isIllegalToSteal" : true
+						"isFragile" : false,
+						"availableFromDay" : 0,
+						"isIllegalToSteal" : false
 					},
 					{
 						"objectName" : "Microwave",
 						"minimumPrice" : 60,
 						"maximumPrice" : 150,
-						"weight" : 15,
-						"strenghtLevelToLift" : 3,
-						"isFragile" : true,
-						"availableFromDay" : 3,
-						"isIllegalToSteal" : true
+						"weight" : 12,
+						"strenghtLevelToLift" : 2,
+						"isFragile" : false,
+						"availableFromDay" : 0,
+						"isIllegalToSteal" : false
 					},
 					{
 						"objectName" : "Rice Cooker",
 						"minimumPrice" : 30,
 						"maximumPrice" : 80,
-						"weight" : 5,
+						"weight" : 4,
 						"strenghtLevelToLift" : 1,
-						"isFragile" : true,
-						"availableFromDay" : 2,
-						"isIllegalToSteal" : true
+						"isFragile" : false,
+						"availableFromDay" : 0,
+						"isIllegalToSteal" : false
 					},
 					{
 						"objectName" : "Toaster",
 						"minimumPrice" : 15,
 						"maximumPrice" : 35,
-						"weight" : 3,
-						"strenghtLevelToLift" : 1,
-						"isFragile" : true,
-						"availableFromDay" : 1,
-						"isIllegalToSteal" : true
+						"weight" : 2,
+						"strenghtLevelToLift" : 0,
+						"isFragile" : false,
+						"availableFromDay" : 0,
+						"isIllegalToSteal" : false
 					}
 				],
 			},
@@ -230,43 +230,43 @@ class_name ShoppingItemArrayList
 				"listItem" : [
 					{
 						"objectName" : "Milk",
-						"minimumPrice" : 1,
+						"minimumPrice" : 2,
 						"maximumPrice" : 5,
 						"weight" : 1,
 						"strenghtLevelToLift" : 0,
-						"isFragile" : true,
-						"availableFromDay" : 1,
-						"isIllegalToSteal" : true
+						"isFragile" : false,
+						"availableFromDay" : 0,
+						"isIllegalToSteal" : false
 					},
 					{
 						"objectName" : "Mineral Water",
+						"minimumPrice" : 1,
+						"maximumPrice" : 3,
+						"weight" : 1,
+						"strenghtLevelToLift" : 0,
+						"isFragile" : false,
+						"availableFromDay" : 0,
+						"isIllegalToSteal" : false
+					},
+					{
+						"objectName" : "Orange Juice",
 						"minimumPrice" : 2,
 						"maximumPrice" : 4,
 						"weight" : 1,
 						"strenghtLevelToLift" : 0,
-						"isFragile" : true,
-						"availableFromDay" : 1,
-						"isIllegalToSteal" : true
-					},
-					{
-						"objectName" : "Orange Juice",
-						"minimumPrice" : 1,
-						"maximumPrice" : 3,
-						"weight" : 2,
-						"strenghtLevelToLift" : 0,
 						"isFragile" : false,
-						"availableFromDay" : 1,
-						"isIllegalToSteal" : true
+						"availableFromDay" : 0,
+						"isIllegalToSteal" : false
 					},
 					{
 						"objectName" : "Soda Can",
-						"minimumPrice" : 3,
-						"maximumPrice" : 8,
-						"weight" : 2,
-						"strenghtLevelToLift" : 1,
+						"minimumPrice" : 1,
+						"maximumPrice" : 3,
+						"weight" : 1,
+						"strenghtLevelToLift" : 0,
 						"isFragile" : false,
-						"availableFromDay" : 2,
-						"isIllegalToSteal" : true
+						"availableFromDay" : 0,
+						"isIllegalToSteal" : false
 					},
 				],
 			},
@@ -275,43 +275,43 @@ class_name ShoppingItemArrayList
 				"listItem" : [
 					{
 						"objectName" : "Shampoo",
-						"minimumPrice" : 2,
-						"maximumPrice" : 6,
-						"weight" : 3,
+						"minimumPrice" : 3,
+						"maximumPrice" : 7,
+						"weight" : 1,
 						"strenghtLevelToLift" : 0,
-						"isFragile" : true,
-						"availableFromDay" : 1,
-						"isIllegalToSteal" : true
+						"isFragile" : false,
+						"availableFromDay" : 0,
+						"isIllegalToSteal" : false
 					},
 					{
 						"objectName" : "Soap",
 						"minimumPrice" : 1,
-						"maximumPrice" : 8,
-						"weight" : 2,
+						"maximumPrice" : 4,
+						"weight" : 1,
 						"strenghtLevelToLift" : 0,
-						"isFragile" : true,
-						"availableFromDay" : 1,
-						"isIllegalToSteal" : true
+						"isFragile" : false,
+						"availableFromDay" : 0,
+						"isIllegalToSteal" : false
 					},
 					{
 						"objectName" : "Tissue Roll Pack",
 						"minimumPrice" : 3,
 						"maximumPrice" : 6,
-						"weight" : 6,
+						"weight" : 1,
 						"strenghtLevelToLift" : 0,
 						"isFragile" : false,
-						"availableFromDay" : 1,
-						"isIllegalToSteal" : true
+						"availableFromDay" : 0,
+						"isIllegalToSteal" : false
 					},
 					{
 						"objectName" : "Tooth Paste",
 						"minimumPrice" : 1,
 						"maximumPrice" : 4,
 						"weight" : 1,
-						"strenghtLevelToLift" : 1,
-						"isFragile" : true,
-						"availableFromDay" : 2,
-						"isIllegalToSteal" : true
+						"strenghtLevelToLift" : 0,
+						"isFragile" : false,
+						"availableFromDay" : 0,
+						"isIllegalToSteal" : false
 					},
 				],
 			},
@@ -320,43 +320,43 @@ class_name ShoppingItemArrayList
 				"listItem" : [
 					{
 						"objectName" : "Chocolate Bar",
-						"minimumPrice" : 3,
-						"maximumPrice" : 8,
+						"minimumPrice" : 2,
+						"maximumPrice" : 5,
 						"weight" : 1,
 						"strenghtLevelToLift" : 0,
-						"isFragile" : true,
-						"availableFromDay" : 1,
-						"isIllegalToSteal" : true
+						"isFragile" : false,
+						"availableFromDay" : 0,
+						"isIllegalToSteal" : false
 					},
 					{
 						"objectName" : "Gummy Bear",
 						"minimumPrice" : 1,
-						"maximumPrice" : 5,
-						"weight" : 5,
+						"maximumPrice" : 4,
+						"weight" : 1,
 						"strenghtLevelToLift" : 0,
 						"isFragile" : false,
-						"availableFromDay" : 1,
-						"isIllegalToSteal" : true
+						"availableFromDay" : 0,
+						"isIllegalToSteal" : false
 					},
 					{
 						"objectName" : "Popcorn",
 						"minimumPrice" : 2,
-						"maximumPrice" : 4,
-						"weight" : 4,
+						"maximumPrice" : 5,
+						"weight" : 1,
 						"strenghtLevelToLift" : 0,
-						"isFragile" : true,
-						"availableFromDay" : 1,
-						"isIllegalToSteal" : true
+						"isFragile" : false,
+						"availableFromDay" : 0,
+						"isIllegalToSteal" : false
 					},
 					{
 						"objectName" : "Potato Chips",
-						"minimumPrice" : 1,
-						"maximumPrice" : 8,
+						"minimumPrice" : 2,
+						"maximumPrice" : 6,
 						"weight" : 1,
-						"strenghtLevelToLift" : 1,
-						"isFragile" : true,
-						"availableFromDay" : 2,
-						"isIllegalToSteal" : true
+						"strenghtLevelToLift" : 0,
+						"isFragile" : false,
+						"availableFromDay" : 0,
+						"isIllegalToSteal" : false
 					},
 				],
 			},
@@ -365,43 +365,43 @@ class_name ShoppingItemArrayList
 				"listItem" : [
 					{
 						"objectName" : "Jeans",
-						"minimumPrice" : 1,
-						"maximumPrice" : 3,
-						"weight" : 8,
-						"strenghtLevelToLift" : 0,
-						"isFragile" : false,
-						"availableFromDay" : 1,
-						"isIllegalToSteal" : true
-					},
-					{
-						"objectName" : "Shoes",
-						"minimumPrice" : 1,
-						"maximumPrice" : 3,
-						"weight" : 6,
-						"strenghtLevelToLift" : 0,
-						"isFragile" : true,
-						"availableFromDay" : 1,
-						"isIllegalToSteal" : true
-					},
-					{
-						"objectName" : "Socks",
-						"minimumPrice" : 2,
-						"maximumPrice" : 8,
+						"minimumPrice" : 15,
+						"maximumPrice" : 40,
 						"weight" : 1,
 						"strenghtLevelToLift" : 0,
 						"isFragile" : false,
-						"availableFromDay" : 1,
-						"isIllegalToSteal" : true
+						"availableFromDay" : 0,
+						"isIllegalToSteal" : false
+					},
+					{
+						"objectName" : "Shoes",
+						"minimumPrice" : 20,
+						"maximumPrice" : 80,
+						"weight" : 1,
+						"strenghtLevelToLift" : 0,
+						"isFragile" : false,
+						"availableFromDay" : 0,
+						"isIllegalToSteal" : false
+					},
+					{
+						"objectName" : "Socks",
+						"minimumPrice" : 3,
+						"maximumPrice" : 10,
+						"weight" : 1,
+						"strenghtLevelToLift" : 0,
+						"isFragile" : false,
+						"availableFromDay" : 0,
+						"isIllegalToSteal" : false
 					},
 					{
 						"objectName" : "T-shirt",
-						"minimumPrice" : 1,
-						"maximumPrice" : 3,
-						"weight" : 8,
-						"strenghtLevelToLift" : 1,
-						"isFragile" : true,
-						"availableFromDay" : 1,
-						"isIllegalToSteal" : true
+						"minimumPrice" : 10,
+						"maximumPrice" : 30,
+						"weight" : 1,
+						"strenghtLevelToLift" : 0,
+						"isFragile" : false,
+						"availableFromDay" : 0,
+						"isIllegalToSteal" : false
 					},
 				],
 			},
@@ -411,86 +411,90 @@ class_name ShoppingItemArrayList
 		"isAbsurd" : true,
 		"list" : [
 			{
-	"category": "infrastructure",
-	"listItem": [
-		{
-			"objectName": "Cashier Table",
-			"minimumPrice": 0,
-			"maximumPrice": 0,
-			"weight": 200,
-			"strenghtLevelToLift": 7,
-			"isFragile": true,
-			"availableFromDay": 3,
-			"isIllegalToSteal": true
-		},
-		{
-			"objectName": "Wooden Table",
-			"minimumPrice": 0,
-			"maximumPrice": 0,
-			"weight": 100,
-			"strenghtLevelToLift": 5,
-			"isFragile": true,
-			"availableFromDay": 3,
-			"isIllegalToSteal": true
-		},
-		{
-			"objectName": "Fridge",
-			"minimumPrice": 0,
-			"maximumPrice": 0,
-			"weight": 100,
-			"strenghtLevelToLift": 5,
-			"isFragile": true,
-			"availableFromDay": 3,
-			"isIllegalToSteal": true
-		},
-		{
-			"objectName": "Wooden Shelf",
-			"minimumPrice": 0,
-			"maximumPrice": 0,
-			"weight": 100,
-			"strenghtLevelToLift": 5,
-			"isFragile": true,
-			"availableFromDay": 3,
-			"isIllegalToSteal": true
-		},{
-			"objectName": "Showcase",
-			"minimumPrice": 0,
-			"maximumPrice": 0,
-			"weight": 100,
-			"strenghtLevelToLift": 5,
-			"isFragile": true,
-			"availableFromDay": 3,
-			"isIllegalToSteal": true
-		},{
-			"objectName": "Mall Pillar",
-			"minimumPrice": 0,
-			"maximumPrice": 0,
-			"weight": 100,
-			"strenghtLevelToLift": 5,
-			"isFragile": true,
-			"availableFromDay": 3,
-			"isIllegalToSteal": true
-		},{
-			"objectName": "Escalator",
-			"minimumPrice": 0,
-			"maximumPrice": 0,
-			"weight": 100,
-			"strenghtLevelToLift": 5,
-			"isFragile": true,
-			"availableFromDay": 3,
-			"isIllegalToSteal": true
-		},{
-			"objectName": "Trash Can",
-			"minimumPrice": 0,
-			"maximumPrice": 0,
-			"weight": 100,
-			"strenghtLevelToLift": 5,
-			"isFragile": true,
-			"availableFromDay": 3,
-			"isIllegalToSteal": true
-		}
-	]
-},
+				"category": "infrastructure",
+				"listItem": [
+					{
+						"objectName": "Cashier Table",
+						"minimumPrice": 0,
+						"maximumPrice": 0,
+						"weight": 80,
+						"strenghtLevelToLift": 5,
+						"isFragile": false,
+						"availableFromDay": 0,
+						"isIllegalToSteal": true
+					},
+					{
+						"objectName": "Wooden Table",
+						"minimumPrice": 0,
+						"maximumPrice": 0,
+						"weight": 40,
+						"strenghtLevelToLift": 3,
+						"isFragile": false,
+						"availableFromDay": 0,
+						"isIllegalToSteal": true
+					},
+					{
+						"objectName": "Fridge",
+						"minimumPrice": 0,
+						"maximumPrice": 0,
+						"weight": 120,
+						"strenghtLevelToLift": 6,
+						"isFragile": false,
+						"availableFromDay": 0,
+						"isIllegalToSteal": true
+					},
+					{
+						"objectName": "Wooden Shelf",
+						"minimumPrice": 0,
+						"maximumPrice": 0,
+						"weight": 60,
+						"strenghtLevelToLift": 4,
+						"isFragile": false,
+						"availableFromDay": 0,
+						"isIllegalToSteal": true
+					},
+					{
+						"objectName": "Showcase",
+						"minimumPrice": 0,
+						"maximumPrice": 0,
+						"weight": 150,
+						"strenghtLevelToLift": 7,
+						"isFragile": false,
+						"availableFromDay": 0,
+						"isIllegalToSteal": true
+					},
+					{
+						"objectName": "Mall Pillar",
+						"minimumPrice": 0,
+						"maximumPrice": 0,
+						"weight": 800,
+						"strenghtLevelToLift": 11,
+						"isFragile": false,
+						"availableFromDay": 0,
+						"isIllegalToSteal": true
+					},
+					{
+						"objectName": "Escalator",
+						"minimumPrice": 0,
+						"maximumPrice": 0,
+						"weight": 1500,
+						"strenghtLevelToLift": 12,
+						"isFragile": false,
+						"availableFromDay": 0,
+						"isIllegalToSteal": true
+					},
+					{
+						"objectName": "Trash Can",
+						"minimumPrice": 0,
+						"maximumPrice": 0,
+						"weight": 15,
+						"strenghtLevelToLift": 2,
+						"isFragile": false,
+						"availableFromDay": 0,
+						"isIllegalToSteal": true
+					}
+				]
+			},
 		]
 	}
 ]

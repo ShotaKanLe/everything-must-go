@@ -1,0 +1,22 @@
+[gd_scene format=3 uid="uid://bvn4sg45ixiv7"]
+
+[ext_resource type="PackedScene" uid="uid://c63tinffyvnxx" path="res://assets/car/car.glb" id="1_c35m8"]
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_c35m8"]
+size = Vector3(5.551174, 1.7045898, 13.196133)
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_qt2eu"]
+size = Vector3(5.551174, 4.3126526, 4.929985)
+
+[node name="Car" type="RigidBody3D" unique_id=569164076]
+
+[node name="car" parent="." unique_id=818521650 instance=ExtResource("1_c35m8")]
+transform = Transform3D(1.5, 0, 0, 0, 1.5, 0, 0, 0, 1.5, 0, 0, 0)
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="." unique_id=704913080]
+transform = Transform3D(1.5, 0, 0, 0, 1.5, 0, 0, 0, 1.5, -0.11668968, 1.9797516, -2.9554014)
+shape = SubResource("BoxShape3D_c35m8")
+
+[node name="CollisionShape3D2" type="CollisionShape3D" parent="." unique_id=1396504521]
+transform = Transform3D(1.5, 0, 0, 0, 1.5, 0, 0, 0, 1.5, -0.11668968, 4.5874696, 1.9658852)
+shape = SubResource("BoxShape3D_qt2eu")

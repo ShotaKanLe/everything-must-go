@@ -40,7 +40,7 @@ func _ready() -> void:
 	if LevelData.current_day == 0:
 		LevelData.start_day()
 		
-	spawn_tools()
+	#spawn_tools()
 	spawn_upgrades()
 	setup_character_ui_connections()
 	setupMoneyUI()

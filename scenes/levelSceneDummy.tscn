@@ -1558,7 +1558,6 @@ offset_top = 236.1
 offset_right = 141.70001
 offset_bottom = 259.1
 text = "Nota List"
-horizontal_alignment = 1
 
 [node name="HBoxContainer" type="Control" parent="CanvasLayer" unique_id=877723055]
 layout_mode = 3
